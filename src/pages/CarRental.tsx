@@ -10,12 +10,12 @@ const CarRental = () => {
     {
       icon: Car,
       title: t('smallVehicles'),
-      description: 'سيارات صغيرة للأفراد والشركات',
+      description: t('smallVehiclesDesc'),
     },
     {
       icon: Truck,
       title: t('largeVehicles'),
-      description: 'مركبات كبيرة للخدمات اللوجستية',
+      description: t('largeVehiclesDesc'),
     },
   ];
 
@@ -54,59 +54,112 @@ const CarRental = () => {
         </div>
       </section>
 
-      {/* Vehicle Types Section */}
-      <section className="py-20">
+      {/* Rental Intro - Split Layout */}
+      <section className="py-20 bg-gradient-to-br from-background via-primary/3 to-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('rentalIntro')}</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                {t('rentalIntroDesc')}
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="bg-card/50 p-4 rounded-xl border border-primary/20"
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="bg-primary/10 p-2 rounded-lg">
+                        <feature.icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <h3 className="font-bold text-sm">{feature.title}</h3>
+                    </div>
+                    <p className="text-xs text-muted-foreground">{feature.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-luxury">
+                <img
+                  src={rentalImage}
+                  alt="Car Rental"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vehicle Types - Showcase Cards */}
+      <section className="py-20 bg-gradient-to-br from-primary/12 via-primary/8 to-accent/12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">{t('vehicleTypes')}</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {vehicleTypes.map((type, index) => (
               <div
                 key={index}
-                className="bg-card p-12 rounded-3xl shadow-luxury hover:shadow-glow transition-smooth animate-fade-in text-center"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="bg-card p-8 rounded-2xl shadow-luxury hover:shadow-glow transition-all border-2 border-transparent hover:border-primary/30 group"
               >
-                <div className="bg-primary/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <type.icon className="h-12 w-12 text-primary" />
+                <div className="flex items-start gap-6">
+                  <div className="bg-primary/10 p-4 rounded-xl group-hover:scale-110 transition-transform">
+                    <type.icon className="h-12 w-12 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-3">{type.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {type.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-3xl font-bold mb-4">{type.title}</h3>
-                <p className="text-muted-foreground text-xl">{type.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-secondary">
+      {/* Vehicle Details - Side by Side */}
+      <section className="py-20 bg-gradient-to-br from-background via-primary/3 to-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-card p-8 rounded-2xl shadow-luxury hover:shadow-glow transition-smooth animate-fade-in text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="h-10 w-10 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                <p className="text-muted-foreground text-lg">{feature.description}</p>
+          <h2 className="text-4xl font-bold text-center mb-12">{t('vehicleDetails')}</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-card to-card/80 p-8 rounded-2xl shadow-luxury border-l-4 border-primary">
+              <h3 className="text-2xl font-bold mb-4">{t('smallVehicles')}</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                {t('smallVehiclesDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-primary">
+                <Car className="h-5 w-5" />
+                <span className="text-sm font-semibold">{t('availableNow')}</span>
               </div>
-            ))}
+            </div>
+            <div className="bg-gradient-to-br from-card to-card/80 p-8 rounded-2xl shadow-luxury border-l-4 border-accent">
+              <h3 className="text-2xl font-bold mb-4">{t('largeVehicles')}</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                {t('largeVehiclesDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-accent">
+                <Truck className="h-5 w-5" />
+                <span className="text-sm font-semibold">{t('availableNow')}</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Description Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-card p-12 rounded-3xl shadow-luxury animate-fade-in">
-            <h3 className="text-3xl font-bold mb-6 text-center">{t('rentalTitle')}</h3>
-            <p className="text-lg text-muted-foreground leading-relaxed text-center mb-6">
-              نوفر جميع أنواع السيارات والمركبات (صغيرة وكبيرة) لتلبية احتياجات الشركات اللوجستية والعملاء الأفراد.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed text-center">
-              تتميز خدماتنا بالمرونة والتوفر على مدار الساعة لضمان راحة عملائنا.
-            </p>
+      {/* Rental Benefits - Compact Grid */}
+      <section className="py-20 bg-gradient-to-br from-primary/12 via-primary/8 to-accent/12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12">{t('rentalBenefits')}</h2>
+            <div className="bg-card p-8 rounded-2xl shadow-luxury">
+              <p className="text-lg text-muted-foreground leading-relaxed text-center">
+                {t('rentalBenefitsDesc')}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -118,7 +171,7 @@ const CarRental = () => {
             {t('bookNow')}
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto animate-fade-in">
-            تواصل معنا الآن للحصول على أفضل العروض
+            {t('contactUsForBestOffers')}
           </p>
         </div>
       </section>
