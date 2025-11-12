@@ -16,7 +16,7 @@ const NotFound = () => {
         <h1 className="mb-4 text-9xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">404</h1>
         <p className="mb-8 text-2xl text-muted-foreground">الصفحة غير موجودة / Page not found</p>
         <Link to="/">
-          <Button className="rounded-full shadow-glow gap-2">
+          <Button className="rounded-full gap-2 hover:bg-primary/90 transition-all duration-300">
             <Home className="h-5 w-5" />
             العودة للرئيسية / Return Home
           </Button>

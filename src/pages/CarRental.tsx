@@ -1,7 +1,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import ContactForm from '@/components/ContactForm';
 import { Car, Truck, Clock, CheckCircle } from 'lucide-react';
-import rentalImage from '@/assets/car-rental.jpg';
+// Image is in public/assets/ folder
+const rentalImage = '/assets/car-rental.jpg';
 
 const CarRental = () => {
   const { t } = useLanguage();
@@ -102,7 +103,7 @@ const CarRental = () => {
             {vehicleTypes.map((type, index) => (
               <div
                 key={index}
-                className="bg-card p-8 rounded-2xl shadow-luxury hover:shadow-glow transition-all border-2 border-transparent hover:border-primary/30 group"
+                className="bg-card p-8 rounded-2xl shadow-luxury hover:bg-card/80 transition-all border-2 border-transparent hover:border-primary/30 group"
               >
                 <div className="flex items-start gap-6">
                   <div className="bg-primary/10 p-4 rounded-xl group-hover:scale-110 transition-transform">

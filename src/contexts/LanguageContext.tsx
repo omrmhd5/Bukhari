@@ -26,7 +26,7 @@ const translations = {
     contact: "اتصل بنا",
 
     // Home Page
-    heroTitle: "شركة عبدالله أحمد بخاري",
+    heroTitle: "شركة عبدالله  بخاري",
     heroSubtitle: "للنقل والخدمات اللوجستية",
     heroDescription:
       "الشركة الرائدة في المملكة العربية السعودية والعالم في مجال النقل والخدمات اللوجستية - نقدم حلولاً متكاملة بمعايير عالمية",
@@ -45,9 +45,9 @@ const translations = {
     coverageDesc: "نغطي جميع مناطق المملكة",
     aboutCompany: "من نحن",
     aboutCompanyDesc:
-      "شركة عبدالله أحمد بخاري للنقل والخدمات اللوجستية هي إحدى أبرز الشركات الرائدة في المملكة العربية السعودية والعالم. نحن نفتخر بكوننا الشريك الموثوق للعديد من كبرى الشركات المحلية والعالمية، ونقدم خدماتنا بمعايير عالمية تجعلنا الخيار الأول في مجال النقل والخدمات اللوجستية.",
+      "شركة عبدالله  بخاري للنقل والخدمات اللوجستية هي إحدى أبرز الشركات الرائدة في المملكة العربية السعودية والعالم. نحن نفتخر بكوننا الشريك الموثوق للعديد من كبرى الشركات المحلية والعالمية، ونقدم خدماتنا بمعايير عالمية تجعلنا الخيار الأول في مجال النقل والخدمات اللوجستية.",
     aboutCompanySubtitle:
-      "مبادرة وطنية رائدة ضمن برنامج النقل واللوجستيات في المملكة",
+      "شركة رائدة في مجال النقل واللوجستيات في المملكة العربية السعودية",
     ourVision: "رؤيتنا",
     ourVisionDesc:
       "أن نكون الشركة الرائدة في مجال النقل والخدمات اللوجستية في المملكة العربية السعودية والعالم، ونحقق أعلى معايير جودة الحياة لعملائنا وشركائنا، ونُسهم في تحقيق رؤية السعودية 2030.",
@@ -94,6 +94,7 @@ const translations = {
 
     // Contact
     contactTitle: "تواصل معنا",
+    contactSubtitle: "نحن هنا لمساعدتك - تواصل معنا لأي استفسارات أو طلبات",
     phone: "الهاتف",
     email: "البريد الإلكتروني",
     whatsapp: "واتساب",
@@ -239,7 +240,7 @@ const translations = {
     contact: "Contact Us",
 
     // Home Page
-    heroTitle: "Abdullah Ahmed Bukhari Company",
+    heroTitle: "Abdullah  Bukhari Company",
     heroSubtitle: "Transport & Logistics Services",
     heroDescription:
       "Leading company in Saudi Arabia and the world in transport and logistics services - we provide integrated solutions with global standards",
@@ -258,9 +259,9 @@ const translations = {
     coverageDesc: "Nationwide coverage across Saudi Arabia",
     aboutCompany: "About Us",
     aboutCompanyDesc:
-      "Abdullah Ahmed Bukhari Transport and Logistics Services Company is one of the leading companies in Saudi Arabia and the world. We are proud to be the trusted partner of many major local and international companies, and we provide our services with global standards that make us the first choice in transport and logistics.",
+      "Abdullah  Bukhari Transport and Logistics Services Company is one of the leading companies in Saudi Arabia and the world. We are proud to be the trusted partner of many major local and international companies, and we provide our services with global standards that make us the first choice in transport and logistics.",
     aboutCompanySubtitle:
-      "Leading national initiative within the Transport & Logistics Program in the Kingdom",
+      "Leading company in transport and logistics in the Kingdom of Saudi Arabia",
     ourVision: "Our Vision",
     ourVisionDesc:
       "To be the leading company in transport and logistics services in Saudi Arabia and the world, achieving the highest standards of quality of life for our clients and partners, and contributing to achieving Saudi Vision 2030.",
@@ -308,6 +309,7 @@ const translations = {
 
     // Contact
     contactTitle: "Contact Us",
+    contactSubtitle: "We're here to help - Get in touch with us for any inquiries or requests",
     phone: "Phone",
     email: "Email",
     whatsapp: "WhatsApp",

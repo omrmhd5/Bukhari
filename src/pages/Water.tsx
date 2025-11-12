@@ -1,7 +1,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import ContactForm from '@/components/ContactForm';
 import { Droplets, Award, Truck, CheckCircle2, Sparkles, Factory } from 'lucide-react';
-import waterImage from '@/assets/water-production.jpg';
+// Image is in public/assets/ folder
+const waterImage = '/assets/water-production.jpg';
 
 const Water = () => {
   const { t } = useLanguage();
@@ -151,7 +152,7 @@ const Water = () => {
             {brands.map((brand, index) => (
               <div
                 key={index}
-                className="relative bg-card p-10 rounded-3xl shadow-luxury hover:shadow-glow transition-all border-2 border-transparent hover:border-primary/40 group overflow-hidden"
+                className="relative bg-card p-10 rounded-3xl shadow-luxury hover:bg-card/80 transition-all border-2 border-transparent hover:border-primary/40 group overflow-hidden"
               >
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">

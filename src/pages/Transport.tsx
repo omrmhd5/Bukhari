@@ -1,7 +1,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import ContactForm from '@/components/ContactForm';
 import { Truck, Package, Clock, MapPin, ArrowRight, Sparkles, TrendingUp, CheckCircle2, Shield, Zap } from 'lucide-react';
-import heroImage from '@/assets/hero-logistics.jpg';
+// Image is in public/assets/ folder
+const heroImage = '/assets/hero-logistics.jpg';
 
 const Transport = () => {
   const { t } = useLanguage();
@@ -269,7 +270,7 @@ const Transport = () => {
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="relative bg-card p-8 rounded-3xl shadow-luxury hover:shadow-glow transition-all border-2 border-transparent hover:border-primary/40 text-center group overflow-hidden"
+                className="relative bg-card p-8 rounded-3xl shadow-luxury hover:bg-card/80 transition-all border-2 border-transparent hover:border-primary/40 text-center group overflow-hidden"
               >
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
