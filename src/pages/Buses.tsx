@@ -10,9 +10,13 @@ import {
   CheckCircle2,
   MapPin,
   Clock,
+  Truck,
 } from "lucide-react";
 // Image is in public/assets/ folder
-const busesImage = "/assets/buses.jpg";
+const busesHero = "/assets/buses/buses-hero.jpg";
+const busesImage = "/assets/buses/buses-image.jpg";
+const umrah = "/assets/buses/umrah.jpg";
+const tourism = "/assets/buses/tourism.jpg";
 
 const Buses = () => {
   const { t } = useLanguage();
@@ -60,120 +64,191 @@ const Buses = () => {
 
   return (
     <div className="pt-20">
-      {/* Hero Section - Enhanced */}
-      <section className="relative h-[550px] md:h-[650px] overflow-hidden">
-        <img
-          src={busesImage}
-          alt="Buses & Trailers"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="container mx-auto px-4 text-center text-white">
-            {/* Badge */}
-            <div className="mb-6 inline-block animate-fade-in">
-              <div className="bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 inline-flex items-center gap-2">
-                <Bus className="h-4 w-4 text-white" />
-                <span className="text-sm font-medium">{t("busesTitle")}</span>
-                <TrendingUp className="h-4 w-4 text-white" />
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in leading-tight">
-              {t("busesTitle")}
-            </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl max-w-3xl mx-auto animate-fade-in text-white/90 leading-relaxed">
-              {t("busesDesc")}
-            </p>
-          </div>
+      {/* Hero Section - Full Width with Side Cards */}
+      <section className="relative min-h-[600px] md:min-h-[700px] overflow-hidden bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900">
+        <div className="absolute inset-0">
+          <img
+            src={busesHero}
+            alt="Buses & Trailers"
+            className="w-full h-full object-cover opacity-40"
+          />
         </div>
-        {/* Decorative Elements */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-      </section>
-
-      {/* Features Banner */}
-      <section className="py-12 bg-gradient-to-r from-primary/15 via-primary/10 to-accent/15 border-b border-primary/20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all group">
-                <div className="bg-primary/10 p-4 rounded-xl mb-4 group-hover:bg-primary/20 transition-colors">
-                  <feature.icon className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Buses Intro - Enhanced Split Layout */}
-      <section className="py-24 bg-gradient-to-br from-background via-primary/3 to-background relative overflow-hidden">
-        {/* Decorative Background Elements */}
-        <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        {/* Decorative Pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:3rem_3rem]" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 text-primary mb-4">
-                <Bus className="h-5 w-5" />
+          <div className="grid lg:grid-cols-12 gap-8 items-center min-h-[600px] md:min-h-[700px] py-16">
+            {/* Left Side Card */}
+            <div className="lg:col-span-3 space-y-4">
+              <div className="bg-white/10 dark:bg-navy-800/50 backdrop-blur-lg p-6 rounded-2xl border border-white/20 dark:border-navy-600/30 hover:bg-white/15 dark:hover:bg-navy-800/70 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-light-blue-400/20 dark:bg-light-blue-500/20 p-2 rounded-lg">
+                    <Shield className="h-5 w-5 text-light-blue-400" />
+                  </div>
+                  <span className="text-sm font-semibold text-white">
+                    {t("safety")}
+                  </span>
+                </div>
+                <p className="text-xs text-white/80">{t("safetyDesc")}</p>
+              </div>
+              <div className="bg-white/10 dark:bg-navy-800/50 backdrop-blur-lg p-6 rounded-2xl border border-white/20 dark:border-navy-600/30 hover:bg-white/15 dark:hover:bg-navy-800/70 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-light-blue-400/20 dark:bg-light-blue-500/20 p-2 rounded-lg">
+                    <Heart className="h-5 w-5 text-light-blue-400" />
+                  </div>
+                  <span className="text-sm font-semibold text-white">
+                    {t("comfort")}
+                  </span>
+                </div>
+                <p className="text-xs text-white/80">{t("comfortDesc")}</p>
+              </div>
+            </div>
+
+            {/* Center Content */}
+            <div className="lg:col-span-6 text-center space-y-6">
+              <div className="inline-flex items-center gap-2 text-light-blue-400 mb-4">
+                <div className="bg-light-blue-500/20 p-2 rounded-lg border border-light-blue-400/30">
+                  <Bus className="h-5 w-5 text-light-blue-400" />
+                </div>
                 <span className="font-semibold text-sm uppercase tracking-wide">
-                  {t("busesIntro")}
+                  {t("busesTitle")}
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                {t("busesIntro")}
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                {t("busesIntroDesc")}
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-white">
+                {t("busesTitle")}
+              </h1>
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+                {t("busesDesc")}
               </p>
-              <div className="pt-4 space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    {t("busesFleetModern")}
-                  </p>
+              <div className="flex flex-wrap gap-3 justify-center pt-4">
+                <div className="bg-white/10 backdrop-blur-lg px-6 py-3 rounded-full border border-white/20">
+                  <div className="flex items-center gap-2">
+                    <Star className="h-5 w-5 text-light-blue-400" />
+                    <span className="text-sm font-semibold text-white">
+                      {t("busesLuxury")}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    {t("busesComfortable")}
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    {t("busesSafeTransport")}
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    {t("busesProfessional")}
-                  </p>
+                <div className="bg-white/10 backdrop-blur-lg px-6 py-3 rounded-full border border-white/20">
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="h-5 w-5 text-light-blue-400" />
+                    <span className="text-sm font-semibold text-white">
+                      {t("busesFleetModern")}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl group">
-                <img
-                  src={busesImage}
-                  alt="Buses & Trailers"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-primary/20 to-transparent" />
-                {/* Floating Badge */}
-                <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg">
-                  <div className="flex items-center gap-2">
-                    <Star className="h-4 w-4 text-primary" />
-                    <span className="text-sm font-semibold text-foreground">
-                      {t("busesLuxury")}
+
+            {/* Right Side Card */}
+            <div className="lg:col-span-3 space-y-4">
+              <div className="bg-white/10 dark:bg-navy-800/50 backdrop-blur-lg p-6 rounded-2xl border border-white/20 dark:border-navy-600/30 hover:bg-white/15 dark:hover:bg-navy-800/70 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-light-blue-400/20 dark:bg-light-blue-500/20 p-2 rounded-lg">
+                    <Clock className="h-5 w-5 text-light-blue-400" />
+                  </div>
+                  <span className="text-sm font-semibold text-white">
+                    {t("speed")}
+                  </span>
+                </div>
+                <p className="text-xs text-white/80">{t("speedDesc")}</p>
+              </div>
+              <div className="bg-white/10 dark:bg-navy-800/50 backdrop-blur-lg p-6 rounded-2xl border border-white/20 dark:border-navy-600/30 hover:bg-white/15 dark:hover:bg-navy-800/70 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-light-blue-400/20 dark:bg-light-blue-500/20 p-2 rounded-lg">
+                    <MapPin className="h-5 w-5 text-light-blue-400" />
+                  </div>
+                  <span className="text-sm font-semibold text-white">
+                    {t("coverage")}
+                  </span>
+                </div>
+                <p className="text-xs text-white/80">{t("coverageDesc")}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Bottom Gradient */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent" />
+      </section>
+
+      {/* Buses Intro - Card-Based Layout */}
+      <section className="py-28 bg-gradient-to-br from-navy-50 via-light-blue-50/30 to-navy-50 dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-navy-200/20 dark:bg-navy-700/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-light-blue-200/20 dark:bg-light-blue-700/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-3 gap-8 items-start">
+              {/* Left Content Card */}
+              <div className="lg:col-span-2 space-y-6">
+                <div className="bg-white dark:bg-navy-800 p-8 rounded-3xl shadow-xl border-2 border-navy-100 dark:border-navy-700">
+                  <div className="inline-flex items-center gap-2 text-navy-700 dark:text-light-blue-400 mb-4">
+                    <Bus className="h-5 w-5" />
+                    <span className="font-semibold text-sm uppercase tracking-wide">
+                      {t("busesIntro")}
                     </span>
+                  </div>
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-navy-800 dark:text-white">
+                    {t("busesIntro")}
+                  </h2>
+                  <p className="text-lg text-navy-600 dark:text-navy-300 leading-relaxed mb-6">
+                    {t("busesIntroDesc")}
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="bg-light-blue-100 dark:bg-light-blue-900/30 p-1.5 rounded-lg border border-light-blue-200/50 dark:border-light-blue-700/30 mt-0.5">
+                        <CheckCircle2 className="h-5 w-5 text-navy-700 dark:text-light-blue-400 flex-shrink-0" />
+                      </div>
+                      <p className="text-navy-600 dark:text-navy-300 pt-0.5">
+                        {t("busesFleetModern")}
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-light-blue-100 dark:bg-light-blue-900/30 p-1.5 rounded-lg border border-light-blue-200/50 dark:border-light-blue-700/30 mt-0.5">
+                        <CheckCircle2 className="h-5 w-5 text-navy-700 dark:text-light-blue-400 flex-shrink-0" />
+                      </div>
+                      <p className="text-navy-600 dark:text-navy-300 pt-0.5">
+                        {t("busesComfortable")}
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-light-blue-100 dark:bg-light-blue-900/30 p-1.5 rounded-lg border border-light-blue-200/50 dark:border-light-blue-700/30 mt-0.5">
+                        <CheckCircle2 className="h-5 w-5 text-navy-700 dark:text-light-blue-400 flex-shrink-0" />
+                      </div>
+                      <p className="text-navy-600 dark:text-navy-300 pt-0.5">
+                        {t("busesSafeTransport")}
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-light-blue-100 dark:bg-light-blue-900/30 p-1.5 rounded-lg border border-light-blue-200/50 dark:border-light-blue-700/30 mt-0.5">
+                        <CheckCircle2 className="h-5 w-5 text-navy-700 dark:text-light-blue-400 flex-shrink-0" />
+                      </div>
+                      <p className="text-navy-600 dark:text-navy-300 pt-0.5">
+                        {t("busesProfessional")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Image Card */}
+              <div className="lg:col-span-1">
+                <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border-2 border-navy-200/50 dark:border-navy-600/50 group">
+                  <img
+                    src={busesImage}
+                    alt="Buses & Trailers"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-navy-800/40 via-light-blue-500/20 to-transparent" />
+                  {/* Floating Badge */}
+                  <div className="absolute top-6 right-6 bg-white/95 dark:bg-navy-800/95 backdrop-blur-lg px-4 py-2 rounded-full shadow-xl border border-navy-200/50 dark:border-navy-600/50">
+                    <div className="flex items-center gap-2">
+                      <Star className="h-4 w-4 text-light-blue-600 dark:text-light-blue-400" />
+                      <span className="text-sm font-semibold text-navy-800 dark:text-white">
+                        {t("busesLuxury")}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -182,141 +257,122 @@ const Buses = () => {
         </div>
       </section>
 
-      {/* Services - Enhanced Cards */}
-      <section className="py-24 bg-gradient-to-br from-primary/12 via-primary/8 to-accent/12 relative overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl" />
+      {/* Services - Staggered Card Layout */}
+      <section className="py-28 bg-gradient-to-br from-white via-navy-50/50 to-light-blue-50/50 dark:from-navy-900/50 dark:via-navy-800/50 dark:to-navy-900/50 relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-navy-200/20 dark:bg-navy-700/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-light-blue-200/20 dark:bg-light-blue-700/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 text-primary mb-4">
-              <Star className="h-5 w-5" />
-              <span className="font-semibold text-sm uppercase tracking-wide">
-                {t("ourServicesHeader")}
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-navy-800 dark:text-white">
               {t("ourServicesHeader")}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-navy-600 dark:text-navy-300 max-w-2xl mx-auto">
               {t("busesServicesSubtitle")}
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Hajj & Umrah */}
-            <div className="relative bg-gradient-to-br from-yellow-50/50 dark:from-yellow-950/30 to-card p-10 rounded-3xl shadow-2xl border-2 border-yellow-200/50 dark:border-yellow-800/30 hover:border-yellow-300 dark:hover:border-yellow-700 transition-all group overflow-hidden">
-              <div className="absolute top-6 right-6">
-                <div className="bg-yellow-100 dark:bg-yellow-900/50 p-4 rounded-2xl">
-                  <Star className="h-10 w-10 text-yellow-600 dark:text-yellow-400" />
+
+          {/* Staggered Grid Layout */}
+          <div className="max-w-7xl mx-auto space-y-8">
+            {/* Hajj & Umrah - Left Aligned */}
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="order-2 md:order-1">
+                <div className="bg-white dark:bg-navy-800 p-10 rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group hover:scale-[1.02]">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-light-blue-100 to-light-blue-200 dark:from-light-blue-800/50 dark:to-light-blue-700/50 p-5 rounded-2xl border border-light-blue-200/50 dark:border-light-blue-700/30 group-hover:scale-110 transition-transform">
+                      <Star className="h-10 w-10 text-navy-700 dark:text-light-blue-400" />
+                    </div>
+                    <h3 className="text-3xl font-bold text-navy-800 dark:text-white">
+                      {t("hajjUmrah")}
+                    </h3>
+                  </div>
+                  <p className="text-navy-600 dark:text-navy-300 leading-relaxed text-lg mb-6">
+                    {t("hajjUmrahServicesDesc")}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
+                      {t("busesComfortable")}
+                    </span>
+                    <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
+                      {t("busesSafeTransport")}
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-4 mt-4">
-                  {t("hajjUmrah")}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg mb-6">
-                  {t("hajjUmrahServicesDesc")}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-medium">
-                    {t("busesComfortable")}
-                  </span>
-                  <span className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-medium">
-                    {t("busesSafeTransport")}
-                  </span>
+              <div className="order-1 md:order-2">
+                <div className="relative h-[300px] rounded-3xl overflow-hidden shadow-xl border-2 border-navy-100 dark:border-navy-700">
+                  <img
+                    src={umrah}
+                    alt={t("hajjUmrah")}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-navy-800/30 via-light-blue-500/20 to-transparent" />
                 </div>
               </div>
             </div>
 
-            {/* Domestic Tourism */}
-            <div className="relative bg-gradient-to-br from-blue-50/50 dark:from-blue-950/30 to-card p-10 rounded-3xl shadow-2xl border-2 border-blue-200/50 dark:border-blue-800/30 hover:border-blue-300 dark:hover:border-blue-700 transition-all group overflow-hidden">
-              <div className="absolute top-6 right-6">
-                <div className="bg-blue-100 dark:bg-blue-900/50 p-4 rounded-2xl">
-                  <Bus className="h-10 w-10 text-blue-600 dark:text-blue-400" />
+            {/* Tourism - Right Aligned */}
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="order-1 md:order-2">
+                <div className="bg-white dark:bg-navy-800 p-10 rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group hover:scale-[1.02]">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-navy-100 to-navy-200 dark:from-navy-700/50 dark:to-navy-600/50 p-5 rounded-2xl border border-navy-200/50 dark:border-navy-600/30 group-hover:scale-110 transition-transform">
+                      <Bus className="h-10 w-10 text-navy-700 dark:text-light-blue-400" />
+                    </div>
+                    <h3 className="text-3xl font-bold text-navy-800 dark:text-white">
+                      {t("tourism")}
+                    </h3>
+                  </div>
+                  <p className="text-navy-600 dark:text-navy-300 leading-relaxed text-lg mb-6">
+                    {t("domesticTourismDesc")}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-4 py-2 bg-navy-100 dark:bg-navy-700/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-navy-200/50 dark:border-navy-600/30">
+                      {t("busesLuxury")}
+                    </span>
+                    <span className="px-4 py-2 bg-navy-100 dark:bg-navy-700/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-navy-200/50 dark:border-navy-600/30">
+                      {t("busesFleetModern")}
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-4 mt-4">{t("tourism")}</h3>
-                <p className="text-muted-foreground leading-relaxed text-lg mb-6">
-                  {t("domesticTourismDesc")}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
-                    {t("busesLuxury")}
-                  </span>
-                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
-                    {t("busesFleetModern")}
-                  </span>
+              <div className="order-2 md:order-1">
+                <div className="relative h-[300px] rounded-3xl overflow-hidden shadow-xl border-2 border-navy-100 dark:border-navy-700">
+                  <img
+                    src={tourism}
+                    alt={t("tourism")}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-navy-800/30 via-light-blue-500/20 to-transparent" />
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Trailers */}
-          <div className="max-w-3xl mx-auto">
-            <div className="relative bg-gradient-to-br from-green-50/50 dark:from-green-950/30 to-card p-10 rounded-3xl shadow-2xl border-2 border-green-200/50 dark:border-green-800/30 hover:border-green-300 dark:hover:border-green-700 transition-all group overflow-hidden">
-              <div className="absolute top-6 right-6">
-                <div className="bg-green-100 dark:bg-green-900/50 p-4 rounded-2xl">
-                  <Shield className="h-10 w-10 text-green-600 dark:text-green-400" />
+            {/* Trailers - Centered Full Width */}
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white dark:bg-navy-800 p-10 rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group hover:scale-[1.02]">
+                <div className="flex items-center justify-center gap-4 mb-6">
+                  <div className="bg-gradient-to-br from-light-blue-100 to-light-blue-200 dark:from-light-blue-800/50 dark:to-light-blue-700/50 p-5 rounded-2xl border border-light-blue-200/50 dark:border-light-blue-700/30 group-hover:scale-110 transition-transform">
+                    <Truck className="h-10 w-10 text-navy-700 dark:text-light-blue-400" />
+                  </div>
+                  <h3 className="text-3xl font-bold text-navy-800 dark:text-white">
+                    {t("trailers")}
+                  </h3>
                 </div>
-              </div>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-4 mt-4">
-                  {t("trailers")}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+                <p className="text-navy-600 dark:text-navy-300 leading-relaxed text-lg mb-6 text-center">
                   {t("trailersServicesDesc")}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
                     {t("busesProfessional")}
                   </span>
-                  <span className="px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
+                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
                     {t("completeManagement")}
                   </span>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features - Enhanced Grid */}
-      <section className="py-24 bg-gradient-to-br from-background via-primary/3 to-background relative overflow-hidden">
-        {/* Decorative Background Elements */}
-        <div className="absolute top-0 right-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 text-primary mb-4">
-              <Sparkles className="h-5 w-5" />
-              <span className="font-semibold text-sm uppercase tracking-wide">
-                {t("ourFeatures")}
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              {t("ourFeatures")}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t("busesFeaturesSubtitle")}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-card p-8 rounded-3xl shadow-luxury hover:bg-card/80 transition-all border-2 border-transparent hover:border-primary/30 group text-center">
-                <div className="bg-primary/10 p-6 rounded-2xl mb-6 inline-block group-hover:scale-110 transition-transform">
-                  <feature.icon className="h-10 w-10 text-primary mx-auto" />
-                </div>
-                <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
