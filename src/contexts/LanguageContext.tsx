@@ -218,6 +218,8 @@ const translations = {
     flexibilityDesc: "حلول مرنة تناسب احتياجاتك",
     availability: "التوفر",
     availabilityDesc: "مركبات متاحة على مدار الساعة",
+    competitivePrices: "أسعار تنافسية",
+    competitivePricesDesc: "أفضل الأسعار في السوق مع عروض وخصومات مميزة",
     bookNow: "احجز الآن",
     rentalIntro: "خدمات تأجير السيارات المتميزة",
     rentalIntroDesc:
@@ -439,6 +441,8 @@ const translations = {
     flexibilityDesc: "Flexible solutions for your needs",
     availability: "Availability",
     availabilityDesc: "Vehicles available 24/7",
+    competitivePrices: "Competitive Prices",
+    competitivePricesDesc: "Best prices in the market with special offers and discounts",
     bookNow: "Book Now",
     rentalIntro: "Distinguished Car Rental Services",
     rentalIntroDesc:
