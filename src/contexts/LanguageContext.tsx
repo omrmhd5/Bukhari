@@ -87,7 +87,7 @@ const translations = {
     partnerNoon: "نون / Noon",
     partnerNaqel: "ناقل / Naqel",
     partnerNoonFood: "نون فود / Noon Food",
-    partnerToyou: "تويو / Toyou",
+    partnerToyou: "تويو / ToYou",
     partnerJahez: "جاهز / Jahez",
     partnerHungerStation: "هنقرستيشن / HungerStation",
     partnerMrsool: "مرسول / Mrsool",
@@ -309,7 +309,8 @@ const translations = {
 
     // Contact
     contactTitle: "Contact Us",
-    contactSubtitle: "We're here to help - Get in touch with us for any inquiries or requests",
+    contactSubtitle:
+      "We're here to help - Get in touch with us for any inquiries or requests",
     phone: "Phone",
     email: "Email",
     whatsapp: "WhatsApp",
