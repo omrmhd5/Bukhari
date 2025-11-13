@@ -23,10 +23,15 @@ import {
   TrendingUp,
 } from "lucide-react";
 // Images are in public/assets/ folder
-const heroImage = "/assets/hero-logistics.jpg";
-const waterImage = "/assets/water-production.jpg";
-const busesImage = "/assets/buses.jpg";
-const rentalImage = "/assets/car-rental.jpg";
+const heroImage = "/assets/home/hero-logistics.jpg";
+const waterImage = "/assets/home/water-production.jpg";
+const busesImage = "/assets/home/buses.jpg";
+const rentalImage = "/assets/home/car-rental.jpg";
+
+const waterLink = "/assets/home/water-link.jpg";
+const truckLink = "/assets/home/truck-link.jpeg";
+const logisticsLink = "/assets/home/logistics-link.jpg";
+const carLink = "/assets/home/car-link.jpg";
 
 const Home = () => {
   const { t } = useLanguage();
@@ -85,7 +90,7 @@ const Home = () => {
               className="w-full h-full object-cover scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-accent/20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy-800/20 via-transparent to-light-blue-500/20" />
           </div>
         ))}
 
@@ -138,9 +143,9 @@ const Home = () => {
           {/* Stats Cards Overlay */}
           <div className="container mx-auto px-4 mt-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-              <div className="text-center p-5 md:p-7 bg-white/15 backdrop-blur-lg rounded-3xl border border-white/30 shadow-xl hover:bg-white/25 transition-all duration-300 group hover:scale-105 hover:border-white/50">
+              <div className="text-center p-5 md:p-7 bg-white/15 backdrop-blur-lg rounded-3xl border border-white/30 shadow-xl hover:bg-white/25 transition-all duration-300 group hover:scale-105 hover:border-light-blue-400/50">
                 <div className="flex justify-center mb-4">
-                  <div className="bg-gradient-to-br from-primary/40 to-accent/40 p-3 md:p-4 rounded-2xl group-hover:from-primary/60 group-hover:to-accent/60 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                  <div className="bg-gradient-to-br from-light-blue-400/40 to-light-blue-500/40 p-3 md:p-4 rounded-2xl border border-light-blue-300/20 group-hover:from-light-blue-400/60 group-hover:to-light-blue-500/60 group-hover:scale-110 transition-all duration-300 shadow-lg">
                     <Briefcase className="h-6 w-6 md:h-7 md:w-7 text-white" />
                   </div>
                 </div>
@@ -151,9 +156,9 @@ const Home = () => {
                   {t("mainServices")}
                 </div>
               </div>
-              <div className="text-center p-5 md:p-7 bg-white/15 backdrop-blur-lg rounded-3xl border border-white/30 shadow-xl hover:bg-white/25 transition-all duration-300 group hover:scale-105 hover:border-white/50">
+              <div className="text-center p-5 md:p-7 bg-white/15 backdrop-blur-lg rounded-3xl border border-white/30 shadow-xl hover:bg-white/25 transition-all duration-300 group hover:scale-105 hover:border-light-blue-400/50">
                 <div className="flex justify-center mb-4">
-                  <div className="bg-gradient-to-br from-primary/40 to-accent/40 p-3 md:p-4 rounded-2xl group-hover:from-primary/60 group-hover:to-accent/60 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                  <div className="bg-gradient-to-br from-light-blue-400/40 to-light-blue-500/40 p-3 md:p-4 rounded-2xl border border-light-blue-300/20 group-hover:from-light-blue-400/60 group-hover:to-light-blue-500/60 group-hover:scale-110 transition-all duration-300 shadow-lg">
                     <Users className="h-6 w-6 md:h-7 md:w-7 text-white" />
                   </div>
                 </div>
@@ -164,9 +169,9 @@ const Home = () => {
                   {t("strategicPartner")}
                 </div>
               </div>
-              <div className="text-center p-5 md:p-7 bg-white/15 backdrop-blur-lg rounded-3xl border border-white/30 shadow-xl hover:bg-white/25 transition-all duration-300 group hover:scale-105 hover:border-white/50">
+              <div className="text-center p-5 md:p-7 bg-white/15 backdrop-blur-lg rounded-3xl border border-white/30 shadow-xl hover:bg-white/25 transition-all duration-300 group hover:scale-105 hover:border-light-blue-400/50">
                 <div className="flex justify-center mb-4">
-                  <div className="bg-gradient-to-br from-primary/40 to-accent/40 p-3 md:p-4 rounded-2xl group-hover:from-primary/60 group-hover:to-accent/60 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                  <div className="bg-gradient-to-br from-light-blue-400/40 to-light-blue-500/40 p-3 md:p-4 rounded-2xl border border-light-blue-300/20 group-hover:from-light-blue-400/60 group-hover:to-light-blue-500/60 group-hover:scale-110 transition-all duration-300 shadow-lg">
                     <Zap className="h-6 w-6 md:h-7 md:w-7 text-white" />
                   </div>
                 </div>
@@ -177,9 +182,9 @@ const Home = () => {
                   {t("availableService")}
                 </div>
               </div>
-              <div className="text-center p-5 md:p-7 bg-white/15 backdrop-blur-lg rounded-3xl border border-white/30 shadow-xl hover:bg-white/25 transition-all duration-300 group hover:scale-105 hover:border-white/50">
+              <div className="text-center p-5 md:p-7 bg-white/15 backdrop-blur-lg rounded-3xl border border-white/30 shadow-xl hover:bg-white/25 transition-all duration-300 group hover:scale-105 hover:border-light-blue-400/50">
                 <div className="flex justify-center mb-4">
-                  <div className="bg-gradient-to-br from-primary/40 to-accent/40 p-3 md:p-4 rounded-2xl group-hover:from-primary/60 group-hover:to-accent/60 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                  <div className="bg-gradient-to-br from-light-blue-400/40 to-light-blue-500/40 p-3 md:p-4 rounded-2xl border border-light-blue-300/20 group-hover:from-light-blue-400/60 group-hover:to-light-blue-500/60 group-hover:scale-110 transition-all duration-300 shadow-lg">
                     <Globe className="h-6 w-6 md:h-7 md:w-7 text-white" />
                   </div>
                 </div>
@@ -248,14 +253,14 @@ const Home = () => {
           {/* Vision and Mission Boxes */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Vision Box */}
-            <div className="relative bg-gradient-to-br from-emerald-500/90 via-emerald-600/90 to-teal-600/90 p-10 rounded-3xl border-2 border-emerald-300/30 shadow-2xl hover:border-emerald-300/50 hover:scale-[1.02] transition-all duration-300 group overflow-hidden">
+            <div className="relative bg-gradient-to-br from-light-blue-500/95 via-light-blue-600/95 to-light-blue-700/95 dark:from-light-blue-600/95 dark:via-light-blue-700/95 dark:to-light-blue-800/95 p-10 rounded-3xl border-2 border-white/30 dark:border-light-blue-400/30 shadow-2xl hover:border-white/50 dark:hover:border-light-blue-400/50 hover:scale-[1.02] transition-all duration-300 group overflow-hidden">
               {/* Animated Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/15 dark:bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 shadow-lg">
-                    <Target className="h-10 w-10 text-white" />
+                  <div className="bg-white/25 dark:bg-white/15 backdrop-blur-sm p-4 rounded-2xl border border-white/40 dark:border-white/30 group-hover:bg-white/35 dark:group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                    <Target className="h-10 w-10 text-navy-800 dark:text-navy-900" />
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
                     {t("ourVision")}
@@ -268,13 +273,13 @@ const Home = () => {
             </div>
 
             {/* Mission Box */}
-            <div className="relative bg-gradient-to-br from-blue-500/90 via-blue-600/90 to-cyan-600/90 p-10 rounded-3xl border-2 border-blue-300/30 shadow-2xl hover:border-blue-300/50 hover:scale-[1.02] transition-all duration-300 group overflow-hidden">
+            <div className="relative bg-gradient-to-br from-navy-700/95 via-navy-800/95 to-navy-900/95 dark:from-navy-800/95 dark:via-navy-900/95 dark:to-navy-900/95 p-10 rounded-3xl border-2 border-light-blue-400/30 dark:border-light-blue-500/30 shadow-2xl hover:border-light-blue-400/50 dark:hover:border-light-blue-500/50 hover:scale-[1.02] transition-all duration-300 group overflow-hidden">
               {/* Animated Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute top-0 left-0 w-32 h-32 bg-white/5 rounded-full blur-2xl -translate-y-1/2 -translate-x-1/2" />
+              <div className="absolute inset-0 bg-gradient-to-br from-light-blue-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 left-0 w-32 h-32 bg-light-blue-400/10 dark:bg-light-blue-500/10 rounded-full blur-2xl -translate-y-1/2 -translate-x-1/2" />
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                  <div className="bg-light-blue-400/20 dark:bg-light-blue-500/20 backdrop-blur-sm p-4 rounded-2xl border border-light-blue-300/30 dark:border-light-blue-600/30 group-hover:bg-light-blue-400/30 dark:group-hover:bg-light-blue-500/30 group-hover:scale-110 transition-all duration-300 shadow-lg">
                     <Heart className="h-10 w-10 text-white" />
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
@@ -289,18 +294,18 @@ const Home = () => {
           </div>
 
           {/* Strategic Objectives Box */}
-          <div className="relative bg-gradient-to-br from-slate-700/95 via-slate-800/95 to-slate-900/95 dark:from-slate-800/95 dark:via-slate-900/95 dark:to-slate-950/95 p-10 md:p-12 rounded-3xl border-2 border-primary/30 shadow-2xl overflow-hidden">
+          <div className="relative bg-gradient-to-br from-white via-navy-50 to-light-blue-50 dark:from-navy-900/95 dark:via-navy-800/95 dark:to-navy-900/95 p-10 md:p-12 rounded-3xl border-2 border-navy-200/50 dark:border-light-blue-500/30 shadow-2xl overflow-hidden">
             {/* Decorative Pattern */}
-            <div className="absolute top-0 right-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-primary/5 rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-72 h-72 bg-light-blue-200/30 dark:bg-light-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-72 h-72 bg-navy-200/30 dark:bg-navy-700/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-light-blue-100/40 dark:bg-light-blue-500/5 rounded-full blur-3xl" />
 
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-10">
-                <div className="bg-gradient-to-br from-primary/40 to-accent/40 p-5 rounded-2xl shadow-lg">
-                  <Shield className="h-10 w-10 text-white" />
+                <div className="bg-gradient-to-br from-navy-700/40 to-navy-800/40 dark:from-light-blue-500/40 dark:to-light-blue-600/40 p-5 rounded-2xl shadow-lg border border-navy-300/30 dark:border-light-blue-600/20">
+                  <Shield className="h-10 w-10 text-white dark:text-white" />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
+                <h3 className="text-3xl md:text-4xl font-bold text-navy-800 dark:text-white drop-shadow-lg">
                   {t("ourStrategicObjectives")}
                 </h3>
               </div>
@@ -308,15 +313,15 @@ const Home = () => {
                 {values.map((value, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 bg-white/10 backdrop-blur-sm dark:bg-white/5 p-6 rounded-2xl border border-white/20 dark:border-white/10 hover:bg-white/15 dark:hover:bg-white/10 hover:border-primary/30 transition-all duration-300 group hover:scale-[1.02]">
-                    <div className="bg-gradient-to-br from-primary/30 to-accent/30 p-3 rounded-xl group-hover:from-primary/50 group-hover:to-accent/50 group-hover:scale-110 transition-all duration-300 shadow-md">
+                    className="flex items-start gap-4 bg-navy-50/80 dark:bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-navy-200/50 dark:border-white/10 hover:bg-navy-100/80 dark:hover:bg-white/10 hover:border-navy-400/60 dark:hover:border-light-blue-500/40 transition-all duration-300 group hover:scale-[1.02]">
+                    <div className="bg-gradient-to-br from-navy-600/30 to-navy-700/30 dark:from-light-blue-500/30 dark:to-light-blue-600/30 p-3 rounded-xl border border-navy-400/30 dark:border-light-blue-600/20 group-hover:from-navy-600/50 group-hover:to-navy-700/50 dark:group-hover:from-light-blue-500/50 dark:group-hover:to-light-blue-600/50 group-hover:scale-110 transition-all duration-300 shadow-md">
                       <value.icon className="h-6 w-6 text-white flex-shrink-0" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-white dark:text-white font-bold text-lg mb-3">
+                      <h4 className="text-navy-800 dark:text-white font-bold text-lg mb-3">
                         {value.title}
                       </h4>
-                      <p className="text-white/90 dark:text-white/80 text-base leading-relaxed">
+                      <p className="text-navy-700 dark:text-white/80 text-base leading-relaxed">
                         {value.description}
                       </p>
                     </div>
@@ -331,11 +336,11 @@ const Home = () => {
       {/* Our Services Section - Enhanced Masonry Style */}
       <section
         id="services"
-        className="py-28 bg-gradient-to-br from-background via-primary/8 to-accent/8 relative overflow-hidden">
+        className="py-28 bg-gradient-to-br from-background via-navy-50/30 to-light-blue-50/30 dark:via-navy-900/15 dark:to-light-blue-900/10 relative overflow-hidden">
         {/* Decorative Elements */}
-        <div className="absolute top-20 left-10 w-48 h-48 bg-primary/12 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-56 h-56 bg-accent/12 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/6 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-48 h-48 bg-navy-200/15 dark:bg-navy-700/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-56 h-56 bg-light-blue-200/15 dark:bg-light-blue-700/15 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-navy-200/10 dark:bg-navy-700/10 rounded-full blur-3xl" />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
@@ -349,16 +354,16 @@ const Home = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             <Link to="/water" className="group">
-              <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-primary/40 hover:shadow-2xl hover:scale-[1.02]">
+              <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 hover:shadow-2xl hover:scale-[1.02]">
                 <img
-                  src={waterImage}
+                  src={waterLink}
                   alt="Water Production"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy-800/20 via-transparent to-transparent" />
                 {/* Badge */}
-                <div className="absolute top-6 right-6 bg-white/25 backdrop-blur-lg px-5 py-2.5 rounded-full border border-white/40 shadow-lg hover:bg-white/35 transition-all duration-300">
+                <div className="absolute top-6 right-6 bg-white/25 dark:bg-navy-800/25 backdrop-blur-lg px-5 py-2.5 rounded-full border border-white/40 dark:border-light-blue-500/40 shadow-lg hover:bg-white/35 dark:hover:bg-navy-800/35 transition-all duration-300">
                   <span className="text-sm font-bold text-white drop-shadow-md">
                     {t("premiumService")}
                   </span>
@@ -379,14 +384,14 @@ const Home = () => {
             </Link>
 
             <Link to="/transport" className="group">
-              <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-primary/40 hover:shadow-2xl hover:scale-[1.02]">
+              <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 hover:shadow-2xl hover:scale-[1.02]">
                 <img
-                  src={heroImage}
+                  src={logisticsLink}
                   alt="Transport & Logistics"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy-800/20 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:translate-x-2 transition-transform drop-shadow-lg">
                     {t("transport")}
@@ -403,14 +408,14 @@ const Home = () => {
             </Link>
 
             <Link to="/buses" className="group">
-              <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-primary/40 hover:shadow-2xl hover:scale-[1.02]">
+              <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 hover:shadow-2xl hover:scale-[1.02]">
                 <img
-                  src={busesImage}
+                  src={truckLink}
                   alt="Buses"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy-800/20 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:translate-x-2 transition-transform drop-shadow-lg">
                     {t("buses")}
@@ -429,14 +434,14 @@ const Home = () => {
             <Link to="/car-rental" className="group">
               <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-primary/40 hover:shadow-2xl hover:scale-[1.02]">
                 <img
-                  src={rentalImage}
+                  src={carLink}
                   alt="Car Rental"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-light-blue-500/20 via-transparent to-transparent" />
                 {/* Badge */}
-                <div className="absolute top-6 right-6 bg-white/25 backdrop-blur-lg px-5 py-2.5 rounded-full border border-white/40 shadow-lg hover:bg-white/35 transition-all duration-300">
+                <div className="absolute top-6 right-6 bg-white/25 dark:bg-light-blue-600/25 backdrop-blur-lg px-5 py-2.5 rounded-full border border-white/40 dark:border-light-blue-400/40 shadow-lg hover:bg-white/35 dark:hover:bg-light-blue-600/35 transition-all duration-300">
                   <span className="text-sm font-bold text-white drop-shadow-md">
                     {t("popularService")}
                   </span>
