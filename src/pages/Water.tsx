@@ -49,11 +49,11 @@ const Water = () => {
   return (
     <div className="pt-20">
       {/* Hero Section with Enhanced Design */}
-      <section className="relative min-h-[650px] md:min-h-[750px] overflow-hidden">
+      <section className="relative min-h-[600px] sm:min-h-[650px] md:min-h-[750px] overflow-hidden">
         <img
           src={waterHero}
           alt="Water Production"
-          className="w-full h-full object-cover scale-105"
+          className="absolute inset-0 w-full h-full object-cover scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/80" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-800/25 via-transparent to-light-blue-500/25" />
@@ -61,21 +61,21 @@ const Water = () => {
         <div className="absolute top-20 right-20 w-96 h-96 bg-navy-800/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-light-blue-500/20 rounded-full blur-3xl" />
 
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="container mx-auto px-4 text-center text-white">
-            <div className="mb-8 inline-block animate-fade-in">
-              <div className="bg-white/15 backdrop-blur-lg px-6 py-3 rounded-full border border-white/30 shadow-lg inline-flex items-center gap-2 hover:bg-white/20 transition-all duration-300">
-                <Sparkles className="h-4 w-4 text-white" />
-                <span className="text-sm font-semibold text-white">
+        <div className="absolute inset-0 flex items-center justify-center py-16 md:py-0">
+          <div className="container mx-auto px-4 text-center text-white relative z-10">
+            <div className="mb-4 md:mb-8 inline-block animate-fade-in">
+              <div className="bg-white/15 backdrop-blur-lg px-4 md:px-6 py-2 md:py-3 rounded-full border border-white/30 shadow-lg inline-flex items-center gap-2 hover:bg-white/20 transition-all duration-300">
+                <Sparkles className="h-3 w-3 md:h-4 md:w-4 text-white" />
+                <span className="text-xs md:text-sm font-semibold text-white">
                   {t("waterTitle")}
                 </span>
-                <TrendingUp className="h-4 w-4 text-white" />
+                <TrendingUp className="h-3 w-3 md:h-4 md:w-4 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in leading-tight text-white drop-shadow-2xl">
+            <h1 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-bold mb-3 md:mb-6 animate-fade-in leading-tight text-white drop-shadow-2xl px-2">
               {t("waterTitle")}
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl max-w-3xl mx-auto animate-fade-in text-white/95 leading-relaxed drop-shadow-lg font-medium">
+            <p className="text-base sm:text-lg md:text-2xl lg:text-3xl max-w-3xl mx-auto animate-fade-in text-white/95 leading-relaxed drop-shadow-lg font-medium px-2">
               {t("waterDesc")}
             </p>
           </div>
@@ -85,7 +85,7 @@ const Water = () => {
       </section>
 
       {/* Features Banner */}
-      <section className="py-16 bg-gradient-to-r from-navy-50 via-light-blue-50/50 to-navy-50 dark:from-navy-900/30 dark:via-light-blue-900/20 dark:to-navy-900/30 border-b border-navy-200/50 dark:border-navy-700/50 relative overflow-hidden">
+      <section className="py-8 md:py-12 lg:py-16 bg-gradient-to-r from-light-blue-100/70 via-light-blue-50/50 to-navy-100/60 dark:from-navy-900/30 dark:via-light-blue-900/20 dark:to-navy-900/30 border-b border-navy-200/50 dark:border-navy-700/50 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-navy-200/30 dark:bg-navy-700/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-light-blue-200/30 dark:bg-light-blue-700/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -114,13 +114,13 @@ const Water = () => {
       </section>
 
       {/* Water Production - Enhanced Split Layout */}
-      <section className="py-28 bg-gradient-to-br from-background via-navy-50/50 to-light-blue-50/50 dark:via-navy-900/20 dark:to-light-blue-900/10 relative overflow-hidden">
+      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-white via-navy-100/40 to-navy-50/60 dark:via-navy-900/20 dark:to-light-blue-900/10 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-navy-200/20 dark:bg-navy-700/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-light-blue-200/20 dark:bg-light-blue-700/10 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             <div className="space-y-6 animate-fade-in">
               <div className="inline-flex items-center gap-2 text-navy-700 dark:text-light-blue-400 mb-4">
                 <div className="bg-light-blue-100 dark:bg-light-blue-900/30 p-2 rounded-lg border border-light-blue-200/50 dark:border-light-blue-700/30">
@@ -130,10 +130,10 @@ const Water = () => {
                   {t("waterProductionLabel")}
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 {t("waterProductionTitle")}
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">
                 {t("waterProductionDesc")}
               </p>
               <div className="pt-4 space-y-4">
@@ -141,7 +141,7 @@ const Water = () => {
                   <div className="bg-light-blue-100 dark:bg-light-blue-900/30 p-1.5 rounded-lg border border-light-blue-200/50 dark:border-light-blue-700/30 group-hover:bg-light-blue-200 dark:group-hover:bg-light-blue-800/40 transition-colors">
                     <CheckCircle2 className="h-5 w-5 text-navy-700 dark:text-light-blue-400 flex-shrink-0" />
                   </div>
-                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed pt-0.5">
+                  <p className="text-navy-700 dark:text-navy-300 leading-relaxed pt-0.5">
                     {t("directDistribution")}
                   </p>
                 </div>
@@ -149,7 +149,7 @@ const Water = () => {
                   <div className="bg-light-blue-100 dark:bg-light-blue-900/30 p-1.5 rounded-lg border border-light-blue-200/50 dark:border-light-blue-700/30 group-hover:bg-light-blue-200 dark:group-hover:bg-light-blue-800/40 transition-colors">
                     <CheckCircle2 className="h-5 w-5 text-navy-700 dark:text-light-blue-400 flex-shrink-0" />
                   </div>
-                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed pt-0.5">
+                  <p className="text-navy-700 dark:text-navy-300 leading-relaxed pt-0.5">
                     {t("allSizesAvailable")}
                   </p>
                 </div>
@@ -157,14 +157,14 @@ const Water = () => {
                   <div className="bg-light-blue-100 dark:bg-light-blue-900/30 p-1.5 rounded-lg border border-light-blue-200/50 dark:border-light-blue-700/30 group-hover:bg-light-blue-200 dark:group-hover:bg-light-blue-800/40 transition-colors">
                     <CheckCircle2 className="h-5 w-5 text-navy-700 dark:text-light-blue-400 flex-shrink-0" />
                   </div>
-                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed pt-0.5">
+                  <p className="text-navy-700 dark:text-navy-300 leading-relaxed pt-0.5">
                     {t("fastReliableDelivery")}
                   </p>
                 </div>
               </div>
             </div>
             <div className="relative animate-fade-in">
-              <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl group border-2 border-navy-200/50 dark:border-navy-600/50 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300">
+              <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl group border-2 border-navy-200/50 dark:border-navy-600/50 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300">
                 <img
                   src={waterImage}
                   alt="Water Production"
@@ -189,21 +189,21 @@ const Water = () => {
       </section>
 
       {/* Brands Section - Enhanced Cards */}
-      <section className="py-28 bg-gradient-to-br from-navy-50 via-light-blue-50/30 to-navy-50 dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
+      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-light-blue-100/60 via-light-blue-50/50 to-white dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-navy-200/20 dark:bg-navy-700/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-64 h-64 bg-light-blue-200/20 dark:bg-light-blue-700/20 rounded-full blur-3xl" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4">
               {t("ourBrands")}
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
               {t("brandsSubtitle")}
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {brands.map((brand, index) => (
               <div
                 key={index}
@@ -243,7 +243,7 @@ const Water = () => {
       </section>
 
       {/* Water Quality & Delivery - Enhanced Cards */}
-      <section className="py-28 bg-gradient-to-br from-background via-navy-50/50 to-light-blue-50/50 dark:via-navy-900/20 dark:to-light-blue-900/10 relative overflow-hidden">
+      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-navy-100/50 via-white to-navy-50/40 dark:via-navy-900/20 dark:to-light-blue-900/10 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-navy-200/20 dark:bg-navy-700/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-light-blue-200/20 dark:bg-light-blue-700/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -274,10 +274,10 @@ const Water = () => {
                   {t("waterQualityDesc")}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow border border-light-blue-200/50 dark:border-light-blue-700/30">
+                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow border border-light-blue-200/50 dark:border-light-blue-700/30">
                     {t("globalStandards")}
                   </span>
-                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow border border-light-blue-200/50 dark:border-light-blue-700/30">
+                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow border border-light-blue-200/50 dark:border-light-blue-700/30">
                     {t("preciseTests")}
                   </span>
                 </div>
@@ -299,10 +299,10 @@ const Water = () => {
                   {t("waterDeliveryDesc")}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-4 py-2 bg-navy-100 dark:bg-navy-700/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow border border-navy-200/50 dark:border-navy-600/30">
+                  <span className="px-4 py-2 bg-navy-100 dark:bg-navy-700/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow border border-navy-200/50 dark:border-navy-600/30">
                     {t("waterFastDelivery")}
                   </span>
-                  <span className="px-4 py-2 bg-navy-100 dark:bg-navy-700/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow border border-navy-200/50 dark:border-navy-600/30">
+                  <span className="px-4 py-2 bg-navy-100 dark:bg-navy-700/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow border border-navy-200/50 dark:border-navy-600/30">
                     {t("waterFullCoverage")}
                   </span>
                 </div>
@@ -313,7 +313,7 @@ const Water = () => {
       </section>
 
       {/* Process Flow Section */}
-      <section className="py-28 bg-gradient-to-br from-navy-50 via-light-blue-50/30 to-navy-50 dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
+      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-light-blue-100/50 via-light-blue-50/40 to-white dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-navy-200/20 dark:bg-navy-700/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-64 h-64 bg-light-blue-200/20 dark:bg-light-blue-700/20 rounded-full blur-3xl" />

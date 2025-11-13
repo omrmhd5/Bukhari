@@ -128,16 +128,16 @@ const CarRental = () => {
       </section>
 
       {/* Rental Intro - Image First, Content Second */}
-      <section className="py-28 bg-gradient-to-br from-navy-50 via-light-blue-50/30 to-navy-50 dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
+      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-light-blue-100/50 via-white to-light-blue-50/40 dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-navy-200/20 dark:bg-navy-700/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-light-blue-200/20 dark:bg-light-blue-700/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             {/* Image First */}
             <div className="order-2 lg:order-1">
-              <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border-2 border-navy-200/50 dark:border-navy-600/50 group">
+              <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-2 border-navy-200/50 dark:border-navy-600/50 group">
                 <img
                   src={carImage}
                   alt="Car Rental"
@@ -158,10 +158,10 @@ const CarRental = () => {
 
             {/* Content Second */}
             <div className="order-1 lg:order-2 space-y-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-navy-800 dark:text-white">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-navy-800 dark:text-white">
                 {t("rentalIntro")}
               </h2>
-              <p className="text-lg md:text-xl text-navy-600 dark:text-navy-300 leading-relaxed">
+              <p className="text-base md:text-lg lg:text-xl text-navy-600 dark:text-navy-300 leading-relaxed">
                 {t("rentalIntroDesc")}
               </p>
               <div className="pt-4 grid grid-cols-2 gap-4">
@@ -189,19 +189,19 @@ const CarRental = () => {
       </section>
 
       {/* Vehicle Details - Diagonal Card Layout */}
-      <section className="py-28 bg-gradient-to-br from-light-blue-50 via-light-blue-100/50 to-navy-50 dark:from-light-blue-900/60 dark:via-light-blue-800/50 dark:to-navy-900/60 relative overflow-hidden">
+      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-navy-100/50 via-navy-50/40 to-white dark:from-light-blue-900/60 dark:via-light-blue-800/50 dark:to-navy-900/60 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-light-blue-200/30 dark:bg-light-blue-700/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-navy-200/20 dark:bg-navy-700/15 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-navy-800 dark:text-white">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 text-navy-800 dark:text-white">
               {t("vehicleDetails")}
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white dark:bg-navy-800 p-8 rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group relative overflow-hidden hover:scale-[1.02]">
+            <div className="bg-white dark:bg-navy-800 p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group relative overflow-hidden hover:scale-[1.02]">
               {/* Diagonal Accent */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-light-blue-400/20 to-transparent rounded-bl-full" />
               <div className="relative z-10">
@@ -224,7 +224,7 @@ const CarRental = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-white dark:bg-navy-800 p-8 rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group relative overflow-hidden hover:scale-[1.02]">
+            <div className="bg-white dark:bg-navy-800 p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group relative overflow-hidden hover:scale-[1.02]">
               {/* Diagonal Accent */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-light-blue-400/20 to-transparent rounded-br-full" />
               <div className="relative z-10">
@@ -252,7 +252,7 @@ const CarRental = () => {
       </section>
 
       {/* Rental Benefits - Grid Layout */}
-      <section className="py-28 bg-gradient-to-br from-navy-50 via-light-blue-50/30 to-navy-50 dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
+      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-light-blue-100/60 via-light-blue-50/50 to-white dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-navy-200/20 dark:bg-navy-700/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-light-blue-200/20 dark:bg-light-blue-700/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />

@@ -107,56 +107,59 @@ All colors MUST be HSL.
 
   .dark {
     /* Luxury Corporate Theme - Dark Mode */
-    --background: 220 40% 8%;
-    --foreground: 0 0% 100%;
+    --background: 220 50% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 220 40% 12%;
-    --card-foreground: 0 0% 100%;
+    --card: 220 45% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 220 40% 12%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 220 45% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 190 100% 50%;
-    --primary-foreground: 220 40% 15%;
+    --primary: 200 90% 60%;
+    --primary-foreground: 220 50% 6%;
 
-    --secondary: 220 40% 15%;
-    --secondary-foreground: 190 100% 50%;
+    --secondary: 220 45% 15%;
+    --secondary-foreground: 200 90% 60%;
 
-    --muted: 220 30% 20%;
-    --muted-foreground: 220 20% 70%;
+    --muted: 220 35% 15%;
+    --muted-foreground: 220 15% 85%;
 
-    --accent: 190 100% 50%;
-    --accent-foreground: 220 40% 15%;
+    --accent: 200 90% 60%;
+    --accent-foreground: 220 50% 6%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 30% 20%;
-    --input: 220 30% 20%;
+    --border: 220 35% 18%;
+    --input: 220 35% 18%;
     --ring: 200 90% 60%;
 
     /* Navy and Light Blue Color Scheme - Dark Mode */
-    --navy-50: 220 40% 15%;
-    --navy-100: 220 40% 18%;
-    --navy-200: 220 35% 22%;
-    --navy-300: 220 30% 28%;
-    --navy-400: 220 25% 35%;
-    --navy-500: 220 30% 45%;
-    --navy-600: 220 35% 55%;
-    --navy-700: 220 40% 65%;
-    --navy-800: 220 45% 75%;
-    --navy-900: 220 50% 85%;
+    /* Background colors (dark) */
+    --navy-50: 220 50% 8%;
+    --navy-100: 220 45% 10%;
+    --navy-200: 220 40% 12%;
+    /* Text colors (light for readability) */
+    --navy-300: 220 25% 75%;
+    --navy-400: 220 20% 80%;
+    --navy-500: 220 25% 70%;
+    --navy-600: 220 30% 75%;
+    --navy-700: 220 35% 80%;
+    /* Background colors (dark for cards) */
+    --navy-800: 220 45% 12%;
+    --navy-900: 220 50% 10%;
 
-    --blue-50: 200 70% 20%;
-    --blue-100: 200 75% 25%;
-    --blue-200: 200 80% 30%;
-    --blue-300: 200 85% 40%;
-    --blue-400: 200 80% 50%;
-    --blue-500: 200 85% 60%;
-    --blue-600: 200 90% 70%;
-    --blue-700: 200 85% 75%;
-    --blue-800: 200 80% 80%;
-    --blue-900: 200 75% 85%;
+    --blue-50: 200 70% 15%;
+    --blue-100: 200 75% 18%;
+    --blue-200: 200 80% 22%;
+    --blue-300: 200 85% 30%;
+    --blue-400: 200 80% 45%;
+    --blue-500: 200 85% 55%;
+    --blue-600: 200 90% 65%;
+    --blue-700: 200 85% 70%;
+    --blue-800: 200 80% 75%;
+    --blue-900: 200 75% 80%;
 
     /* Custom gradient variables - dark */
     --gradient-primary: linear-gradient(
@@ -188,14 +191,14 @@ All colors MUST be HSL.
     /* Shadows - dark */
     --shadow-luxury: 0 20px 60px -15px hsl(0 0% 0% / 0.5);
 
-    --sidebar-background: 220 40% 10%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 190 100% 50%;
-    --sidebar-primary-foreground: 220 40% 15%;
-    --sidebar-accent: 220 30% 15%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 220 30% 20%;
-    --sidebar-ring: 190 100% 50%;
+    --sidebar-background: 220 50% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 200 90% 60%;
+    --sidebar-primary-foreground: 220 50% 6%;
+    --sidebar-accent: 220 35% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 35% 18%;
+    --sidebar-ring: 200 90% 60%;
   }
 }
 
@@ -213,6 +216,63 @@ All colors MUST be HSL.
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar Styles */
+  /* For Chrome, Safari, Edge */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--navy-600)),
+      hsl(var(--blue-500))
+    );
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--navy-700)),
+      hsl(var(--blue-600))
+    );
+  }
+
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--blue-500)) hsl(var(--background));
+  }
+
+  /* Dark mode scrollbar */
+  .dark ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--navy-400)),
+      hsl(var(--blue-400))
+    );
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--navy-300)),
+      hsl(var(--blue-500))
+    );
+  }
+
+  .dark * {
+    scrollbar-color: hsl(var(--blue-400)) hsl(var(--background));
   }
 }
 

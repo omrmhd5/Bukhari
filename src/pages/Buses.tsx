@@ -172,7 +172,7 @@ const Buses = () => {
       </section>
 
       {/* Buses Intro - Card-Based Layout */}
-      <section className="py-28 bg-gradient-to-br from-navy-50 via-light-blue-50/30 to-navy-50 dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
+      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-white via-light-blue-100/40 to-light-blue-50/50 dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-navy-200/20 dark:bg-navy-700/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-light-blue-200/20 dark:bg-light-blue-700/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -182,17 +182,17 @@ const Buses = () => {
             <div className="grid lg:grid-cols-3 gap-8 items-start">
               {/* Left Content Card */}
               <div className="lg:col-span-2 space-y-6">
-                <div className="bg-white dark:bg-navy-800 p-8 rounded-3xl shadow-xl border-2 border-navy-100 dark:border-navy-700">
+                <div className="bg-white dark:bg-navy-800 p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-xl border-2 border-navy-100 dark:border-navy-700">
                   <div className="inline-flex items-center gap-2 text-navy-700 dark:text-light-blue-400 mb-4">
                     <Bus className="h-5 w-5" />
                     <span className="font-semibold text-sm uppercase tracking-wide">
                       {t("busesIntro")}
                     </span>
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-navy-800 dark:text-white">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-navy-800 dark:text-white">
                     {t("busesIntro")}
                   </h2>
-                  <p className="text-lg text-navy-600 dark:text-navy-300 leading-relaxed mb-6">
+                  <p className="text-base md:text-lg text-navy-600 dark:text-navy-300 leading-relaxed mb-6">
                     {t("busesIntroDesc")}
                   </p>
                   <div className="space-y-3">
@@ -258,7 +258,7 @@ const Buses = () => {
       </section>
 
       {/* Services - Staggered Card Layout */}
-      <section className="py-28 bg-gradient-to-br from-white via-navy-50/50 to-light-blue-50/50 dark:from-navy-900/50 dark:via-navy-800/50 dark:to-navy-900/50 relative overflow-hidden">
+      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-navy-100/60 via-navy-50/50 to-white dark:from-navy-900/50 dark:via-navy-800/50 dark:to-navy-900/50 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-navy-200/20 dark:bg-navy-700/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-light-blue-200/20 dark:bg-light-blue-700/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -278,7 +278,7 @@ const Buses = () => {
             {/* Hajj & Umrah - Left Aligned */}
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="order-2 md:order-1">
-                <div className="bg-white dark:bg-navy-800 p-10 rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group hover:scale-[1.02]">
+                <div className="bg-white dark:bg-navy-800 p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group hover:scale-[1.02]">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-gradient-to-br from-light-blue-100 to-light-blue-200 dark:from-light-blue-800/50 dark:to-light-blue-700/50 p-5 rounded-2xl border border-light-blue-200/50 dark:border-light-blue-700/30 group-hover:scale-110 transition-transform">
                       <Star className="h-10 w-10 text-navy-700 dark:text-light-blue-400" />
@@ -291,10 +291,10 @@ const Buses = () => {
                     {t("hajjUmrahServicesDesc")}
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
+                    <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
                       {t("busesComfortable")}
                     </span>
-                    <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
+                    <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
                       {t("busesSafeTransport")}
                     </span>
                   </div>
@@ -315,7 +315,7 @@ const Buses = () => {
             {/* Tourism - Right Aligned */}
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="order-1 md:order-2">
-                <div className="bg-white dark:bg-navy-800 p-10 rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group hover:scale-[1.02]">
+                <div className="bg-white dark:bg-navy-800 p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group hover:scale-[1.02]">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-gradient-to-br from-navy-100 to-navy-200 dark:from-navy-700/50 dark:to-navy-600/50 p-5 rounded-2xl border border-navy-200/50 dark:border-navy-600/30 group-hover:scale-110 transition-transform">
                       <Bus className="h-10 w-10 text-navy-700 dark:text-light-blue-400" />
@@ -328,10 +328,10 @@ const Buses = () => {
                     {t("domesticTourismDesc")}
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-4 py-2 bg-navy-100 dark:bg-navy-700/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-navy-200/50 dark:border-navy-600/30">
+                    <span className="px-4 py-2 bg-navy-100 dark:bg-navy-700/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold border border-navy-200/50 dark:border-navy-600/30">
                       {t("busesLuxury")}
                     </span>
-                    <span className="px-4 py-2 bg-navy-100 dark:bg-navy-700/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-navy-200/50 dark:border-navy-600/30">
+                    <span className="px-4 py-2 bg-navy-100 dark:bg-navy-700/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold border border-navy-200/50 dark:border-navy-600/30">
                       {t("busesFleetModern")}
                     </span>
                   </div>
@@ -364,10 +364,10 @@ const Buses = () => {
                   {t("trailersServicesDesc")}
                 </p>
                 <div className="flex flex-wrap gap-2 justify-center">
-                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
+                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
                     {t("busesProfessional")}
                   </span>
-                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-300 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
+                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
                     {t("completeManagement")}
                   </span>
                 </div>
