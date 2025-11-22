@@ -19,9 +19,9 @@ const translations = {
   ar: {
     // Navigation
     home: "الرئيسية",
-    water: "تحلية وبيع المياه",
+    water: "إنتاج و توريد المياة المحلاه",
     transport: "النقل واللوجستيات",
-    buses: "الباصات والتريلات",
+    buses: "خدمة ضيوف الرحمن",
     carRental: "تأجير السيارات",
     contact: "اتصل بنا",
 
@@ -60,7 +60,7 @@ const translations = {
       "نتميز بأسطول حديث ومتطور، وشراكات استراتيجية مع كبرى الشركات، وخبرة واسعة في مختلف المجالات. نحن نضع رضا العملاء في مقدمة أولوياتنا ونعمل بلا كلل لتحقيق التميز في كل ما نقدمه.",
     ourServices: "خدماتنا المتميزة",
     ourServicesDesc:
-      "نقدم مجموعة شاملة من الخدمات تشمل إنتاج وتوريد المياه المحلاة، النقل والخدمات اللوجستية، توفير الباصات للحج والعمرة والسياحة، التريلات للمقاولات، وتأجير السيارات بجميع أنواعها.",
+      "نقدم مجموعة شاملة من الخدمات تشمل إنتاج وتوريد المياه المحلاة، النقل والخدمات اللوجستية، توفير الباصات للحج والعمرة والسياحة، النقل الثقيل للمقاولات، وتأجير السيارات بجميع أنواعها.",
     ourStats: "إحصائياتنا",
     mainServices: "خدمات رئيسية",
     strategicPartner: "شريك استراتيجي",
@@ -68,14 +68,14 @@ const translations = {
     fullCoverage: "تغطية شاملة",
     waterProductionDescShort: "إنتاج وتوريد المياه المحلاة",
     transportServicesDescShort: "خدمات النقل واللوجستيات",
-    busesTrailersDescShort: "الباصات والتريلات",
+    busesTrailersDescShort: "الباصات",
     carRentalDescShort: "تأجير السيارات",
     qualityAndDelivery: "الجودة والتوصيل",
     integratedLogisticsServices: "خدمات لوجستية متكاملة",
     ourLogisticsServices: "خدماتنا اللوجستية",
     hajjUmrahDescShort: "خدمات نقل مريحة وآمنة للحجاج والمعتمرين",
     tourismDescShort: "باصات فاخرة للسياحة الداخلية",
-    trailersDescShort: "تريلات للمقاولات ونقل البضائع",
+    trailersDescShort: "النقل الثقيل للمقاولات ونقل البضائع",
     ourServicesHeader: "خدماتنا",
     ourFeatures: "مميزاتنا",
     vehicleTypes: "أنواع المركبات",
@@ -103,7 +103,7 @@ const translations = {
     send: "إرسال",
 
     // Water Page
-    waterTitle: "تحلية وبيع المياه",
+    waterTitle: "إنتاج و توريد المياة المحلاه",
     waterDesc:
       "ننتج ونوفر ونوزع المياه المحلاة بجميع أحجامها مباشرة من المصانع إلى عملائنا أو مستودعاتهم بأعلى معايير الجودة العالمية",
     ourBrands: "علاماتنا التجارية المتميزة",
@@ -178,35 +178,64 @@ const translations = {
     trustedPartner: "شريك موثوق",
 
     // Buses Page
-    busesTitle: "الباصات والتريلات",
+    busesTitle: "الباصات والنقل الثقيل",
     busesDesc:
       "نوفر باصات فاخرة للحج والعمرة والسياحة الداخلية، وتريلات متطورة للمقاولات ونقل البضائع - الخيار الأمثل في المملكة",
+    busesOnlyTitle: "خدمة و نقل المعتمرين و الحجاج إلى بيت الله الحرام",
+    busesOnlyDesc:
+      "نوفر خدمة نقل متميزة وآمنة للمعتمرين والحجاج إلى بيت الله الحرام، بالإضافة إلى خدمات السياحة الداخلية - الخيار الأمثل في المملكة",
     hajjUmrah: "خدمات الحج والعمرة",
     tourism: "السياحة الداخلية",
-    trailers: "التريلات",
+    trailers: "النقل الثقيل",
     safety: "السلامة",
     safetyDesc: "أعلى معايير السلامة والأمان العالمية",
     comfort: "الراحة",
     comfortDesc: "راحة تامة للركاب بأعلى المعايير",
-    busesIntro: "خدمات الباصات المتميزة",
+    busesIntro: "خدمة و نقل المعتمرين و الحجاج إلى بيت الله الحرام",
     busesIntroDesc:
-      "نقدم خدمات متميزة في مجال توفير الباصات لشركات الحج والعمرة والسياحة الداخلية في المملكة العربية السعودية. باصاتنا فاخرة ومجهزة بأحدث التقنيات لضمان رحلة مريحة وآمنة.",
-    hajjUmrahServices: "خدمات الحج والعمرة",
+      "نفتخر بتقديم خدمة نقل متميزة وآمنة للمعتمرين والحجاج إلى بيت الله الحرام. نعمل مع كبرى شركات الحج والعمرة في المملكة العربية السعودية لتوفير باصات فاخرة ومريحة مجهزة بأحدث التقنيات لضمان رحلة مريحة وآمنة ومباركة. كما نوفر خدمات نقل للسياحة الداخلية بمعايير عالية من الجودة والراحة.",
+    hajjUmrahServices: "خدمة و نقل المعتمرين و الحجاج إلى بيت الله الحرام",
     hajjUmrahServicesDesc:
-      "نعمل مع كبرى شركات الحج والعمرة في المملكة لتوفير باصات فاخرة ومريحة للحجاج والمعتمرين. نضمن رحلات آمنة ومريحة مع أعلى معايير الخدمة والراحة.",
+      "نعمل مع كبرى شركات الحج والعمرة في المملكة لتوفير باصات فاخرة ومريحة وآمنة لنقل المعتمرين والحجاج إلى بيت الله الحرام. نضمن رحلات مباركة وآمنة ومريحة مع أعلى معايير الخدمة والراحة، مع الالتزام التام بجميع متطلبات السلامة والجودة لخدمة ضيوف الرحمن.",
     domesticTourism: "السياحة الداخلية",
     domesticTourismDesc:
       "نوفر باصات فاخرة ومجهزة لشركات السياحة الداخلية في المملكة. باصاتنا مصممة لتوفير رحلة مريحة وممتعة لجميع الركاب في رحلاتهم السياحية الداخلية.",
-    trailersServices: "خدمات التريلات",
+    trailersServices: "خدمات النقل الثقيل",
     trailersServicesDesc:
-      "نقدم خدمات متخصصة في توفير التريلات لشركات المقاولات ونقل البضائع. تريلاتنا متطورة ومجهزة بأحدث المعدات لضمان نقل آمن وفعال للبضائع والمعدات.",
-    busesFleetModern: "أسطول حديث ومتطور من الباصات والتريلات",
+      "نقدم خدمات متخصصة في النقل الثقيل لشركات المقاولات ونقل البضائع. أسطولنا متطور ومجهز بأحدث المعدات لضمان نقل آمن وفعال للبضائع والمعدات.",
+    busesFleetModern: "أسطول حديث ومتطور من الباصات",
     busesComfortable: "مريح ومريح",
     busesSafeTransport: "نقل آمن وموثوق",
     busesProfessional: "خدمة احترافية",
     busesLuxury: "فاخر",
-    busesServicesSubtitle: "خدمات شاملة للباصات والتريلات في المملكة",
+    busesServicesSubtitle: "خدمة نقل متميزة لضيوف الرحمن والسياحة الداخلية",
     busesFeaturesSubtitle: "مميزاتنا التي تجعلنا الخيار الأمثل",
+
+    // Trailers Page
+    trailersTitle: "النقل الثقيل",
+    trailersDesc:
+      "نوفر خدمات نقل ثقيل متطورة ومتخصصة للمقاولات ونقل البضائع والمعدات - الخيار الأمثل في المملكة",
+    trailersIntro: "خدمات النقل الثقيل المتميزة",
+    trailersIntroTitle: "خدمات النقل الثقيل المتخصصة",
+    trailersFeaturesTitle: "مميزاتنا",
+    trailersFeaturesSubtitle: "لماذا نحن الخيار الأمثل لخدمات النقل الثقيل",
+    trailersServicesTitle: "خدماتنا",
+    trailersServicesSubtitle: "خدمات شاملة للنقل الثقيل في المملكة",
+    trailersConstruction: "النقل الثقيل للمقاولات",
+    trailersConstructionDesc: "خدمات نقل ثقيل متخصصة لشركات المقاولات لنقل المعدات والمواد",
+    trailersCargo: "نقل البضائع",
+    trailersCargoDesc: "خدمات نقل البضائع بجميع الأحجام بأمان وكفاءة عالية",
+    trailersEquipment: "نقل المعدات",
+    trailersEquipmentDesc: "نقل المعدات الثقيلة والخاصة بأعلى معايير السلامة",
+    trailersProfessional: "احترافية",
+    trailersReliable: "موثوقة",
+    trailersSafe: "آمنة",
+    trailersBenefit1: "أسطول حديث ومتطور للنقل الثقيل",
+    trailersBenefit2: "معدات متخصصة لجميع أنواع النقل",
+    trailersBenefit3: "خدمة موثوقة وسريعة",
+    trailersBenefit4: "تغطية شاملة لجميع مناطق المملكة",
+    trailersCTATitle: "هل تحتاج إلى خدمات النقل الثقيل؟",
+    trailersCTADesc: "تواصل معنا الآن للحصول على أفضل العروض والخدمات",
 
     // Car Rental Page
     rentalTitle: "تأجير السيارات",
@@ -237,7 +266,7 @@ const translations = {
     home: "Home",
     water: "Water Production",
     transport: "Transport & Logistics",
-    buses: "Buses & Trailers",
+    buses: "Guests of the Most Merciful Service",
     carRental: "Car Rental",
     contact: "Contact Us",
 
@@ -276,7 +305,7 @@ const translations = {
       "We are distinguished by a modern and advanced fleet, strategic partnerships with major companies, and extensive experience in various fields. We put customer satisfaction at the forefront of our priorities and work tirelessly to achieve excellence in everything we offer.",
     ourServices: "Our Distinguished Services",
     ourServicesDesc:
-      "We provide a comprehensive range of services including desalinated water production and supply, transport and logistics services, bus provision for Hajj, Umrah and tourism, trailers for contracting, and car rental of all types.",
+      "We provide a comprehensive range of services including desalinated water production and supply, transport and logistics services, bus provision for Hajj, Umrah and tourism, heavy transport for contracting, and car rental of all types.",
     ourStats: "Our Statistics",
     mainServices: "Main Services",
     strategicPartner: "Strategic Partner",
@@ -284,7 +313,7 @@ const translations = {
     fullCoverage: "Full Coverage",
     waterProductionDescShort: "Desalinated Water Production & Supply",
     transportServicesDescShort: "Transport & Logistics Services",
-    busesTrailersDescShort: "Buses & Trailers",
+    busesTrailersDescShort: "Buses",
     carRentalDescShort: "Car Rental",
     qualityAndDelivery: "Quality & Delivery",
     integratedLogisticsServices: "Integrated Logistics Services",
@@ -292,7 +321,7 @@ const translations = {
     hajjUmrahDescShort:
       "Comfortable and safe transport services for pilgrims and Umrah performers",
     tourismDescShort: "Luxury buses for domestic tourism",
-    trailersDescShort: "Trailers for contracting and cargo transport",
+    trailersDescShort: "Heavy transport for contracting and cargo transport",
     ourServicesHeader: "Our Services",
     ourFeatures: "Our Features",
     vehicleTypes: "Vehicle Types",
@@ -400,36 +429,65 @@ const translations = {
     trustedPartner: "Trusted Partner",
 
     // Buses Page
-    busesTitle: "Buses & Trailers",
+    busesTitle: "Buses & Heavy Transport",
     busesDesc:
-      "We provide luxury buses for Hajj, Umrah and domestic tourism, and advanced trailers for construction and cargo transport - the optimal choice in the Kingdom",
+      "We provide luxury buses for Hajj, Umrah and domestic tourism, and advanced heavy transport for construction and cargo transport - the optimal choice in the Kingdom",
+    busesOnlyTitle: "Service & Transport of Umrah Performers and Pilgrims to the Sacred House of Allah",
+    busesOnlyDesc:
+      "We provide distinguished and safe transport services for Umrah performers and pilgrims to the Sacred House of Allah, in addition to domestic tourism services - the optimal choice in the Kingdom",
     hajjUmrah: "Hajj & Umrah Services",
     tourism: "Domestic Tourism",
-    trailers: "Trailers",
+    trailers: "Heavy Transport",
     safety: "Safety",
     safetyDesc: "Highest global safety and security standards",
     comfort: "Comfort",
     comfortDesc: "Complete comfort for passengers with the highest standards",
-    busesIntro: "Distinguished Bus Services",
+    busesIntro: "Service & Transport of Umrah Performers and Pilgrims to the Sacred House of Allah",
     busesIntroDesc:
-      "We provide distinguished services in providing buses for Hajj, Umrah and domestic tourism companies in Saudi Arabia. Our buses are luxurious and equipped with the latest technologies to ensure a comfortable and safe journey.",
-    hajjUmrahServices: "Hajj & Umrah Services",
+      "We are proud to provide distinguished and safe transport services for Umrah performers and pilgrims to the Sacred House of Allah. We work with major Hajj and Umrah companies in Saudi Arabia to provide luxurious and comfortable buses equipped with the latest technologies to ensure a comfortable, safe and blessed journey. We also provide transport services for domestic tourism with high standards of quality and comfort.",
+    hajjUmrahServices: "Service & Transport of Umrah Performers and Pilgrims to the Sacred House of Allah",
     hajjUmrahServicesDesc:
-      "We work with major Hajj and Umrah companies in the Kingdom to provide luxurious and comfortable buses for pilgrims and Umrah performers. We ensure safe and comfortable trips with the highest service and comfort standards.",
+      "We work with major Hajj and Umrah companies in the Kingdom to provide luxurious, comfortable and safe buses for transporting Umrah performers and pilgrims to the Sacred House of Allah. We ensure blessed, safe and comfortable trips with the highest service and comfort standards, with full commitment to all safety and quality requirements for serving the Guests of the Most Merciful.",
     domesticTourism: "Domestic Tourism",
     domesticTourismDesc:
       "We provide luxurious and equipped buses for domestic tourism companies in the Kingdom. Our buses are designed to provide a comfortable and enjoyable journey for all passengers on their domestic tourism trips.",
-    trailersServices: "Trailer Services",
+    trailersServices: "Heavy Transport Services",
     trailersServicesDesc:
-      "We provide specialized services in providing trailers for contracting companies and cargo transport. Our trailers are advanced and equipped with the latest equipment to ensure safe and efficient transport of goods and equipment.",
-    busesFleetModern: "Modern and advanced fleet of buses and trailers",
+      "We provide specialized services in heavy transport for contracting companies and cargo transport. Our fleet is advanced and equipped with the latest equipment to ensure safe and efficient transport of goods and equipment.",
+    busesFleetModern: "Modern and advanced fleet of buses",
     busesComfortable: "Comfortable and Cozy",
     busesSafeTransport: "Safe and Reliable Transport",
     busesProfessional: "Professional Service",
     busesLuxury: "Luxury",
     busesServicesSubtitle:
-      "Comprehensive bus and trailer services in the Kingdom",
+      "Distinguished transport service for the Guests of the Most Merciful and domestic tourism",
     busesFeaturesSubtitle: "Our features that make us the optimal choice",
+
+    // Trailers Page
+    trailersTitle: "Heavy Transport",
+    trailersDesc:
+      "We provide advanced and specialized heavy transport services for construction, cargo and equipment transport - the optimal choice in the Kingdom",
+    trailersIntro: "Distinguished Heavy Transport Services",
+    trailersIntroTitle: "Specialized Heavy Transport Services",
+    trailersFeaturesTitle: "Our Features",
+    trailersFeaturesSubtitle: "Why we are the optimal choice for heavy transport services",
+    trailersServicesTitle: "Our Services",
+    trailersServicesSubtitle: "Comprehensive heavy transport services in the Kingdom",
+    trailersConstruction: "Heavy Transport for Construction",
+    trailersConstructionDesc: "Specialized heavy transport services for construction companies to transport equipment and materials",
+    trailersCargo: "Cargo Transport",
+    trailersCargoDesc: "Cargo transport services of all sizes with high safety and efficiency",
+    trailersEquipment: "Equipment Transport",
+    trailersEquipmentDesc: "Heavy and special equipment transport with the highest safety standards",
+    trailersProfessional: "Professional",
+    trailersReliable: "Reliable",
+    trailersSafe: "Safe",
+    trailersBenefit1: "Modern and advanced heavy transport fleet",
+    trailersBenefit2: "Specialized equipment for all types of transport",
+    trailersBenefit3: "Reliable and fast service",
+    trailersBenefit4: "Full coverage of all regions of the Kingdom",
+    trailersCTATitle: "Need Heavy Transport Services?",
+    trailersCTADesc: "Contact us now to get the best offers and services",
 
     // Car Rental Page
     rentalTitle: "Car Rental Services",

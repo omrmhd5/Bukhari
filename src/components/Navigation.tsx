@@ -16,6 +16,7 @@ const Navigation = () => {
     { path: "/water", label: t("water") },
     { path: "/transport", label: t("transport") },
     { path: "/buses", label: t("buses") },
+    { path: "/trailers", label: t("trailers") },
     { path: "/car-rental", label: t("carRental") },
   ];
 
@@ -35,7 +36,11 @@ const Navigation = () => {
           <Link
             to="/"
             className="flex items-center space-x-2 rtl:space-x-reverse group">
-            <img src="/assets/LogoT.png" alt="Logo" className="w-16 sm:w-20" />
+            <img
+              src="/assets/LogoNavBar.png"
+              alt="Logo"
+              className="w-24 sm:w-26 md:w-20 lg:w-16 h-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

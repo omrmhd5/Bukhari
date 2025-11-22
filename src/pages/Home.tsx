@@ -231,6 +231,16 @@ const Home = () => {
 
       {/* About Company Section */}
       <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-navy-100/60 via-navy-50/40 to-white dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
+        {/* Logo Background */}
+        <div
+          className="absolute inset-0 opacity-10 dark:opacity-15 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url(/assets/LogoT.png)",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+          }}
+        />
+
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/8 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent/8 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -253,7 +263,7 @@ const Home = () => {
           {/* Vision and Mission Boxes */}
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
             {/* Vision Box */}
-            <div className="relative bg-gradient-to-br from-light-blue-500/95 via-light-blue-600/95 to-light-blue-700/95 dark:from-light-blue-600/95 dark:via-light-blue-700/95 dark:to-light-blue-800/95 p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl border-2 border-white/30 dark:border-light-blue-400/30 shadow-2xl hover:border-white/50 dark:hover:border-light-blue-400/50 hover:scale-[1.02] transition-all duration-300 group overflow-hidden">
+            <div className="relative bg-gradient-to-br from-light-blue-500/70 via-light-blue-600/70 to-light-blue-700/70 dark:from-light-blue-600/70 dark:via-light-blue-700/70 dark:to-light-blue-800/70 backdrop-blur-sm p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl border-2 border-white/30 dark:border-light-blue-400/30 shadow-2xl hover:border-white/50 dark:hover:border-light-blue-400/50 hover:scale-[1.02] transition-all duration-300 group overflow-hidden">
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/15 dark:bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
@@ -273,7 +283,7 @@ const Home = () => {
             </div>
 
             {/* Mission Box */}
-            <div className="relative bg-gradient-to-br from-navy-700/95 via-navy-800/95 to-navy-900/95 dark:from-navy-800/95 dark:via-navy-900/95 dark:to-navy-900/95 p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl border-2 border-light-blue-400/30 dark:border-light-blue-500/30 shadow-2xl hover:border-light-blue-400/50 dark:hover:border-light-blue-500/50 hover:scale-[1.02] transition-all duration-300 group overflow-hidden">
+            <div className="relative bg-gradient-to-br from-navy-700/70 via-navy-800/70 to-navy-900/70 dark:from-navy-800/70 dark:via-navy-900/70 dark:to-navy-900/70 backdrop-blur-sm p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl border-2 border-light-blue-400/30 dark:border-light-blue-500/30 shadow-2xl hover:border-light-blue-400/50 dark:hover:border-light-blue-500/50 hover:scale-[1.02] transition-all duration-300 group overflow-hidden">
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-light-blue-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute top-0 left-0 w-32 h-32 bg-light-blue-400/10 dark:bg-light-blue-500/10 rounded-full blur-2xl -translate-y-1/2 -translate-x-1/2" />
@@ -294,7 +304,7 @@ const Home = () => {
           </div>
 
           {/* Strategic Objectives Box */}
-          <div className="relative bg-gradient-to-br from-white via-navy-50 to-light-blue-50 dark:from-navy-900/95 dark:via-navy-800/95 dark:to-navy-900/95 p-6 md:p-8 lg:p-10 xl:p-12 rounded-2xl md:rounded-3xl border-2 border-navy-200/50 dark:border-light-blue-500/30 shadow-2xl overflow-hidden">
+          <div className="relative bg-gradient-to-br from-white/80 via-navy-50/80 to-light-blue-50/80 dark:from-navy-900/70 dark:via-navy-800/70 dark:to-navy-900/70 backdrop-blur-sm p-6 md:p-8 lg:p-10 xl:p-12 rounded-2xl md:rounded-3xl border-2 border-navy-200/50 dark:border-light-blue-500/30 shadow-2xl overflow-hidden">
             {/* Decorative Pattern */}
             <div className="absolute top-0 right-0 w-72 h-72 bg-light-blue-200/30 dark:bg-light-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-72 h-72 bg-navy-200/30 dark:bg-navy-700/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
@@ -313,7 +323,7 @@ const Home = () => {
                 {values.map((value, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 bg-navy-50/80 dark:bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-navy-200/50 dark:border-white/10 hover:bg-navy-100/80 dark:hover:bg-white/10 hover:border-navy-400/60 dark:hover:border-light-blue-500/40 transition-all duration-300 group hover:scale-[1.02]">
+                    className="flex items-start gap-4 bg-navy-50/60 dark:bg-white/3 backdrop-blur-sm p-6 rounded-2xl border border-navy-200/50 dark:border-white/10 hover:bg-navy-100/70 dark:hover:bg-white/8 hover:border-navy-400/60 dark:hover:border-light-blue-500/40 transition-all duration-300 group hover:scale-[1.02]">
                     <div className="bg-gradient-to-br from-navy-600/30 to-navy-700/30 dark:from-light-blue-500/30 dark:to-light-blue-600/30 p-3 rounded-xl border border-navy-400/30 dark:border-light-blue-600/20 group-hover:from-navy-600/50 group-hover:to-navy-700/50 dark:group-hover:from-light-blue-500/50 dark:group-hover:to-light-blue-600/50 group-hover:scale-110 transition-all duration-300 shadow-md">
                       <value.icon className="h-6 w-6 text-white flex-shrink-0" />
                     </div>

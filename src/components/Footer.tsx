@@ -10,6 +10,7 @@ const Footer = () => {
     { path: "/water", label: t("water") },
     { path: "/transport", label: t("transport") },
     { path: "/buses", label: t("buses") },
+    { path: "/trailers", label: t("trailers") },
     { path: "/car-rental", label: t("carRental") },
   ];
 
@@ -30,7 +31,7 @@ const Footer = () => {
               to="/"
               className="flex items-center space-x-2 rtl:space-x-reverse group">
               <img
-                src="/assets/LogoT.png"
+                src="/assets/LogoNavBar.png"
                 alt="Logo"
                 className="h-16 w-auto group-hover:scale-105 transition-transform duration-300"
               />

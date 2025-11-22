@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import Water from "./pages/Water";
 import Transport from "./pages/Transport";
 import Buses from "./pages/Buses";
+import Trailers from "./pages/Trailers";
 import CarRental from "./pages/CarRental";
 import NotFound from "./pages/NotFound";
 
@@ -34,6 +35,7 @@ const App = () => (
                   <Route path="/water" element={<Water />} />
                   <Route path="/transport" element={<Transport />} />
                   <Route path="/buses" element={<Buses />} />
+                  <Route path="/trailers" element={<Trailers />} />
                   <Route path="/car-rental" element={<CarRental />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />

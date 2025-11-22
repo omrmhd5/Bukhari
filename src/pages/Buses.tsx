@@ -10,7 +10,6 @@ import {
   CheckCircle2,
   MapPin,
   Clock,
-  Truck,
 } from "lucide-react";
 // Image is in public/assets/ folder
 const busesHero = "/assets/buses/buses-hero.jpg";
@@ -24,18 +23,13 @@ const Buses = () => {
   const services = [
     {
       icon: Star,
-      title: t("hajjUmrah"),
-      description: t("hajjUmrahDescShort"),
+      title: t("hajjUmrahServices"),
+      description: t("hajjUmrahServicesDesc"),
     },
     {
       icon: Bus,
       title: t("tourism"),
       description: t("tourismDescShort"),
-    },
-    {
-      icon: Shield,
-      title: t("trailers"),
-      description: t("trailersDescShort"),
     },
   ];
 
@@ -69,7 +63,7 @@ const Buses = () => {
         <div className="absolute inset-0">
           <img
             src={busesHero}
-            alt="Buses & Trailers"
+            alt="Buses"
             className="w-full h-full object-cover opacity-40"
           />
         </div>
@@ -111,14 +105,14 @@ const Buses = () => {
                   <Bus className="h-5 w-5 text-light-blue-400" />
                 </div>
                 <span className="font-semibold text-sm uppercase tracking-wide">
-                  {t("busesTitle")}
+                  {t("busesOnlyTitle")}
                 </span>
               </div>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-white">
-                {t("busesTitle")}
+                {t("busesOnlyTitle")}
               </h1>
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl mx-auto">
-                {t("busesDesc")}
+                {t("busesOnlyDesc")}
               </p>
               <div className="flex flex-wrap gap-3 justify-center pt-4">
                 <div className="bg-white/10 backdrop-blur-lg px-6 py-3 rounded-full border border-white/20">
@@ -237,7 +231,7 @@ const Buses = () => {
                 <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border-2 border-navy-200/50 dark:border-navy-600/50 group">
                   <img
                     src={busesImage}
-                    alt="Buses & Trailers"
+                    alt="Buses"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-navy-800/40 via-light-blue-500/20 to-transparent" />
@@ -284,7 +278,7 @@ const Buses = () => {
                       <Star className="h-10 w-10 text-navy-700 dark:text-light-blue-400" />
                     </div>
                     <h3 className="text-3xl font-bold text-navy-800 dark:text-white">
-                      {t("hajjUmrah")}
+                      {t("hajjUmrahServices")}
                     </h3>
                   </div>
                   <p className="text-navy-600 dark:text-navy-300 leading-relaxed text-lg mb-6">
@@ -349,30 +343,6 @@ const Buses = () => {
               </div>
             </div>
 
-            {/* Trailers - Centered Full Width */}
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white dark:bg-navy-800 p-10 rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group hover:scale-[1.02]">
-                <div className="flex items-center justify-center gap-4 mb-6">
-                  <div className="bg-gradient-to-br from-light-blue-100 to-light-blue-200 dark:from-light-blue-800/50 dark:to-light-blue-700/50 p-5 rounded-2xl border border-light-blue-200/50 dark:border-light-blue-700/30 group-hover:scale-110 transition-transform">
-                    <Truck className="h-10 w-10 text-navy-700 dark:text-light-blue-400" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-navy-800 dark:text-white">
-                    {t("trailers")}
-                  </h3>
-                </div>
-                <p className="text-navy-600 dark:text-navy-300 leading-relaxed text-lg mb-6 text-center">
-                  {t("trailersServicesDesc")}
-                </p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
-                    {t("busesProfessional")}
-                  </span>
-                  <span className="px-4 py-2 bg-light-blue-100 dark:bg-light-blue-900/40 text-navy-700 dark:text-light-blue-400 rounded-full text-sm font-semibold border border-light-blue-200/50 dark:border-light-blue-700/30">
-                    {t("completeManagement")}
-                  </span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
