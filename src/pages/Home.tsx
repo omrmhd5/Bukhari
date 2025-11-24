@@ -51,6 +51,25 @@ const Home = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
+  // Handle hash navigation
+  useEffect(() => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          const offset = 80; // Account for fixed navbar
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      }, 300);
+    }
+  }, []);
+
   const values = [
     {
       icon: Award,
@@ -230,7 +249,7 @@ const Home = () => {
       </section>
 
       {/* About Company Section */}
-      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-navy-100/60 via-navy-50/40 to-white dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
+      <section id="about" className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-navy-100/60 via-navy-50/40 to-white dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
         {/* Logo Background */}
         <div
           className="absolute inset-0 opacity-10 dark:opacity-15 bg-cover bg-center bg-no-repeat"

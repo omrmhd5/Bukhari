@@ -4,10 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { toast } from "sonner";
-import { Phone, Mail, MessageCircle, Send, Sparkles } from "lucide-react";
+import { Phone, Mail, MessageCircle, Send, Sparkles, User, MessageSquare } from "lucide-react";
 
 const ContactForm = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,7 +22,7 @@ const ContactForm = () => {
   };
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/966500000000", "_blank");
+    window.open("https://wa.me/966564431326", "_blank");
   };
 
   return (
@@ -54,9 +54,10 @@ const ContactForm = () => {
                     {t("phone")}
                   </h3>
                   <a
-                    href="tel:+966500000000"
-                    className="text-navy-600 dark:text-navy-300 hover:text-light-blue-600 dark:hover:text-light-blue-400 transition-colors duration-300 hover:underline">
-                    +966 50 000 0000
+                    href="tel:+966564431326"
+                    dir="ltr"
+                    className="text-navy-600 dark:text-navy-300 hover:text-light-blue-600 dark:hover:text-light-blue-400 transition-colors duration-300 hover:underline inline-block">
+                    +966 56 443 1326
                   </a>
                 </div>
               </div>
@@ -72,9 +73,9 @@ const ContactForm = () => {
                     {t("email")}
                   </h3>
                   <a
-                    href="mailto:info@bukhari.sa"
+                    href="mailto:info@logistics-as.com"
                     className="text-navy-600 dark:text-navy-300 hover:text-light-blue-600 dark:hover:text-light-blue-400 transition-colors duration-300 hover:underline">
-                    info@bukhari.sa
+                    info@logistics-as.com
                   </a>
                 </div>
               </div>
@@ -89,11 +90,14 @@ const ContactForm = () => {
                   <h3 className="font-semibold text-lg mb-1 text-navy-800 dark:text-white">
                     {t("whatsapp")}
                   </h3>
-                  <button
-                    onClick={openWhatsApp}
-                    className="text-navy-600 dark:text-navy-300 hover:text-light-blue-600 dark:hover:text-light-blue-400 transition-colors duration-300 hover:underline text-left">
-                    {t("whatsapp")}
-                  </button>
+                  <a
+                    href="https://wa.me/966564431326"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    dir="ltr"
+                    className="text-navy-600 dark:text-navy-300 hover:text-light-blue-600 dark:hover:text-light-blue-400 transition-colors duration-300 hover:underline inline-block">
+                    +966 56 443 1326
+                  </a>
                 </div>
               </div>
             </div>
@@ -104,7 +108,10 @@ const ContactForm = () => {
             onSubmit={handleSubmit}
             className="bg-white dark:bg-navy-800 p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300">
             <div className="space-y-6">
-              <div>
+              <div className="relative">
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 z-10">
+                  <User className="h-5 w-5 text-navy-400 dark:text-navy-500" />
+                </div>
                 <Input
                   placeholder={t("name")}
                   value={formData.name}
@@ -112,10 +119,13 @@ const ContactForm = () => {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   required
-                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500"
+                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10"
                 />
               </div>
-              <div>
+              <div className="relative">
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 z-10">
+                  <Mail className="h-5 w-5 text-navy-400 dark:text-navy-500" />
+                </div>
                 <Input
                   type="email"
                   placeholder={t("email")}
@@ -124,10 +134,13 @@ const ContactForm = () => {
                     setFormData({ ...formData, email: e.target.value })
                   }
                   required
-                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500"
+                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10"
                 />
               </div>
-              <div>
+              <div className="relative">
+                <div className="absolute right-3 top-4 z-10">
+                  <MessageSquare className="h-5 w-5 text-navy-400 dark:text-navy-500" />
+                </div>
                 <Textarea
                   placeholder={t("message")}
                   value={formData.message}
@@ -136,7 +149,7 @@ const ContactForm = () => {
                   }
                   required
                   rows={6}
-                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 resize-none"
+                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 resize-none pr-10"
                 />
               </div>
               <Button

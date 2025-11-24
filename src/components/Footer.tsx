@@ -5,6 +5,11 @@ import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 const Footer = () => {
   const { t, language } = useLanguage();
 
+  // Format phone number for RTL
+  const formatPhoneNumber = (phone: string) => {
+    return phone;
+  };
+
   const navLinks = [
     { path: "/", label: t("home") },
     { path: "/water", label: t("water") },
@@ -15,7 +20,7 @@ const Footer = () => {
   ];
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/966500000000", "_blank");
+    window.open("https://wa.me/966564431326", "_blank");
   };
 
   return (
@@ -75,9 +80,10 @@ const Footer = () => {
                   <Phone className="h-4 w-4 text-primary" />
                 </div>
                 <a
-                  href="tel:+966500000000"
-                  className="text-muted-foreground hover:text-primary transition-all duration-300 hover:underline">
-                  +966 50 000 0000
+                  href="tel:+966564431326"
+                  dir="ltr"
+                  className="text-muted-foreground hover:text-primary transition-all duration-300 hover:underline inline-block">
+                  +966 56 443 1326
                 </a>
               </li>
               <li className="flex items-center gap-3 group">
@@ -85,9 +91,9 @@ const Footer = () => {
                   <Mail className="h-4 w-4 text-primary" />
                 </div>
                 <a
-                  href="mailto:info@bukhari.sa"
+                  href="mailto:info@logistics-as.com"
                   className="text-muted-foreground hover:text-primary transition-all duration-300 hover:underline">
-                  info@bukhari.sa
+                  info@logistics-as.com
                 </a>
               </li>
               <li className="flex items-center gap-3 group">
@@ -119,7 +125,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm text-center md:text-left">
               {language === "ar"
-                ? `© ${new Date().getFullYear()} شركة عبدالله بخاري. جميع الحقوق محفوظة.`
+                ? `© ${new Date().getFullYear()} شركة عبدالله بخاري و شركائه. جميع الحقوق محفوظة.`
                 : `© ${new Date().getFullYear()} Abdullah Bukhari Company. All rights reserved.`}
             </p>
             <p className="text-muted-foreground text-sm text-center md:text-right">

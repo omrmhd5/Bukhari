@@ -26,7 +26,7 @@ const translations = {
     contact: "اتصل بنا",
 
     // Home Page
-    heroTitle: "شركة عبدالله  بخاري",
+    heroTitle: "شركة عبدالله بخاري و شركائه",
     heroSubtitle: "للنقل والخدمات اللوجستية",
     heroDescription:
       "الشركة الرائدة في المملكة العربية السعودية والعالم في مجال النقل والخدمات اللوجستية - نقدم حلولاً متكاملة بمعايير عالمية",
@@ -222,7 +222,8 @@ const translations = {
     trailersServicesTitle: "خدماتنا",
     trailersServicesSubtitle: "خدمات شاملة للنقل الثقيل في المملكة",
     trailersConstruction: "النقل الثقيل للمقاولات",
-    trailersConstructionDesc: "خدمات نقل ثقيل متخصصة لشركات المقاولات لنقل المعدات والمواد",
+    trailersConstructionDesc:
+      "خدمات نقل ثقيل متخصصة لشركات المقاولات لنقل المعدات والمواد",
     trailersCargo: "نقل البضائع",
     trailersCargoDesc: "خدمات نقل البضائع بجميع الأحجام بأمان وكفاءة عالية",
     trailersEquipment: "نقل المعدات",
@@ -271,7 +272,7 @@ const translations = {
     contact: "Contact Us",
 
     // Home Page
-    heroTitle: "Abdullah  Bukhari Company",
+    heroTitle: "Abdullah Bukhari and Partners Company",
     heroSubtitle: "Transport & Logistics Services",
     heroDescription:
       "Leading company in Saudi Arabia and the world in transport and logistics services - we provide integrated solutions with global standards",
@@ -432,7 +433,8 @@ const translations = {
     busesTitle: "Buses & Heavy Transport",
     busesDesc:
       "We provide luxury buses for Hajj, Umrah and domestic tourism, and advanced heavy transport for construction and cargo transport - the optimal choice in the Kingdom",
-    busesOnlyTitle: "Service & Transport of Umrah Performers and Pilgrims to the Sacred House of Allah",
+    busesOnlyTitle:
+      "Service & Transport of Umrah Performers and Pilgrims to the Sacred House of Allah",
     busesOnlyDesc:
       "We provide distinguished and safe transport services for Umrah performers and pilgrims to the Sacred House of Allah, in addition to domestic tourism services - the optimal choice in the Kingdom",
     hajjUmrah: "Hajj & Umrah Services",
@@ -442,10 +444,12 @@ const translations = {
     safetyDesc: "Highest global safety and security standards",
     comfort: "Comfort",
     comfortDesc: "Complete comfort for passengers with the highest standards",
-    busesIntro: "Service & Transport of Umrah Performers and Pilgrims to the Sacred House of Allah",
+    busesIntro:
+      "Service & Transport of Umrah Performers and Pilgrims to the Sacred House of Allah",
     busesIntroDesc:
       "We are proud to provide distinguished and safe transport services for Umrah performers and pilgrims to the Sacred House of Allah. We work with major Hajj and Umrah companies in Saudi Arabia to provide luxurious and comfortable buses equipped with the latest technologies to ensure a comfortable, safe and blessed journey. We also provide transport services for domestic tourism with high standards of quality and comfort.",
-    hajjUmrahServices: "Service & Transport of Umrah Performers and Pilgrims to the Sacred House of Allah",
+    hajjUmrahServices:
+      "Service & Transport of Umrah Performers and Pilgrims to the Sacred House of Allah",
     hajjUmrahServicesDesc:
       "We work with major Hajj and Umrah companies in the Kingdom to provide luxurious, comfortable and safe buses for transporting Umrah performers and pilgrims to the Sacred House of Allah. We ensure blessed, safe and comfortable trips with the highest service and comfort standards, with full commitment to all safety and quality requirements for serving the Guests of the Most Merciful.",
     domesticTourism: "Domestic Tourism",
@@ -470,15 +474,20 @@ const translations = {
     trailersIntro: "Distinguished Heavy Transport Services",
     trailersIntroTitle: "Specialized Heavy Transport Services",
     trailersFeaturesTitle: "Our Features",
-    trailersFeaturesSubtitle: "Why we are the optimal choice for heavy transport services",
+    trailersFeaturesSubtitle:
+      "Why we are the optimal choice for heavy transport services",
     trailersServicesTitle: "Our Services",
-    trailersServicesSubtitle: "Comprehensive heavy transport services in the Kingdom",
+    trailersServicesSubtitle:
+      "Comprehensive heavy transport services in the Kingdom",
     trailersConstruction: "Heavy Transport for Construction",
-    trailersConstructionDesc: "Specialized heavy transport services for construction companies to transport equipment and materials",
+    trailersConstructionDesc:
+      "Specialized heavy transport services for construction companies to transport equipment and materials",
     trailersCargo: "Cargo Transport",
-    trailersCargoDesc: "Cargo transport services of all sizes with high safety and efficiency",
+    trailersCargoDesc:
+      "Cargo transport services of all sizes with high safety and efficiency",
     trailersEquipment: "Equipment Transport",
-    trailersEquipmentDesc: "Heavy and special equipment transport with the highest safety standards",
+    trailersEquipmentDesc:
+      "Heavy and special equipment transport with the highest safety standards",
     trailersProfessional: "Professional",
     trailersReliable: "Reliable",
     trailersSafe: "Safe",
@@ -500,7 +509,8 @@ const translations = {
     availability: "Availability",
     availabilityDesc: "Vehicles available 24/7",
     competitivePrices: "Competitive Prices",
-    competitivePricesDesc: "Best prices in the market with special offers and discounts",
+    competitivePricesDesc:
+      "Best prices in the market with special offers and discounts",
     bookNow: "Book Now",
     rentalIntro: "Distinguished Car Rental Services",
     rentalIntroDesc:

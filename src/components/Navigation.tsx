@@ -11,14 +11,44 @@ const Navigation = () => {
   const { language, setLanguage, t } = useLanguage();
   const { theme, setTheme } = useTheme();
 
-  const navLinks = [
-    { path: "/", label: t("home") },
-    { path: "/water", label: t("water") },
-    { path: "/transport", label: t("transport") },
-    { path: "/buses", label: t("buses") },
-    { path: "/trailers", label: t("trailers") },
-    { path: "/car-rental", label: t("carRental") },
+  const navLinks: Array<{
+    path?: string;
+    section?: string;
+    label: string;
+    type: "link" | "section";
+  }> = [
+    { path: "/", label: t("home"), type: "link" },
+    { section: "about", label: t("aboutCompany"), type: "section" },
+    { section: "services", label: t("ourServices"), type: "section" },
+    { path: "/water", label: t("water"), type: "link" },
+    { path: "/transport", label: t("transport"), type: "link" },
+    { path: "/buses", label: t("buses"), type: "link" },
+    { path: "/trailers", label: t("trailers"), type: "link" },
+    { path: "/car-rental", label: t("carRental"), type: "link" },
+    { section: "contact", label: t("contactTitle"), type: "section" },
   ];
+
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== "/") {
+      // If not on home page, navigate first then scroll
+      window.location.href = `/#${sectionId}`;
+    } else {
+      // If on home page, just scroll
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const offset = 80; // Account for fixed navbar
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      }, 100);
+    }
+    setIsOpen(false); // Close mobile menu
+  };
 
   const toggleLanguage = () => {
     setLanguage(language === "ar" ? "en" : "ar");
@@ -45,18 +75,31 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1 rtl:space-x-reverse">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`relative px-4 py-2 rounded-xl transition-all duration-300 font-medium group ${
-                  location.pathname === link.path
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-accent/10 text-foreground hover:text-primary"
-                }`}>
-                <span className="relative z-10">{link.label}</span>
-              </Link>
-            ))}
+            {navLinks.map((link, index) => {
+              if (link.type === "section") {
+                return (
+                  <button
+                    key={`${link.section}-${index}`}
+                    onClick={() => scrollToSection(link.section!)}
+                    className="relative px-4 py-2 rounded-xl transition-all duration-300 font-medium hover:bg-accent/10 text-foreground hover:text-primary">
+                    <span className="relative z-10">{link.label}</span>
+                  </button>
+                );
+              } else {
+                return (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`relative px-4 py-2 rounded-xl transition-all duration-300 font-medium group ${
+                      location.pathname === link.path
+                        ? "bg-primary text-primary-foreground"
+                        : "hover:bg-accent/10 text-foreground hover:text-primary"
+                    }`}>
+                    <span className="relative z-10">{link.label}</span>
+                  </Link>
+                );
+              }
+            })}
           </div>
 
           {/* Theme, Language & Mobile Menu Toggle */}
@@ -100,19 +143,32 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden pb-4 animate-fade-in border-t border-border/50 mt-2 pt-4">
             <div className="flex flex-col space-y-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`px-4 py-3 rounded-xl transition-all duration-300 font-medium hover:translate-x-2 rtl:hover:-translate-x-2 ${
-                    location.pathname === link.path
-                      ? "bg-primary text-primary-foreground"
-                      : "hover:bg-accent/10 text-foreground hover:text-primary"
-                  }`}>
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link, index) => {
+                if (link.type === "section") {
+                  return (
+                    <button
+                      key={`${link.section}-${index}`}
+                      onClick={() => scrollToSection(link.section!)}
+                      className="px-4 py-3 rounded-xl transition-all duration-300 font-medium hover:translate-x-2 rtl:hover:-translate-x-2 hover:bg-accent/10 text-foreground hover:text-primary text-left rtl:text-right">
+                      {link.label}
+                    </button>
+                  );
+                } else {
+                  return (
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      onClick={() => setIsOpen(false)}
+                      className={`px-4 py-3 rounded-xl transition-all duration-300 font-medium hover:translate-x-2 rtl:hover:-translate-x-2 ${
+                        location.pathname === link.path
+                          ? "bg-primary text-primary-foreground"
+                          : "hover:bg-accent/10 text-foreground hover:text-primary"
+                      }`}>
+                      {link.label}
+                    </Link>
+                  );
+                }
+              })}
             </div>
           </div>
         )}
