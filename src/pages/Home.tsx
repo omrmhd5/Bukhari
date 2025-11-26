@@ -29,8 +29,11 @@ const busesImage = "/assets/home/buses.jpg";
 const rentalImage = "/assets/home/car-rental.jpg";
 
 const waterLink = "/assets/home/water-link.jpg";
+const busesLink = "/assets/home/buses-link.jpg";
 const truckLink = "/assets/home/truck-link.jpeg";
 const logisticsLink = "/assets/home/logistics-link.jpg";
+const companyLink = "/assets/home/companies-link.jpg";
+const digitalLink = "/assets/home/digital-link.jpg";
 const carLink = "/assets/home/car-link.jpg";
 
 const Home = () => {
@@ -249,7 +252,9 @@ const Home = () => {
       </section>
 
       {/* About Company Section */}
-      <section id="about" className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-navy-100/60 via-navy-50/40 to-white dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
+      <section
+        id="about"
+        className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-navy-100/60 via-navy-50/40 to-white dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
         {/* Logo Background */}
         <div
           className="absolute inset-0 opacity-10 dark:opacity-15 bg-cover bg-center bg-no-repeat"
@@ -439,7 +444,7 @@ const Home = () => {
             <Link to="/buses" className="group">
               <div className="relative h-64 sm:h-72 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 hover:shadow-2xl hover:scale-[1.02]">
                 <img
-                  src={truckLink}
+                  src={busesLink}
                   alt="Buses"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
@@ -517,7 +522,7 @@ const Home = () => {
             <Link to="/logistics-management" className="group">
               <div className="relative h-64 sm:h-72 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-purple-400/60 dark:hover:border-purple-500/60 hover:shadow-2xl hover:scale-[1.02]">
                 <img
-                  src={logisticsLink}
+                  src={companyLink}
                   alt="Logistics Management"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
@@ -541,7 +546,7 @@ const Home = () => {
             <Link to="/digital-marketing" className="group">
               <div className="relative h-64 sm:h-72 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-purple-400/60 dark:hover:border-purple-500/60 hover:shadow-2xl hover:scale-[1.02]">
                 <img
-                  src={logisticsLink}
+                  src={digitalLink}
                   alt="Digital Marketing"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />

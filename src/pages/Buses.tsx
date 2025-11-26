@@ -141,7 +141,10 @@ const Buses = () => {
                     {t("safety")}
                   </span>
                 </div>
-                <p className="text-xs text-white/80">{t("safetyDesc")}</p>
+                <p className="text-xs text-white/80 mb-2">{t("safetyDesc")}</p>
+                <p className="text-xs text-white/70 leading-relaxed">
+                  {t("busesSafetyDetail1")}
+                </p>
               </div>
               <div className="bg-white/10 dark:bg-navy-800/50 backdrop-blur-lg p-6 rounded-2xl border border-white/20 dark:border-navy-600/30 hover:bg-white/15 dark:hover:bg-navy-800/70 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-3">
@@ -152,7 +155,10 @@ const Buses = () => {
                     {t("comfort")}
                   </span>
                 </div>
-                <p className="text-xs text-white/80">{t("comfortDesc")}</p>
+                <p className="text-xs text-white/80 mb-2">{t("comfortDesc")}</p>
+                <p className="text-xs text-white/70 leading-relaxed">
+                  {t("busesComfortDetail1")}
+                </p>
               </div>
             </div>
 
@@ -203,7 +209,10 @@ const Buses = () => {
                     {t("speed")}
                   </span>
                 </div>
-                <p className="text-xs text-white/80">{t("speedDesc")}</p>
+                <p className="text-xs text-white/80 mb-2">{t("speedDesc")}</p>
+                <p className="text-xs text-white/70 leading-relaxed">
+                  {t("busesSpeedDetail1")}
+                </p>
               </div>
               <div className="bg-white/10 dark:bg-navy-800/50 backdrop-blur-lg p-6 rounded-2xl border border-white/20 dark:border-navy-600/30 hover:bg-white/15 dark:hover:bg-navy-800/70 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-3">
@@ -214,7 +223,10 @@ const Buses = () => {
                     {t("coverage")}
                   </span>
                 </div>
-                <p className="text-xs text-white/80">{t("coverageDesc")}</p>
+                <p className="text-xs text-white/80 mb-2">{t("coverageDesc")}</p>
+                <p className="text-xs text-white/70 leading-relaxed">
+                  {t("busesCoverageDetail1")}
+                </p>
               </div>
             </div>
           </div>

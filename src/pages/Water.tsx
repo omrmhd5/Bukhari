@@ -14,9 +14,12 @@ import {
 // Image is in public/assets/ folder
 const waterHero = "/assets/water/water-hero.jpg";
 const waterImage = "/assets/water/water-image.jpg";
+const sidqWaterImageAr = "/assets/water/SidqAr.png";
+const sidqWaterImageEn = "/assets/water/SidqEn.png";
+const bakkahWaterImage = "/assets/water/Bakkah.png";
 
 const Water = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const features = [
     {
@@ -40,10 +43,12 @@ const Water = () => {
     {
       name: t("sidqWater"),
       nameAr: t("sidqWater"),
+      image: language === "ar" ? sidqWaterImageAr : sidqWaterImageEn,
     },
     {
       name: t("bakkahWater"),
       nameAr: t("bakkahWater"),
+      image: bakkahWaterImage,
     },
   ];
 
@@ -111,7 +116,7 @@ const Water = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Highlighted Sodium Advantage */}
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-light-blue-500 via-light-blue-400 to-light-blue-500 dark:from-light-blue-600 dark:via-light-blue-500 dark:to-light-blue-600 p-8 md:p-10 rounded-3xl shadow-2xl border-4 border-white/50 dark:border-navy-800/50 relative overflow-hidden group hover:scale-[1.02] transition-all duration-300">
@@ -119,7 +124,7 @@ const Water = () => {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2)_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-50" />
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-              
+
               <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 text-center md:text-right">
                 <div className="bg-white/20 dark:bg-navy-800/30 backdrop-blur-lg p-6 rounded-2xl border-2 border-white/30 dark:border-navy-700/30 group-hover:scale-110 transition-transform shadow-xl">
                   <Heart className="h-12 w-12 text-white" />
@@ -192,14 +197,14 @@ const Water = () => {
                   </p>
                 </div>
               </div>
-              
+
               {/* Highlighted Sodium Advantage */}
               <div className="mt-8 pt-6 border-t-2 border-light-blue-200/50 dark:border-light-blue-700/30">
                 <div className="bg-gradient-to-br from-light-blue-500/10 via-light-blue-400/10 to-light-blue-500/10 dark:from-light-blue-600/20 dark:via-light-blue-500/20 dark:to-light-blue-600/20 p-6 rounded-2xl border-2 border-light-blue-400/30 dark:border-light-blue-500/30 relative overflow-hidden group hover:scale-[1.02] transition-all duration-300">
                   {/* Decorative Background */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-light-blue-400/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
                   <div className="absolute bottom-0 left-0 w-32 h-32 bg-light-blue-400/20 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
-                  
+
                   <div className="relative z-10 flex items-center gap-4">
                     <div className="bg-gradient-to-br from-light-blue-500 to-light-blue-600 dark:from-light-blue-600 dark:to-light-blue-700 p-3 rounded-xl border-2 border-white/30 dark:border-navy-700/30 group-hover:scale-110 transition-transform shadow-lg">
                       <Heart className="h-6 w-6 text-white" />
@@ -275,15 +280,19 @@ const Water = () => {
 
                 <div className="relative text-center">
                   <div className="mb-6">
-                    <div className="bg-gradient-to-br from-light-blue-100 to-light-blue-200 dark:from-light-blue-800/40 dark:to-light-blue-700/40 p-4 rounded-2xl inline-block border border-light-blue-200/50 dark:border-light-blue-700/30 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <Droplets className="h-12 w-12 text-navy-700 dark:text-light-blue-400 mx-auto" />
+                    <div
+                      className={`bg-white dark:bg-navy-800 p-6 rounded-2xl inline-block border-2 border-light-blue-200/50 dark:border-light-blue-700/30 group-hover:scale-110 transition-transform duration-300 shadow-lg ${
+                        brand.name === t("bakkahWater") ? "p-8 md:p-10" : ""
+                      }`}>
+                      <img
+                        src={brand.image}
+                        alt={brand.name}
+                        className="w-auto mx-auto object-contain h-24 md:h-32"
+                      />
                     </div>
                   </div>
                   <div className="text-5xl md:text-6xl font-bold group-hover:scale-105 transition-transform duration-300 bg-gradient-to-r from-navy-700 via-light-blue-500 to-navy-700 dark:from-light-blue-400 dark:via-light-blue-500 dark:to-light-blue-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient leading-[1.2] py-2 min-h-[1.2em]">
                     {brand.nameAr}
-                  </div>
-                  <div className="text-xl text-navy-600 dark:text-navy-300 font-medium mb-6 mt-3">
-                    {brand.name}
                   </div>
                   <div className="mt-6 pt-6 border-t border-navy-200/50 dark:border-navy-600/50">
                     <div className="flex items-center justify-center gap-2 text-sm text-navy-600 dark:text-navy-300 group-hover:text-light-blue-600 dark:group-hover:text-light-blue-400 transition-colors">
