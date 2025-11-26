@@ -381,7 +381,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-4 md:gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
             <Link to="/water" className="group">
               <div className="relative h-64 sm:h-72 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 hover:shadow-2xl hover:scale-[1.02]">
                 <img
