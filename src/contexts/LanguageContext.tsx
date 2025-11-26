@@ -133,7 +133,8 @@ const translations = {
       "نلتزم بأعلى معايير الجودة العالمية في إنتاج وتوزيع المياه المحلاة. جميع منتجاتنا تخضع لفحوصات دقيقة ومستمرة لضمان نقاء وجودة المياه التي نقدمها لعملائنا.",
     importantAdvantage: "ميزة مهمة",
     lowSodiumTitle: "صوديوم أقل من 5%",
-    lowSodiumDesc: "مياهنا المحلاة تحتوي على نسبة صوديوم أقل من 5%، مما يجعلها صحية وآمنة للاستهلاك اليومي",
+    lowSodiumDesc:
+      "مياهنا المحلاة تحتوي على نسبة صوديوم أقل من 5%، مما يجعلها صحية وآمنة للاستهلاك اليومي",
     waterDelivery: "التوصيل السريع",
     waterDeliveryDesc:
       "نوفر خدمة توصيل سريعة وموثوقة لجميع عملائنا في جميع أنحاء المملكة. سواء كنت بحاجة إلى توصيل مباشر من المصنع أو إلى مستودعاتك، نحن هنا لخدمتك.",
@@ -158,6 +159,8 @@ const translations = {
     distributionStepDesc: "توزيع سريع وموثوق",
     deliveryStep: "التسليم",
     deliveryStepDesc: "تسليم آمن إلى العميل",
+    waterCTA2Title: "احصل على مياه نقية بجودة عالمية",
+    waterCTA2Desc: "تواصل معنا الآن لتلبية احتياجاتك من المياه المحلاة",
     waterProductionLabel: "إنتاج المياه",
 
     // Transport Page
@@ -191,6 +194,8 @@ const translations = {
     completeManagement: "إدارة كاملة",
     partnersSubtitle: "شركاؤنا الاستراتيجيون من كبرى الشركات المحلية والعالمية",
     trustedPartner: "شريك موثوق",
+    transportCTA2Title: "نحن شريكك الموثوق في النقل واللوجستيات",
+    transportCTA2Desc: "تواصل معنا الآن لخدمات نقل ولوجستية متميزة",
 
     // Buses Page
     busesTitle: "الباصات والنقل الثقيل",
@@ -248,6 +253,8 @@ const translations = {
     busesQuality: "جودة عالية",
     busesQualityDesc: "معايير جودة عالمية في جميع خدماتنا",
     busesLuxuryDesc: "باصات فاخرة مجهزة بأحدث التقنيات والخدمات",
+    busesCTA2Title: "استعد لرحلة مباركة معنا",
+    busesCTA2Desc: "نضمن لك رحلة آمنة ومريحة لضيوف الرحمن",
 
     // Trailers Page
     trailersTitle: "النقل الثقيل",
@@ -275,6 +282,8 @@ const translations = {
     trailersBenefit4: "تغطية شاملة لجميع مناطق المملكة",
     trailersCTATitle: "هل تحتاج إلى خدمات النقل الثقيل؟",
     trailersCTADesc: "تواصل معنا الآن للحصول على أفضل العروض والخدمات",
+    trailersCTA2Title: "جاهزون لخدمتك في أي وقت",
+    trailersCTA2Desc: "فريقنا متاح على مدار الساعة لتلبية احتياجاتك",
 
     // Car Rental Page
     rentalTitle: "تأجير السيارات",
@@ -289,6 +298,8 @@ const translations = {
     competitivePrices: "أسعار تنافسية",
     competitivePricesDesc: "أفضل الأسعار في السوق مع عروض وخصومات مميزة",
     bookNow: "احجز الآن",
+    rentalCTA2Title: "احصل على أفضل العروض الآن",
+    rentalCTA2Desc: "تواصل معنا للحصول على أسعار مميزة وخدمة استثنائية",
     rentalIntro: "خدمات تأجير السيارات المتميزة",
     rentalIntroDesc:
       "بفضل الله، تستطيع شركتنا توفير أي أنواع سيارات (صغيرة وكبيرة) لشركات اللوجستية وغيرها من الشركات الأخرى. نحن نقدم حلولاً مرنة ومتنوعة تلبي جميع احتياجات عملائنا.",
@@ -343,13 +354,14 @@ const translations = {
       "توفير مناديب محترفين ومدربين على أعلى المستويات",
     logisticsManagementBenefit2:
       "أسطول واسع من السيارات المجهزة بأحدث التقنيات",
-    logisticsManagementBenefit3:
-      "عقود تشغيل شاملة ومتكاملة مع متابعة مستمرة",
-    logisticsManagementBenefit4:
-      "دعم فني وإداري متاح على مدار الساعة",
+    logisticsManagementBenefit3: "عقود تشغيل شاملة ومتكاملة مع متابعة مستمرة",
+    logisticsManagementBenefit4: "دعم فني وإداري متاح على مدار الساعة",
     logisticsManagementCTATitle: "ابدأ شراكتك معنا اليوم",
     logisticsManagementCTADesc:
       "تواصل معنا الآن لمعرفة كيف يمكننا مساعدتك في إدارة وتشغيل شركتك اللوجيستية",
+    logisticsManagementCTA2Title: "نحن هنا لدعمك دائماً",
+    logisticsManagementCTA2Desc:
+      "فريقنا جاهز لتقديم الحلول المناسبة لاحتياجاتك",
 
     // Digital Marketing Page
     digitalMarketingTitle: "التسويق و الانتاج المرئي",
@@ -399,17 +411,15 @@ const translations = {
     digitalMarketingBenefitsTitle: "فوائد التعامل معنا",
     digitalMarketingBenefitsDesc:
       "نوفر لك حلولاً متكاملة وشاملة تضمن نجاح حملاتك التسويقية",
-    digitalMarketingBenefit1:
-      "تصميم وتطوير مواقع إلكترونية احترافية ومتجاوبة",
-    digitalMarketingBenefit2:
-      "إنتاج محتوى مرئي وفيديو احترافي عالي الجودة",
-    digitalMarketingBenefit3:
-      "إدارة حملات تسويقية فعالة على جميع المنصات",
-    digitalMarketingBenefit4:
-      "تحليل ومراقبة الأداء لتحسين النتائج باستمرار",
+    digitalMarketingBenefit1: "تصميم وتطوير مواقع إلكترونية احترافية ومتجاوبة",
+    digitalMarketingBenefit2: "إنتاج محتوى مرئي وفيديو احترافي عالي الجودة",
+    digitalMarketingBenefit3: "إدارة حملات تسويقية فعالة على جميع المنصات",
+    digitalMarketingBenefit4: "تحليل ومراقبة الأداء لتحسين النتائج باستمرار",
     digitalMarketingCTATitle: "ابدأ مشروعك الرقمي معنا اليوم",
     digitalMarketingCTADesc:
       "تواصل معنا الآن لمعرفة كيف يمكننا مساعدتك في تطوير وجودك الرقمي وتحقيق أهدافك التسويقية",
+    digitalMarketingCTA2Title: "لنبدأ رحلتك الرقمية معاً",
+    digitalMarketingCTA2Desc: "نحن متخصصون في تحويل أفكارك إلى واقع رقمي ناجح",
   },
   en: {
     // Navigation
@@ -464,10 +474,10 @@ const translations = {
     fullCoverage: "Full Coverage",
     waterProductionDescShort: "Desalinated Water Production & Supply",
     transportServicesDescShort: "Transport & Logistics Services",
-    busesTrailersDescShort: "Distinguished transport service for the Guests of the Most Merciful and domestic tourism",
-    carRentalDescShort: "Rental of all types of vehicles for companies and individuals",
-    logisticsManagementDescShort:
-      "Integrated management and operations for logistics companies - representatives, cars, and operational contracts",
+    busesTrailersDescShort:
+      "Distinguished transport service for the Guests of the Most Merciful and domestic tourism",
+    carRentalDescShort:
+      "Rental of all types of vehicles for companies and individuals",
     qualityAndDelivery: "Quality & Delivery",
     integratedLogisticsServices: "Integrated Logistics Services",
     ourLogisticsServices: "Our Logistics Services",
@@ -531,7 +541,8 @@ const translations = {
       "We are committed to the highest global quality standards in producing and distributing desalinated water. All our products undergo rigorous and continuous testing to ensure the purity and quality of the water we provide to our customers.",
     importantAdvantage: "Important Advantage",
     lowSodiumTitle: "Sodium Less Than 5%",
-    lowSodiumDesc: "Our desalinated water contains less than 5% sodium, making it healthy and safe for daily consumption",
+    lowSodiumDesc:
+      "Our desalinated water contains less than 5% sodium, making it healthy and safe for daily consumption",
     waterDelivery: "Fast Delivery",
     waterDeliveryDesc:
       "We provide fast and reliable delivery service to all our customers throughout the Kingdom. Whether you need direct delivery from the factory or to your warehouses, we are here to serve you.",
@@ -557,6 +568,8 @@ const translations = {
     distributionStepDesc: "Fast and reliable distribution",
     deliveryStep: "Delivery",
     deliveryStepDesc: "Safe delivery to the customer",
+    waterCTA2Title: "Get Pure Water with Global Quality",
+    waterCTA2Desc: "Contact us now to meet your desalinated water needs",
     waterProductionLabel: "Water Production",
 
     // Transport Page
@@ -593,6 +606,9 @@ const translations = {
     partnersSubtitle:
       "Our strategic partners from major local and international companies",
     trustedPartner: "Trusted Partner",
+    transportCTA2Title: "We Are Your Trusted Partner in Transport & Logistics",
+    transportCTA2Desc:
+      "Contact us now for distinguished transport and logistics services",
 
     // Buses Page
     busesTitle: "Buses & Heavy Transport",
@@ -631,9 +647,11 @@ const translations = {
     busesServicesSubtitle:
       "Distinguished transport service for the Guests of the Most Merciful and domestic tourism",
     busesFeaturesSubtitle: "Our features that make us the optimal choice",
-    busesSafetyDetail1: "Fleet equipped with latest safety and security systems",
+    busesSafetyDetail1:
+      "Fleet equipped with latest safety and security systems",
     busesSafetyDetail2: "Professional and highly trained drivers",
-    busesSafetyDetail3: "Regular maintenance and continuous vehicle inspections",
+    busesSafetyDetail3:
+      "Regular maintenance and continuous vehicle inspections",
     busesComfortDetail1: "Luxurious and comfortable seats with spacious areas",
     busesComfortDetail2: "Advanced air conditioning and excellent ventilation",
     busesComfortDetail3: "Entertainment services and free WiFi",
@@ -653,7 +671,11 @@ const translations = {
     busesLuggageDesc: "Wide and dedicated spaces for safe luggage storage",
     busesQuality: "High Quality",
     busesQualityDesc: "Global quality standards in all our services",
-    busesLuxuryDesc: "Luxury buses equipped with latest technologies and services",
+    busesLuxuryDesc:
+      "Luxury buses equipped with latest technologies and services",
+    busesCTA2Title: "Get Ready for a Blessed Journey With Us",
+    busesCTA2Desc:
+      "We guarantee you a safe and comfortable journey for the Guests of the Most Merciful",
 
     // Trailers Page
     trailersTitle: "Heavy Transport",
@@ -685,6 +707,8 @@ const translations = {
     trailersBenefit4: "Full coverage of all regions of the Kingdom",
     trailersCTATitle: "Need Heavy Transport Services?",
     trailersCTADesc: "Contact us now to get the best offers and services",
+    trailersCTA2Title: "Ready to Serve You Anytime",
+    trailersCTA2Desc: "Our team is available 24/7 to meet your needs",
 
     // Car Rental Page
     rentalTitle: "Car Rental Services",
@@ -700,6 +724,8 @@ const translations = {
     competitivePricesDesc:
       "Best prices in the market with special offers and discounts",
     bookNow: "Book Now",
+    rentalCTA2Title: "Get the Best Offers Now",
+    rentalCTA2Desc: "Contact us for special prices and exceptional service",
     rentalIntro: "Distinguished Car Rental Services",
     rentalIntroDesc:
       "Thanks to God, our company can provide any types of cars (small and large) for logistics companies and other companies. We provide flexible and diverse solutions that meet all our customers' needs.",
@@ -761,6 +787,9 @@ const translations = {
     logisticsManagementCTATitle: "Start Your Partnership With Us Today",
     logisticsManagementCTADesc:
       "Contact us now to learn how we can help you manage and operate your logistics company",
+    logisticsManagementCTA2Title: "We're Here to Support You Always",
+    logisticsManagementCTA2Desc:
+      "Our team is ready to provide solutions tailored to your needs",
 
     // Digital Marketing Page
     digitalMarketingTitle: "Digital Marketing & Visual Production",
@@ -821,6 +850,9 @@ const translations = {
     digitalMarketingCTATitle: "Start Your Digital Project With Us Today",
     digitalMarketingCTADesc:
       "Contact us now to learn how we can help you develop your digital presence and achieve your marketing goals",
+    digitalMarketingCTA2Title: "Let's Start Your Digital Journey Together",
+    digitalMarketingCTA2Desc:
+      "We specialize in turning your ideas into successful digital reality",
   },
 };
 

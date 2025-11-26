@@ -89,7 +89,7 @@ const DigitalMarketing = () => {
         </div>
         {/* Decorative Pattern */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col justify-center items-center min-h-[650px] md:min-h-[750px] py-16 text-center">
             <div className="inline-flex items-center gap-2 text-light-blue-400 mb-6">
@@ -100,11 +100,11 @@ const DigitalMarketing = () => {
                 {t("digitalMarketingTitle")}
               </span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-white mb-6">
               {t("digitalMarketingTitle")}
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-12">
               {t("digitalMarketingDesc")}
             </p>
@@ -261,10 +261,12 @@ const DigitalMarketing = () => {
                 {t("digitalMarketingBenefitsDesc")}
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3 group bg-white dark:bg-navy-800 p-5 rounded-xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 hover:scale-[1.02]">
+                <div
+                  key={index}
+                  className="flex items-start gap-3 group bg-white dark:bg-navy-800 p-5 rounded-xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 hover:scale-[1.02]">
                   <div className="bg-light-blue-100 dark:bg-light-blue-900/30 p-1.5 rounded-lg border border-light-blue-200 dark:border-light-blue-800/30 group-hover:bg-light-blue-200 dark:group-hover:bg-light-blue-800/40 transition-colors mt-0.5 flex-shrink-0">
                     <CheckCircle2 className="h-5 w-5 text-light-blue-600 dark:text-light-blue-400" />
                   </div>
@@ -300,7 +302,6 @@ const DigitalMarketing = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <div id="contact">
         <ContactForm />
@@ -310,4 +311,3 @@ const DigitalMarketing = () => {
 };
 
 export default DigitalMarketing;
-
