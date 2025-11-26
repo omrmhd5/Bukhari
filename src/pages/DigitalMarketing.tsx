@@ -17,8 +17,11 @@ import {
 } from "lucide-react";
 
 // Image paths - user will change these later
-const digitalHero = "/assets/transport/transport-hero.jpg";
-const digitalImage = "/assets/transport/transport-plane.jpg";
+const digitalHero = "/assets/digital/digital-hero.jpg";
+const digitalWebsite = "/assets/digital/digital-website.jpg";
+const digitalVideo = "/assets/digital/digital-video.jpg";
+const digitalSocial = "/assets/digital/digital-social.jpg";
+const digitalSEO = "/assets/digital/digital-seo.jpg";
 
 const DigitalMarketing = () => {
   const { t } = useLanguage();
@@ -28,21 +31,25 @@ const DigitalMarketing = () => {
       icon: Globe,
       title: t("digitalMarketingWebsites"),
       description: t("digitalMarketingWebsitesDesc"),
+      image: digitalWebsite,
     },
     {
       icon: Video,
       title: t("digitalMarketingVideo"),
       description: t("digitalMarketingVideoDesc"),
+      image: digitalVideo,
     },
     {
       icon: Megaphone,
       title: t("digitalMarketingSocial"),
       description: t("digitalMarketingSocialDesc"),
+      image: digitalSocial,
     },
     {
       icon: Target,
       title: t("digitalMarketingSEO"),
       description: t("digitalMarketingSEODesc"),
+      image: digitalSEO,
     },
   ];
 
@@ -190,7 +197,7 @@ const DigitalMarketing = () => {
                 <div className="flex-1">
                   <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg border-2 border-navy-100 dark:border-navy-700 group-hover:border-light-blue-400/60 dark:group-hover:border-light-blue-500/60 transition-all duration-300">
                     <img
-                      src={digitalImage}
+                      src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
