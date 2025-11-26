@@ -10,6 +10,11 @@ import {
   CheckCircle2,
   MapPin,
   Clock,
+  Users,
+  Award,
+  Wifi,
+  AirVent,
+  Luggage,
 } from "lucide-react";
 // Image is in public/assets/ folder
 const busesHero = "/assets/buses/buses-hero.jpg";
@@ -38,21 +43,74 @@ const Buses = () => {
       icon: Shield,
       title: t("safety"),
       description: t("safetyDesc"),
+      details: [
+        t("busesSafetyDetail1"),
+        t("busesSafetyDetail2"),
+        t("busesSafetyDetail3"),
+      ],
     },
     {
       icon: Heart,
       title: t("comfort"),
       description: t("comfortDesc"),
+      details: [
+        t("busesComfortDetail1"),
+        t("busesComfortDetail2"),
+        t("busesComfortDetail3"),
+      ],
     },
     {
       icon: Clock,
       title: t("speed"),
       description: t("speedDesc"),
+      details: [
+        t("busesSpeedDetail1"),
+        t("busesSpeedDetail2"),
+        t("busesSpeedDetail3"),
+      ],
     },
     {
       icon: MapPin,
       title: t("coverage"),
       description: t("coverageDesc"),
+      details: [
+        t("busesCoverageDetail1"),
+        t("busesCoverageDetail2"),
+        t("busesCoverageDetail3"),
+      ],
+    },
+  ];
+
+  const additionalFeatures = [
+    {
+      icon: Users,
+      title: t("busesCapacity"),
+      description: t("busesCapacityDesc"),
+    },
+    {
+      icon: Wifi,
+      title: t("busesWifi"),
+      description: t("busesWifiDesc"),
+    },
+    {
+      icon: AirVent,
+      title: t("busesAC"),
+      description: t("busesACDesc"),
+    },
+    {
+      icon: Luggage,
+      title: t("busesLuggage"),
+      description: t("busesLuggageDesc"),
+    },
+    {
+      icon: Award,
+      title: t("busesQuality"),
+      description: t("busesQualityDesc"),
+    },
+    {
+      icon: Star,
+      title: t("busesLuxury"),
+      description: t("busesLuxuryDesc"),
     },
   ];
 
@@ -343,6 +401,76 @@ const Buses = () => {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section with Details */}
+      <section className="py-12 md:py-20 lg:py-28 bg-gradient-to-br from-white via-light-blue-100/40 to-light-blue-50/50 dark:from-navy-900/40 dark:via-light-blue-900/20 dark:to-navy-900/40 relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-navy-200/20 dark:bg-navy-700/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-light-blue-200/20 dark:bg-light-blue-700/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-navy-800 dark:text-white">
+              {t("ourFeatures")}
+            </h2>
+            <p className="text-lg text-navy-600 dark:text-navy-300 max-w-2xl mx-auto">
+              {t("busesFeaturesSubtitle")}
+            </p>
+          </div>
+
+          {/* Main Features Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white dark:bg-navy-800 p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group hover:scale-[1.02]">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="bg-gradient-to-br from-light-blue-100 to-light-blue-200 dark:from-light-blue-800/50 dark:to-light-blue-700/50 p-4 rounded-xl border border-light-blue-200/50 dark:border-light-blue-700/30 group-hover:scale-110 transition-transform flex-shrink-0">
+                    <feature.icon className="h-8 w-8 text-navy-700 dark:text-light-blue-400" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2 text-navy-800 dark:text-white">
+                      {feature.title}
+                    </h3>
+                    <p className="text-navy-600 dark:text-navy-300 mb-4">
+                      {feature.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {feature.details.map((detail, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-light-blue-600 dark:text-light-blue-400 flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-navy-600 dark:text-navy-300">
+                            {detail}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Additional Features Grid */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {additionalFeatures.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white dark:bg-navy-800 p-6 rounded-2xl shadow-lg border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300 group hover:scale-[1.02]">
+                <div className="bg-gradient-to-br from-light-blue-100 to-light-blue-200 dark:from-light-blue-800/50 dark:to-light-blue-700/50 p-4 rounded-xl mb-4 group-hover:scale-110 transition-transform inline-block">
+                  <feature.icon className="h-6 w-6 text-navy-700 dark:text-light-blue-400" />
+                </div>
+                <h4 className="text-lg font-bold mb-2 text-navy-800 dark:text-white">
+                  {feature.title}
+                </h4>
+                <p className="text-sm text-navy-600 dark:text-navy-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

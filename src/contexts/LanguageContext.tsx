@@ -23,6 +23,8 @@ const translations = {
     transport: "النقل واللوجستيات",
     buses: "خدمة ضيوف الرحمن",
     carRental: "تأجير السيارات",
+    logisticsManagement: "ادارة و تشغيل الشركات اللوجيستية",
+    digitalMarketing: "التسويق و الانتاج المرئي",
     contact: "اتصل بنا",
 
     // Home Page
@@ -95,6 +97,16 @@ const translations = {
     // Contact
     contactTitle: "تواصل معنا",
     contactSubtitle: "نحن هنا لمساعدتك - تواصل معنا لأي استفسارات أو طلبات",
+    contactCompany: "شركة / عميل",
+    contactEmployee: "موظف / وظيفة",
+    contactCompanyDesc: "للشركات الراغبة في خدماتنا واستشاراتنا",
+    contactEmployeeDesc: "للمتقدمين للوظائف والراغبين في العمل معنا",
+    companyName: "اسم الشركة",
+    position: "المنصب / المسمى الوظيفي",
+    companyMessage: "اكتب رسالتك أو استفسارك عن خدماتنا...",
+    employeeMessage: "اكتب رسالتك أو سيرتك الذاتية...",
+    contactCompanySuccess: "تم إرسال طلبك بنجاح",
+    contactEmployeeSuccess: "تم إرسال طلب التوظيف بنجاح",
     phone: "الهاتف",
     email: "البريد الإلكتروني",
     whatsapp: "واتساب",
@@ -119,6 +131,9 @@ const translations = {
     waterQuality: "جودة المياه",
     waterQualityDesc:
       "نلتزم بأعلى معايير الجودة العالمية في إنتاج وتوزيع المياه المحلاة. جميع منتجاتنا تخضع لفحوصات دقيقة ومستمرة لضمان نقاء وجودة المياه التي نقدمها لعملائنا.",
+    importantAdvantage: "ميزة مهمة",
+    lowSodiumTitle: "صوديوم أقل من 5%",
+    lowSodiumDesc: "مياهنا المحلاة تحتوي على نسبة صوديوم أقل من 5%، مما يجعلها صحية وآمنة للاستهلاك اليومي",
     waterDelivery: "التوصيل السريع",
     waterDeliveryDesc:
       "نوفر خدمة توصيل سريعة وموثوقة لجميع عملائنا في جميع أنحاء المملكة. سواء كنت بحاجة إلى توصيل مباشر من المصنع أو إلى مستودعاتك، نحن هنا لخدمتك.",
@@ -210,6 +225,29 @@ const translations = {
     busesLuxury: "فاخر",
     busesServicesSubtitle: "خدمة نقل متميزة لضيوف الرحمن والسياحة الداخلية",
     busesFeaturesSubtitle: "مميزاتنا التي تجعلنا الخيار الأمثل",
+    busesSafetyDetail1: "أسطول مجهز بأحدث أنظمة السلامة والأمان",
+    busesSafetyDetail2: "سائقون محترفون ومدربون على أعلى المستويات",
+    busesSafetyDetail3: "صيانة دورية وفحوصات مستمرة للمركبات",
+    busesComfortDetail1: "مقاعد فاخرة ومريحة مع مساحات واسعة",
+    busesComfortDetail2: "تكييف هواء متطور وتهوية ممتازة",
+    busesComfortDetail3: "خدمات ترفيهية وWiFi مجاني",
+    busesSpeedDetail1: "التزام تام بمواعيد الوصول المحددة",
+    busesSpeedDetail2: "مسارات محسّنة للوصول السريع",
+    busesSpeedDetail3: "تنسيق دقيق مع شركات الحج والعمرة",
+    busesCoverageDetail1: "تغطية شاملة لجميع مناطق المملكة",
+    busesCoverageDetail2: "خدمة متاحة على مدار الساعة",
+    busesCoverageDetail3: "شبكة واسعة من النقاط والمسارات",
+    busesCapacity: "سعة كبيرة",
+    busesCapacityDesc: "باصات بسعات مختلفة تناسب جميع الاحتياجات",
+    busesWifi: "WiFi مجاني",
+    busesWifiDesc: "اتصال إنترنت مجاني عالي السرعة للركاب",
+    busesAC: "تكييف متطور",
+    busesACDesc: "نظام تكييف هواء متقدم لراحة مثالية",
+    busesLuggage: "مساحة للأمتعة",
+    busesLuggageDesc: "مساحات واسعة ومخصصة لحفظ الأمتعة بأمان",
+    busesQuality: "جودة عالية",
+    busesQualityDesc: "معايير جودة عالمية في جميع خدماتنا",
+    busesLuxuryDesc: "باصات فاخرة مجهزة بأحدث التقنيات والخدمات",
 
     // Trailers Page
     trailersTitle: "النقل الثقيل",
@@ -241,7 +279,7 @@ const translations = {
     // Car Rental Page
     rentalTitle: "تأجير السيارات",
     rentalDesc:
-      "نوفر جميع أنواع السيارات والمركبات (صغيرة وكبيرة) للشركات اللوجستية والشركات الأخرى - الخيار الأمثل في المملكة",
+      "نوفر جميع أنواع السيارات والمركبات (صغيرة وكبيرة) للشركات اللوجستية والشركات الأخرى. نتميز بأسطول واسع ومتنوع، أسعار تنافسية مع عروض وخصومات مميزة، خدمة متاحة على مدار الساعة (24/7)، صيانة دورية وفحوصات مستمرة لضمان السلامة، وإجراءات تأجير بسيطة وسريعة مع دعم فني متواصل - الخيار الأمثل في المملكة",
     smallVehicles: "مركبات صغيرة",
     largeVehicles: "مركبات كبيرة",
     flexibility: "المرونة",
@@ -260,7 +298,118 @@ const translations = {
       "نقدم مركبات كبيرة ومتطورة لشركات اللوجستية والشركات الأخرى. مركباتنا مجهزة بأحدث المعدات والتقنيات لضمان أداء عالي وكفاءة ممتازة.",
     rentalBenefits: "مميزات تأجير السيارات معنا",
     rentalBenefitsDesc:
-      "نوفر مرونة كاملة في التأجير مع أسعار تنافسية وخدمة عملاء متميزة. جميع مركباتنا حديثة ومجهزة بأحدث التقنيات، ونضمن توفرها على مدار الساعة.",
+      "نوفر مرونة كاملة في التأجير مع أسعار تنافسية وخدمة عملاء متميزة. جميع مركباتنا حديثة ومجهزة بأحدث التقنيات، ونضمن توفرها على مدار الساعة",
+
+    // Logistics Management Page
+    logisticsManagementTitle: "ادارة و تشغيل الشركات اللوجيستية",
+    logisticsManagementDesc:
+      "نوفر خدمات إدارة وتشغيل متكاملة للشركات اللوجيستية الأخرى. نقدم مناديب محترفين، سيارات مجهزة، وعقود تشغيل شاملة لضمان نجاح عملياتك اللوجيستية.",
+    logisticsManagementDescShort:
+      "إدارة وتشغيل متكامل للشركات اللوجيستية - مناديب، سيارات، وعقود تشغيل",
+    logisticsManagementPartnership: "شراكة استراتيجية",
+    logisticsManagementProfessional: "خدمة احترافية",
+    logisticsManagementExpert: "خبرة متخصصة",
+    logisticsManagementServicesTitle: "خدماتنا",
+    logisticsManagementServicesSubtitle:
+      "نقدم حلولاً شاملة لإدارة وتشغيل الشركات اللوجيستية",
+    logisticsManagementReps: "توفير المناديب",
+    logisticsManagementRepsDesc:
+      "نوفر مناديب محترفين ومدربين على أعلى المستويات لضمان خدمة متميزة لعملائك",
+    logisticsManagementCars: "توفير السيارات",
+    logisticsManagementCarsDesc:
+      "أسطول واسع من السيارات المجهزة بأحدث التقنيات لخدمة عملياتك اللوجيستية",
+    logisticsManagementContracts: "العقود التشغيلية",
+    logisticsManagementContractsDesc:
+      "عقود تشغيل شاملة ومتكاملة تضمن نجاح عملياتك اللوجيستية بكفاءة عالية",
+    logisticsManagementFeaturesTitle: "مميزاتنا",
+    logisticsManagementFeaturesSubtitle:
+      "ما يميزنا في إدارة وتشغيل الشركات اللوجيستية",
+    logisticsManagementFeature1: "خبرة واسعة",
+    logisticsManagementFeature1Desc:
+      "سنوات من الخبرة في إدارة وتشغيل الشركات اللوجيستية مع كبرى الشركات المحلية والعالمية",
+    logisticsManagementFeature2: "كفاءة عالية",
+    logisticsManagementFeature2Desc:
+      "نظم إدارة متطورة وموارد بشرية محترفة تضمن أعلى مستويات الكفاءة والإنتاجية",
+    logisticsManagementFeature3: "جودة مضمونة",
+    logisticsManagementFeature3Desc:
+      "معايير جودة عالمية في جميع خدماتنا مع متابعة مستمرة وضمان الأداء المتميز",
+    logisticsManagementFeature4: "دعم مستمر",
+    logisticsManagementFeature4Desc:
+      "فريق دعم فني وإداري متاح على مدار الساعة لضمان استمرارية عملياتك بسلاسة",
+    logisticsManagementBenefitsTitle: "فوائد التعامل معنا",
+    logisticsManagementBenefitsDesc:
+      "نوفر لك حلولاً متكاملة وشاملة تضمن نجاح عملياتك اللوجيستية",
+    logisticsManagementBenefit1:
+      "توفير مناديب محترفين ومدربين على أعلى المستويات",
+    logisticsManagementBenefit2:
+      "أسطول واسع من السيارات المجهزة بأحدث التقنيات",
+    logisticsManagementBenefit3:
+      "عقود تشغيل شاملة ومتكاملة مع متابعة مستمرة",
+    logisticsManagementBenefit4:
+      "دعم فني وإداري متاح على مدار الساعة",
+    logisticsManagementCTATitle: "ابدأ شراكتك معنا اليوم",
+    logisticsManagementCTADesc:
+      "تواصل معنا الآن لمعرفة كيف يمكننا مساعدتك في إدارة وتشغيل شركتك اللوجيستية",
+
+    // Digital Marketing Page
+    digitalMarketingTitle: "التسويق و الانتاج المرئي",
+    digitalMarketingDesc:
+      "نقدم خدمات متكاملة في التسويق الرقمي والإنتاج المرئي لمساعدة شركتك على النمو والوصول إلى جمهورك المستهدف بفعالية",
+    digitalMarketingDescShort:
+      "خدمات متكاملة في التسويق الرقمي والإنتاج المرئي والمواقع الإلكترونية",
+    digitalMarketingModern: "حلول حديثة",
+    digitalMarketingResults: "نتائج مضمونة",
+    digitalMarketingProfessional: "خدمة احترافية",
+    digitalMarketingServicesTitle: "خدماتنا",
+    digitalMarketingServicesSubtitle:
+      "نقدم مجموعة شاملة من خدمات التسويق الرقمي والإنتاج المرئي",
+    digitalMarketingWebsites: "تصميم المواقع الإلكترونية",
+    digitalMarketingWebsitesDesc:
+      "تصميم وتطوير مواقع إلكترونية احترافية متجاوبة مع جميع الأجهزة",
+    digitalMarketingVideo: "الإنتاج المرئي والفيديو",
+    digitalMarketingVideoDesc:
+      "إنتاج فيديوهات احترافية للإعلانات والتسويق والمحتوى الرقمي",
+    digitalMarketingPhotography: "التصوير الفوتوغرافي",
+    digitalMarketingPhotographyDesc:
+      "خدمات تصوير احترافية للمنتجات والفعاليات والمحتوى التسويقي",
+    digitalMarketingSocial: "التسويق عبر وسائل التواصل",
+    digitalMarketingSocialDesc:
+      "إدارة وتنفيذ حملات تسويقية فعالة على جميع منصات التواصل الاجتماعي",
+    digitalMarketingAnalytics: "تحليل البيانات والتقارير",
+    digitalMarketingAnalyticsDesc:
+      "تحليل أداء الحملات التسويقية وتقديم تقارير مفصلة لتحسين النتائج",
+    digitalMarketingSEO: "تحسين محركات البحث",
+    digitalMarketingSEODesc:
+      "تحسين ظهور موقعك في نتائج محركات البحث لزيادة الزيارات والتحويلات",
+    digitalMarketingFeaturesTitle: "مميزاتنا",
+    digitalMarketingFeaturesSubtitle:
+      "ما يميز خدماتنا في التسويق الرقمي والإنتاج المرئي",
+    digitalMarketingFeature1: "تصميم احترافي",
+    digitalMarketingFeature1Desc:
+      "فريق محترف من المصممين والمطورين يقدمون حلولاً مبتكرة وعصرية",
+    digitalMarketingFeature2: "استراتيجيات فعالة",
+    digitalMarketingFeature2Desc:
+      "استراتيجيات تسويقية مدروسة ومثبتة لتحقيق أفضل النتائج لعملائنا",
+    digitalMarketingFeature3: "متابعة مستمرة",
+    digitalMarketingFeature3Desc:
+      "متابعة مستمرة لأداء الحملات والتعديلات اللازمة لضمان النجاح",
+    digitalMarketingFeature4: "نتائج سريعة",
+    digitalMarketingFeature4Desc:
+      "حلول سريعة وفعالة تساعدك على تحقيق أهدافك التسويقية في أقصر وقت",
+    digitalMarketingBenefitsTitle: "فوائد التعامل معنا",
+    digitalMarketingBenefitsDesc:
+      "نوفر لك حلولاً متكاملة وشاملة تضمن نجاح حملاتك التسويقية",
+    digitalMarketingBenefit1:
+      "تصميم وتطوير مواقع إلكترونية احترافية ومتجاوبة",
+    digitalMarketingBenefit2:
+      "إنتاج محتوى مرئي وفيديو احترافي عالي الجودة",
+    digitalMarketingBenefit3:
+      "إدارة حملات تسويقية فعالة على جميع المنصات",
+    digitalMarketingBenefit4:
+      "تحليل ومراقبة الأداء لتحسين النتائج باستمرار",
+    digitalMarketingCTATitle: "ابدأ مشروعك الرقمي معنا اليوم",
+    digitalMarketingCTADesc:
+      "تواصل معنا الآن لمعرفة كيف يمكننا مساعدتك في تطوير وجودك الرقمي وتحقيق أهدافك التسويقية",
   },
   en: {
     // Navigation
@@ -269,6 +418,7 @@ const translations = {
     transport: "Transport & Logistics",
     buses: "Guests of the Most Merciful Service",
     carRental: "Car Rental",
+    logisticsManagement: "Logistics Management & Operations",
     contact: "Contact Us",
 
     // Home Page
@@ -316,6 +466,8 @@ const translations = {
     transportServicesDescShort: "Transport & Logistics Services",
     busesTrailersDescShort: "Buses",
     carRentalDescShort: "Car Rental",
+    logisticsManagementDescShort:
+      "Integrated management and operations for logistics companies - representatives, cars, and operational contracts",
     qualityAndDelivery: "Quality & Delivery",
     integratedLogisticsServices: "Integrated Logistics Services",
     ourLogisticsServices: "Our Logistics Services",
@@ -343,6 +495,16 @@ const translations = {
     contactTitle: "Contact Us",
     contactSubtitle:
       "We're here to help - Get in touch with us for any inquiries or requests",
+    contactCompany: "Company / Client",
+    contactEmployee: "Employee / Job",
+    contactCompanyDesc: "For companies wanting our services and consultations",
+    contactEmployeeDesc: "For job applicants and those wanting to work with us",
+    companyName: "Company Name",
+    position: "Position / Job Title",
+    companyMessage: "Write your message or inquiry about our services...",
+    employeeMessage: "Write your message or resume...",
+    contactCompanySuccess: "Your request has been sent successfully",
+    contactEmployeeSuccess: "Your job application has been sent successfully",
     phone: "Phone",
     email: "Email",
     whatsapp: "WhatsApp",
@@ -367,6 +529,9 @@ const translations = {
     waterQuality: "Water Quality",
     waterQualityDesc:
       "We are committed to the highest global quality standards in producing and distributing desalinated water. All our products undergo rigorous and continuous testing to ensure the purity and quality of the water we provide to our customers.",
+    importantAdvantage: "Important Advantage",
+    lowSodiumTitle: "Sodium Less Than 5%",
+    lowSodiumDesc: "Our desalinated water contains less than 5% sodium, making it healthy and safe for daily consumption",
     waterDelivery: "Fast Delivery",
     waterDeliveryDesc:
       "We provide fast and reliable delivery service to all our customers throughout the Kingdom. Whether you need direct delivery from the factory or to your warehouses, we are here to serve you.",
@@ -466,6 +631,29 @@ const translations = {
     busesServicesSubtitle:
       "Distinguished transport service for the Guests of the Most Merciful and domestic tourism",
     busesFeaturesSubtitle: "Our features that make us the optimal choice",
+    busesSafetyDetail1: "Fleet equipped with latest safety and security systems",
+    busesSafetyDetail2: "Professional and highly trained drivers",
+    busesSafetyDetail3: "Regular maintenance and continuous vehicle inspections",
+    busesComfortDetail1: "Luxurious and comfortable seats with spacious areas",
+    busesComfortDetail2: "Advanced air conditioning and excellent ventilation",
+    busesComfortDetail3: "Entertainment services and free WiFi",
+    busesSpeedDetail1: "Full commitment to scheduled arrival times",
+    busesSpeedDetail2: "Optimized routes for fast arrival",
+    busesSpeedDetail3: "Precise coordination with Hajj and Umrah companies",
+    busesCoverageDetail1: "Full coverage of all regions of the Kingdom",
+    busesCoverageDetail2: "Service available 24/7",
+    busesCoverageDetail3: "Wide network of points and routes",
+    busesCapacity: "Large Capacity",
+    busesCapacityDesc: "Buses with different capacities to suit all needs",
+    busesWifi: "Free WiFi",
+    busesWifiDesc: "Free high-speed internet connection for passengers",
+    busesAC: "Advanced AC",
+    busesACDesc: "Advanced air conditioning system for perfect comfort",
+    busesLuggage: "Luggage Space",
+    busesLuggageDesc: "Wide and dedicated spaces for safe luggage storage",
+    busesQuality: "High Quality",
+    busesQualityDesc: "Global quality standards in all our services",
+    busesLuxuryDesc: "Luxury buses equipped with latest technologies and services",
 
     // Trailers Page
     trailersTitle: "Heavy Transport",
@@ -501,7 +689,7 @@ const translations = {
     // Car Rental Page
     rentalTitle: "Car Rental Services",
     rentalDesc:
-      "We provide all types of vehicles and cars (small and large) for logistics companies and other companies - the optimal choice in the Kingdom",
+      "We provide all types of vehicles and cars (small and large) for logistics companies and other companies. We are distinguished by a wide and diverse fleet, competitive prices with special offers and discounts, service available 24/7, regular maintenance and continuous inspections to ensure safety, and simple and fast rental procedures with continuous technical support - the optimal choice in the Kingdom",
     smallVehicles: "Small Vehicles",
     largeVehicles: "Large Vehicles",
     flexibility: "Flexibility",
@@ -522,6 +710,117 @@ const translations = {
     rentalBenefits: "Car Rental Benefits With Us",
     rentalBenefitsDesc:
       "We provide complete flexibility in rental with competitive prices and distinguished customer service. All our vehicles are modern and equipped with the latest technologies, and we ensure their availability 24/7.",
+
+    // Logistics Management Page
+    logisticsManagementTitle: "Logistics Management & Operations",
+    logisticsManagementDesc:
+      "We provide integrated management and operations services for other logistics companies. We offer professional representatives, equipped vehicles, and comprehensive operational contracts to ensure the success of your logistics operations.",
+    logisticsManagementDescShort:
+      "Integrated management and operations for logistics companies - representatives, cars, and operational contracts",
+    logisticsManagementPartnership: "Strategic Partnership",
+    logisticsManagementProfessional: "Professional Service",
+    logisticsManagementExpert: "Specialized Expertise",
+    logisticsManagementServicesTitle: "Our Services",
+    logisticsManagementServicesSubtitle:
+      "We provide comprehensive solutions for logistics company management and operations",
+    logisticsManagementReps: "Representatives Provision",
+    logisticsManagementRepsDesc:
+      "We provide professional and highly trained representatives to ensure distinguished service for your customers",
+    logisticsManagementCars: "Vehicles Provision",
+    logisticsManagementCarsDesc:
+      "Wide fleet of vehicles equipped with latest technologies to serve your logistics operations",
+    logisticsManagementContracts: "Operational Contracts",
+    logisticsManagementContractsDesc:
+      "Comprehensive and integrated operational contracts that ensure the success of your logistics operations with high efficiency",
+    logisticsManagementFeaturesTitle: "Our Features",
+    logisticsManagementFeaturesSubtitle:
+      "What distinguishes us in logistics company management and operations",
+    logisticsManagementFeature1: "Extensive Experience",
+    logisticsManagementFeature1Desc:
+      "Years of experience in managing and operating logistics companies with major local and international companies",
+    logisticsManagementFeature2: "High Efficiency",
+    logisticsManagementFeature2Desc:
+      "Advanced management systems and professional human resources that ensure the highest levels of efficiency and productivity",
+    logisticsManagementFeature3: "Guaranteed Quality",
+    logisticsManagementFeature3Desc:
+      "Global quality standards in all our services with continuous monitoring and guaranteed excellent performance",
+    logisticsManagementFeature4: "Continuous Support",
+    logisticsManagementFeature4Desc:
+      "Technical and administrative support team available 24/7 to ensure smooth continuity of your operations",
+    logisticsManagementBenefitsTitle: "Benefits of Working With Us",
+    logisticsManagementBenefitsDesc:
+      "We provide you with integrated and comprehensive solutions that ensure the success of your logistics operations",
+    logisticsManagementBenefit1:
+      "Providing professional and highly trained representatives",
+    logisticsManagementBenefit2:
+      "Wide fleet of vehicles equipped with latest technologies",
+    logisticsManagementBenefit3:
+      "Comprehensive and integrated operational contracts with continuous monitoring",
+    logisticsManagementBenefit4:
+      "Technical and administrative support available 24/7",
+    logisticsManagementCTATitle: "Start Your Partnership With Us Today",
+    logisticsManagementCTADesc:
+      "Contact us now to learn how we can help you manage and operate your logistics company",
+
+    // Digital Marketing Page
+    digitalMarketingTitle: "Digital Marketing & Visual Production",
+    digitalMarketingDesc:
+      "We provide integrated digital marketing and visual production services to help your company grow and reach your target audience effectively",
+    digitalMarketingDescShort:
+      "Integrated services in digital marketing, visual production, and websites",
+    digitalMarketingModern: "Modern Solutions",
+    digitalMarketingResults: "Guaranteed Results",
+    digitalMarketingProfessional: "Professional Service",
+    digitalMarketingServicesTitle: "Our Services",
+    digitalMarketingServicesSubtitle:
+      "We provide a comprehensive range of digital marketing and visual production services",
+    digitalMarketingWebsites: "Website Design",
+    digitalMarketingWebsitesDesc:
+      "Professional responsive website design and development for all devices",
+    digitalMarketingVideo: "Video & Visual Production",
+    digitalMarketingVideoDesc:
+      "Professional video production for advertisements, marketing, and digital content",
+    digitalMarketingPhotography: "Photography",
+    digitalMarketingPhotographyDesc:
+      "Professional photography services for products, events, and marketing content",
+    digitalMarketingSocial: "Social Media Marketing",
+    digitalMarketingSocialDesc:
+      "Management and execution of effective marketing campaigns on all social media platforms",
+    digitalMarketingAnalytics: "Data Analysis & Reports",
+    digitalMarketingAnalyticsDesc:
+      "Analysis of marketing campaign performance and detailed reports to improve results",
+    digitalMarketingSEO: "Search Engine Optimization",
+    digitalMarketingSEODesc:
+      "Optimizing your website's appearance in search engine results to increase visits and conversions",
+    digitalMarketingFeaturesTitle: "Our Features",
+    digitalMarketingFeaturesSubtitle:
+      "What distinguishes our digital marketing and visual production services",
+    digitalMarketingFeature1: "Professional Design",
+    digitalMarketingFeature1Desc:
+      "Professional team of designers and developers providing innovative and modern solutions",
+    digitalMarketingFeature2: "Effective Strategies",
+    digitalMarketingFeature2Desc:
+      "Well-studied and proven marketing strategies to achieve the best results for our clients",
+    digitalMarketingFeature3: "Continuous Monitoring",
+    digitalMarketingFeature3Desc:
+      "Continuous monitoring of campaign performance and necessary adjustments to ensure success",
+    digitalMarketingFeature4: "Fast Results",
+    digitalMarketingFeature4Desc:
+      "Fast and effective solutions to help you achieve your marketing goals in the shortest time",
+    digitalMarketingBenefitsTitle: "Benefits of Working With Us",
+    digitalMarketingBenefitsDesc:
+      "We provide you with integrated and comprehensive solutions that ensure the success of your marketing campaigns",
+    digitalMarketingBenefit1:
+      "Professional responsive website design and development",
+    digitalMarketingBenefit2:
+      "High-quality professional visual content and video production",
+    digitalMarketingBenefit3:
+      "Effective marketing campaign management on all platforms",
+    digitalMarketingBenefit4:
+      "Performance analysis and monitoring to continuously improve results",
+    digitalMarketingCTATitle: "Start Your Digital Project With Us Today",
+    digitalMarketingCTADesc:
+      "Contact us now to learn how we can help you develop your digital presence and achieve your marketing goals",
   },
 };
 

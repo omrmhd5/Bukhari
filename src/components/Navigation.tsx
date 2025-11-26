@@ -20,11 +20,6 @@ const Navigation = () => {
     { path: "/", label: t("home"), type: "link" },
     { section: "about", label: t("aboutCompany"), type: "section" },
     { section: "services", label: t("ourServices"), type: "section" },
-    { path: "/water", label: t("water"), type: "link" },
-    { path: "/transport", label: t("transport"), type: "link" },
-    { path: "/buses", label: t("buses"), type: "link" },
-    { path: "/trailers", label: t("trailers"), type: "link" },
-    { path: "/car-rental", label: t("carRental"), type: "link" },
     { section: "contact", label: t("contactTitle"), type: "section" },
   ];
 

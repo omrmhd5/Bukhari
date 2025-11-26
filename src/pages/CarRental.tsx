@@ -30,6 +30,16 @@ const CarRental = () => {
       title: t("availability"),
       description: t("availabilityDesc"),
     },
+    {
+      icon: DollarSign,
+      title: t("competitivePrices"),
+      description: t("competitivePricesDesc"),
+    },
+    {
+      icon: Star,
+      title: t("quality"),
+      description: t("qualityDesc"),
+    },
   ];
 
   const benefits = [
@@ -100,7 +110,7 @@ const CarRental = () => {
             </div>
 
             {/* Bottom Overlay Cards */}
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-12">
               {features.map((feature, index) => (
                 <div
                   key={index}

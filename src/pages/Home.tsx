@@ -381,7 +381,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-4 md:gap-6 max-w-7xl mx-auto">
             <Link to="/water" className="group">
               <div className="relative h-64 sm:h-72 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 hover:shadow-2xl hover:scale-[1.02]">
                 <img
@@ -460,6 +460,30 @@ const Home = () => {
               </div>
             </Link>
 
+            <Link to="/trailers" className="group">
+              <div className="relative h-64 sm:h-72 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 hover:shadow-2xl hover:scale-[1.02]">
+                <img
+                  src={truckLink}
+                  alt="Heavy Transport"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy-800/20 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:translate-x-2 transition-transform drop-shadow-lg">
+                    {t("trailers")}
+                  </h3>
+                  <p className="text-white/95 text-sm mb-4 leading-relaxed">
+                    {t("trailersDescShort")}
+                  </p>
+                  <div className="flex items-center gap-2 text-white/90 group-hover:text-white transition-colors font-semibold">
+                    <span className="text-xs">{t("discoverMore")}</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
             <Link to="/car-rental" className="group">
               <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-primary/40 hover:shadow-2xl hover:scale-[1.02]">
                 <img
@@ -481,6 +505,54 @@ const Home = () => {
                   </h3>
                   <p className="text-white/95 text-sm mb-4 leading-relaxed">
                     {t("carRentalDescShort")}
+                  </p>
+                  <div className="flex items-center gap-2 text-white/90 group-hover:text-white transition-colors font-semibold">
+                    <span className="text-xs">{t("discoverMore")}</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link to="/logistics-management" className="group">
+              <div className="relative h-64 sm:h-72 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-purple-400/60 dark:hover:border-purple-500/60 hover:shadow-2xl hover:scale-[1.02]">
+                <img
+                  src={logisticsLink}
+                  alt="Logistics Management"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-800/20 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:translate-x-2 transition-transform drop-shadow-lg">
+                    {t("logisticsManagement")}
+                  </h3>
+                  <p className="text-white/95 text-sm mb-4 leading-relaxed">
+                    {t("logisticsManagementDescShort")}
+                  </p>
+                  <div className="flex items-center gap-2 text-white/90 group-hover:text-white transition-colors font-semibold">
+                    <span className="text-xs">{t("discoverMore")}</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link to="/digital-marketing" className="group">
+              <div className="relative h-64 sm:h-72 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-purple-400/60 dark:hover:border-purple-500/60 hover:shadow-2xl hover:scale-[1.02]">
+                <img
+                  src={logisticsLink}
+                  alt="Digital Marketing"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-800/20 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:translate-x-2 transition-transform drop-shadow-lg">
+                    {t("digitalMarketing")}
+                  </h3>
+                  <p className="text-white/95 text-sm mb-4 leading-relaxed">
+                    {t("digitalMarketingDescShort")}
                   </p>
                   <div className="flex items-center gap-2 text-white/90 group-hover:text-white transition-colors font-semibold">
                     <span className="text-xs">{t("discoverMore")}</span>

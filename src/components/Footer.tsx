@@ -17,6 +17,8 @@ const Footer = () => {
     { path: "/buses", label: t("buses") },
     { path: "/trailers", label: t("trailers") },
     { path: "/car-rental", label: t("carRental") },
+    { path: "/logistics-management", label: t("logisticsManagement") },
+    { path: "/digital-marketing", label: t("digitalMarketing") },
   ];
 
   const openWhatsApp = () => {

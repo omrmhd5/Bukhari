@@ -9,6 +9,7 @@ import {
   Factory,
   ArrowRight,
   TrendingUp,
+  Heart,
 } from "lucide-react";
 // Image is in public/assets/ folder
 const waterHero = "/assets/water/water-hero.jpg";
@@ -91,7 +92,7 @@ const Water = () => {
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-light-blue-200/30 dark:bg-light-blue-700/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -109,6 +110,35 @@ const Water = () => {
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* Highlighted Sodium Advantage */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-light-blue-500 via-light-blue-400 to-light-blue-500 dark:from-light-blue-600 dark:via-light-blue-500 dark:to-light-blue-600 p-8 md:p-10 rounded-3xl shadow-2xl border-4 border-white/50 dark:border-navy-800/50 relative overflow-hidden group hover:scale-[1.02] transition-all duration-300">
+              {/* Decorative Background */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2)_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-50" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+              
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 text-center md:text-right">
+                <div className="bg-white/20 dark:bg-navy-800/30 backdrop-blur-lg p-6 rounded-2xl border-2 border-white/30 dark:border-navy-700/30 group-hover:scale-110 transition-transform shadow-xl">
+                  <Heart className="h-12 w-12 text-white" />
+                </div>
+                <div className="flex-1">
+                  <div className="inline-block bg-white/30 dark:bg-navy-800/30 backdrop-blur-lg px-4 py-2 rounded-full mb-4 border border-white/40 dark:border-navy-700/40">
+                    <span className="text-sm font-bold text-white uppercase tracking-wide">
+                      {t("importantAdvantage")}
+                    </span>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-3 drop-shadow-lg">
+                    {t("lowSodiumTitle")}
+                  </h3>
+                  <p className="text-lg md:text-xl text-white/95 leading-relaxed font-medium drop-shadow-md">
+                    {t("lowSodiumDesc")}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -160,6 +190,34 @@ const Water = () => {
                   <p className="text-navy-700 dark:text-navy-300 leading-relaxed pt-0.5">
                     {t("fastReliableDelivery")}
                   </p>
+                </div>
+              </div>
+              
+              {/* Highlighted Sodium Advantage */}
+              <div className="mt-8 pt-6 border-t-2 border-light-blue-200/50 dark:border-light-blue-700/30">
+                <div className="bg-gradient-to-br from-light-blue-500/10 via-light-blue-400/10 to-light-blue-500/10 dark:from-light-blue-600/20 dark:via-light-blue-500/20 dark:to-light-blue-600/20 p-6 rounded-2xl border-2 border-light-blue-400/30 dark:border-light-blue-500/30 relative overflow-hidden group hover:scale-[1.02] transition-all duration-300">
+                  {/* Decorative Background */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-light-blue-400/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+                  <div className="absolute bottom-0 left-0 w-32 h-32 bg-light-blue-400/20 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
+                  
+                  <div className="relative z-10 flex items-center gap-4">
+                    <div className="bg-gradient-to-br from-light-blue-500 to-light-blue-600 dark:from-light-blue-600 dark:to-light-blue-700 p-3 rounded-xl border-2 border-white/30 dark:border-navy-700/30 group-hover:scale-110 transition-transform shadow-lg">
+                      <Heart className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="inline-block bg-light-blue-500/20 dark:bg-light-blue-600/20 backdrop-blur-sm px-3 py-1 rounded-full mb-2 border border-light-blue-400/30 dark:border-light-blue-500/30">
+                        <span className="text-xs font-bold text-light-blue-700 dark:text-light-blue-300 uppercase tracking-wide">
+                          {t("importantAdvantage")}
+                        </span>
+                      </div>
+                      <h4 className="text-xl font-bold text-navy-800 dark:text-white mb-1">
+                        {t("lowSodiumTitle")}
+                      </h4>
+                      <p className="text-sm text-navy-700 dark:text-navy-300 leading-relaxed">
+                        {t("lowSodiumDesc")}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
