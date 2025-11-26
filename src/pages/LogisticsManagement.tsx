@@ -16,8 +16,8 @@ import {
 } from "lucide-react";
 
 // Image paths - user will change these later
-const logisticsHero = "/assets/transport/transport-hero.jpg";
-const logisticsImage = "/assets/transport/transport-plane.jpg";
+const logisticsHero = "/assets/company/company-hero.jpg";
+const logisticsImage = "/assets/company/company-image.jpg";
 
 const LogisticsManagement = () => {
   const { t } = useLanguage();
