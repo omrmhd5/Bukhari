@@ -24,6 +24,11 @@ const LogisticsManagement = () => {
 
   const services = [
     {
+      icon: Building2,
+      title: t("logisticsManagementManagement"),
+      description: t("logisticsManagementManagementDesc"),
+    },
+    {
       icon: Users,
       title: t("logisticsManagementReps"),
       description: t("logisticsManagementRepsDesc"),
@@ -64,6 +69,7 @@ const LogisticsManagement = () => {
   ];
 
   const benefits = [
+    t("logisticsManagementBenefit5"),
     t("logisticsManagementBenefit1"),
     t("logisticsManagementBenefit2"),
     t("logisticsManagementBenefit3"),
@@ -145,7 +151,7 @@ const LogisticsManagement = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <div
                 key={index}

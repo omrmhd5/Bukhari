@@ -2,11 +2,18 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { toast } from "sonner";
-import { Phone, Mail, MessageCircle, Send, Sparkles, User, MessageSquare, Briefcase, Building2 } from "lucide-react";
+import { Phone, Mail, MessageCircle, Send, Sparkles, User, MessageSquare, Briefcase, Building2, FileText } from "lucide-react";
 
-type ContactType = "employee" | "company";
+type ContactType = "employee" | "company" | "quote";
 
 const ContactForm = () => {
   const { t, language } = useLanguage();
@@ -18,14 +25,29 @@ const ContactForm = () => {
     company: "",
     position: "",
     message: "",
+    registrationNumber: "",
+    taxNumber: "",
+    selectedService: "",
   });
+
+  const services = [
+    t("waterTitle"),
+    t("transportTitle"),
+    t("busesTitle"),
+    t("carRentalTitle"),
+    t("logisticsManagementTitle"),
+    t("digitalMarketingTitle"),
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to a backend
-    const successMessage = contactType === "employee" 
-      ? t("contactEmployeeSuccess") 
-      : t("contactCompanySuccess");
+    const successMessage = 
+      contactType === "employee" 
+        ? t("contactEmployeeSuccess")
+        : contactType === "quote"
+        ? t("contactQuoteSuccess")
+        : t("contactCompanySuccess");
     toast.success(successMessage + " ✓");
     setFormData({ 
       name: "", 
@@ -33,7 +55,10 @@ const ContactForm = () => {
       phone: "",
       company: "",
       position: "",
-      message: "" 
+      message: "",
+      registrationNumber: "",
+      taxNumber: "",
+      selectedService: "",
     });
   };
 
@@ -125,32 +150,47 @@ const ContactForm = () => {
             className="bg-white dark:bg-navy-800 p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-2xl border-2 border-navy-100 dark:border-navy-700 hover:border-light-blue-400/60 dark:hover:border-light-blue-500/60 transition-all duration-300">
             {/* Contact Type Selector */}
             <div className="mb-6">
-              <div className="grid grid-cols-2 gap-3 p-1 bg-navy-100/50 dark:bg-navy-700/30 rounded-xl">
+              <div className="grid grid-cols-3 gap-3 p-1 bg-navy-100/50 dark:bg-navy-700/30 rounded-xl">
                 <button
                   type="button"
                   onClick={() => setContactType("company")}
-                  className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`flex items-center justify-center gap-2 px-3 py-3 rounded-lg font-semibold transition-all duration-300 text-sm ${
                     contactType === "company"
                       ? "bg-light-blue-500 text-white shadow-lg"
                       : "text-navy-600 dark:text-navy-300 hover:bg-navy-200/50 dark:hover:bg-navy-600/50"
                   }`}>
-                  <Building2 className="h-5 w-5" />
-                  <span>{t("contactCompany")}</span>
+                  <Building2 className="h-4 w-4" />
+                  <span className="hidden sm:inline">{t("contactCompany")}</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => setContactType("employee")}
-                  className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`flex items-center justify-center gap-2 px-3 py-3 rounded-lg font-semibold transition-all duration-300 text-sm ${
                     contactType === "employee"
                       ? "bg-light-blue-500 text-white shadow-lg"
                       : "text-navy-600 dark:text-navy-300 hover:bg-navy-200/50 dark:hover:bg-navy-600/50"
                   }`}>
-                  <Briefcase className="h-5 w-5" />
-                  <span>{t("contactEmployee")}</span>
+                  <Briefcase className="h-4 w-4" />
+                  <span className="hidden sm:inline">{t("contactEmployee")}</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setContactType("quote")}
+                  className={`flex items-center justify-center gap-2 px-3 py-3 rounded-lg font-semibold transition-all duration-300 text-sm ${
+                    contactType === "quote"
+                      ? "bg-light-blue-500 text-white shadow-lg"
+                      : "text-navy-600 dark:text-navy-300 hover:bg-navy-200/50 dark:hover:bg-navy-600/50"
+                  }`}>
+                  <FileText className="h-4 w-4" />
+                  <span className="hidden sm:inline">{t("contactQuote")}</span>
                 </button>
               </div>
               <p className="text-sm text-navy-500 dark:text-navy-400 mt-3 text-center">
-                {contactType === "company" ? t("contactCompanyDesc") : t("contactEmployeeDesc")}
+                {contactType === "company" 
+                  ? t("contactCompanyDesc") 
+                  : contactType === "quote"
+                  ? t("contactQuoteDesc")
+                  : t("contactEmployeeDesc")}
               </p>
             </div>
 
@@ -166,7 +206,7 @@ const ContactForm = () => {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   required
-                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10"
+                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10 text-right"
                 />
               </div>
               
@@ -182,7 +222,7 @@ const ContactForm = () => {
                     setFormData({ ...formData, email: e.target.value })
                   }
                   required
-                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10"
+                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10 text-right"
                 />
               </div>
 
@@ -198,7 +238,7 @@ const ContactForm = () => {
                     setFormData({ ...formData, phone: e.target.value })
                   }
                   required
-                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10"
+                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10 text-right"
                 />
               </div>
 
@@ -215,8 +255,77 @@ const ContactForm = () => {
                         setFormData({ ...formData, company: e.target.value })
                       }
                       required
-                      className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10"
+                      className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10 text-right"
                     />
+                  </div>
+                </>
+              )}
+
+              {contactType === "quote" && (
+                <>
+                  <div className="relative">
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 z-10">
+                      <Building2 className="h-5 w-5 text-navy-400 dark:text-navy-500" />
+                    </div>
+                    <Input
+                      placeholder={t("companyName")}
+                      value={formData.company}
+                      onChange={(e) =>
+                        setFormData({ ...formData, company: e.target.value })
+                      }
+                      required
+                      className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10 text-right"
+                    />
+                  </div>
+                  <div className="relative">
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 z-10">
+                      <FileText className="h-5 w-5 text-navy-400 dark:text-navy-500" />
+                    </div>
+                    <Input
+                      placeholder={t("registrationNumber")}
+                      value={formData.registrationNumber}
+                      onChange={(e) =>
+                        setFormData({ ...formData, registrationNumber: e.target.value })
+                      }
+                      required
+                      className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10 text-right"
+                    />
+                  </div>
+                  <div className="relative">
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 z-10">
+                      <FileText className="h-5 w-5 text-navy-400 dark:text-navy-500" />
+                    </div>
+                    <Input
+                      placeholder={t("taxNumber")}
+                      value={formData.taxNumber}
+                      onChange={(e) =>
+                        setFormData({ ...formData, taxNumber: e.target.value })
+                      }
+                      required
+                      className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10 text-right"
+                    />
+                  </div>
+                  <div className="relative">
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
+                      <FileText className="h-5 w-5 text-navy-400 dark:text-navy-500" />
+                    </div>
+                    <Select
+                      value={formData.selectedService}
+                      onValueChange={(value) =>
+                        setFormData({ ...formData, selectedService: value })
+                      }
+                      required>
+                      <SelectTrigger className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white pr-10 text-right">
+                        <SelectValue placeholder={t("selectService")} />
+                      </SelectTrigger>
+                      <SelectContent className="bg-white dark:bg-navy-800 border-2 border-navy-100 dark:border-navy-700">
+                        {services.map((service, index) => (
+                          <SelectItem key={index} value={service} className="text-navy-800 dark:text-white focus:bg-light-blue-100 dark:focus:bg-light-blue-900/30">
+                            {service}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                 </>
               )}
@@ -233,7 +342,7 @@ const ContactForm = () => {
                       setFormData({ ...formData, position: e.target.value })
                     }
                     required
-                    className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10"
+                    className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10 text-right"
                   />
                 </div>
               )}
@@ -243,14 +352,20 @@ const ContactForm = () => {
                   <MessageSquare className="h-5 w-5 text-navy-400 dark:text-navy-500" />
                 </div>
                 <Textarea
-                  placeholder={contactType === "company" ? t("companyMessage") : t("employeeMessage")}
+                  placeholder={
+                    contactType === "company" 
+                      ? t("companyMessage") 
+                      : contactType === "quote"
+                      ? t("companyMessage")
+                      : t("employeeMessage")
+                  }
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
                   required
                   rows={6}
-                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 resize-none pr-10"
+                  className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 resize-none pr-10 text-right"
                 />
               </div>
               

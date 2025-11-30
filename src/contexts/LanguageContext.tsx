@@ -28,7 +28,7 @@ const translations = {
     contact: "اتصل بنا",
 
     // Home Page
-    heroTitle: "شركة عبدالله بخاري و شركائه",
+    heroTitle: "شركة عبدالله بخاري ",
     heroSubtitle: "للنقل والخدمات اللوجستية",
     heroDescription:
       "الشركة الرائدة في المملكة العربية السعودية والعالم في مجال النقل والخدمات اللوجستية - نقدم حلولاً متكاملة بمعايير عالمية",
@@ -99,14 +99,20 @@ const translations = {
     contactSubtitle: "نحن هنا لمساعدتك - تواصل معنا لأي استفسارات أو طلبات",
     contactCompany: "شركة / عميل",
     contactEmployee: "موظف / وظيفة",
+    contactQuote: "طلب عرض السعر",
     contactCompanyDesc: "للشركات الراغبة في خدماتنا واستشاراتنا",
     contactEmployeeDesc: "للمتقدمين للوظائف والراغبين في العمل معنا",
+    contactQuoteDesc: "للحصول على عرض سعر لخدماتنا",
     companyName: "اسم الشركة",
+    registrationNumber: "رقم السجل",
+    taxNumber: "الرقم الضريبي",
+    selectService: "اختر الخدمة",
     position: "المنصب / المسمى الوظيفي",
     companyMessage: "اكتب رسالتك أو استفسارك عن خدماتنا...",
     employeeMessage: "اكتب رسالتك أو سيرتك الذاتية...",
     contactCompanySuccess: "تم إرسال طلبك بنجاح",
     contactEmployeeSuccess: "تم إرسال طلب التوظيف بنجاح",
+    contactQuoteSuccess: "تم إرسال طلب عرض السعر بنجاح",
     phone: "الهاتف",
     email: "البريد الإلكتروني",
     whatsapp: "واتساب",
@@ -286,6 +292,7 @@ const translations = {
     trailersCTA2Desc: "فريقنا متاح على مدار الساعة لتلبية احتياجاتك",
 
     // Car Rental Page
+    carRentalTitle: "تأجير السيارات",
     rentalTitle: "تأجير السيارات",
     rentalDesc:
       "نوفر جميع أنواع السيارات والمركبات (صغيرة وكبيرة) للشركات اللوجستية والشركات الأخرى. نتميز بأسطول واسع ومتنوع، أسعار تنافسية مع عروض وخصومات مميزة، خدمة متاحة على مدار الساعة (24/7)، صيانة دورية وفحوصات مستمرة لضمان السلامة، وإجراءات تأجير بسيطة وسريعة مع دعم فني متواصل - الخيار الأمثل في المملكة",
@@ -332,6 +339,9 @@ const translations = {
     logisticsManagementContracts: "العقود التشغيلية",
     logisticsManagementContractsDesc:
       "عقود تشغيل شاملة ومتكاملة تضمن نجاح عملياتك اللوجيستية بكفاءة عالية",
+    logisticsManagementManagement: "ادارة وتشغيل الشركات اللوجستية",
+    logisticsManagementManagementDesc:
+      "خدمة متكاملة لإدارة وتشغيل الشركات اللوجستية تشمل التخطيط الاستراتيجي، الإدارة اليومية، والتحسين المستمر للعمليات",
     logisticsManagementFeaturesTitle: "مميزاتنا",
     logisticsManagementFeaturesSubtitle:
       "ما يميزنا في إدارة وتشغيل الشركات اللوجيستية",
@@ -356,6 +366,8 @@ const translations = {
       "أسطول واسع من السيارات المجهزة بأحدث التقنيات",
     logisticsManagementBenefit3: "عقود تشغيل شاملة ومتكاملة مع متابعة مستمرة",
     logisticsManagementBenefit4: "دعم فني وإداري متاح على مدار الساعة",
+    logisticsManagementBenefit5:
+      "ادارة وتشغيل متكامل للشركات اللوجستية مع تخطيط استراتيجي وتحسين مستمر",
     logisticsManagementCTATitle: "ابدأ شراكتك معنا اليوم",
     logisticsManagementCTADesc:
       "تواصل معنا الآن لمعرفة كيف يمكننا مساعدتك في إدارة وتشغيل شركتك اللوجيستية",
@@ -507,14 +519,20 @@ const translations = {
       "We're here to help - Get in touch with us for any inquiries or requests",
     contactCompany: "Company / Client",
     contactEmployee: "Employee / Job",
+    contactQuote: "Request Quote",
     contactCompanyDesc: "For companies wanting our services and consultations",
     contactEmployeeDesc: "For job applicants and those wanting to work with us",
+    contactQuoteDesc: "Get a quote for our services",
     companyName: "Company Name",
+    registrationNumber: "Registration Number",
+    taxNumber: "Tax Number",
+    selectService: "Select Service",
     position: "Position / Job Title",
     companyMessage: "Write your message or inquiry about our services...",
     employeeMessage: "Write your message or resume...",
     contactCompanySuccess: "Your request has been sent successfully",
     contactEmployeeSuccess: "Your job application has been sent successfully",
+    contactQuoteSuccess: "Your quote request has been sent successfully",
     phone: "Phone",
     email: "Email",
     whatsapp: "WhatsApp",
@@ -711,6 +729,7 @@ const translations = {
     trailersCTA2Desc: "Our team is available 24/7 to meet your needs",
 
     // Car Rental Page
+    carRentalTitle: "Car Rental",
     rentalTitle: "Car Rental Services",
     rentalDesc:
       "We provide all types of vehicles and cars (small and large) for logistics companies and other companies. We are distinguished by a wide and diverse fleet, competitive prices with special offers and discounts, service available 24/7, regular maintenance and continuous inspections to ensure safety, and simple and fast rental procedures with continuous technical support - the optimal choice in the Kingdom",
@@ -758,6 +777,10 @@ const translations = {
     logisticsManagementContracts: "Operational Contracts",
     logisticsManagementContractsDesc:
       "Comprehensive and integrated operational contracts that ensure the success of your logistics operations with high efficiency",
+    logisticsManagementManagement:
+      "Logistics Companies Management & Operations Service",
+    logisticsManagementManagementDesc:
+      "Comprehensive service for managing and operating logistics companies including strategic planning, daily management, and continuous process improvement",
     logisticsManagementFeaturesTitle: "Our Features",
     logisticsManagementFeaturesSubtitle:
       "What distinguishes us in logistics company management and operations",
@@ -784,6 +807,8 @@ const translations = {
       "Comprehensive and integrated operational contracts with continuous monitoring",
     logisticsManagementBenefit4:
       "Technical and administrative support available 24/7",
+    logisticsManagementBenefit5:
+      "Integrated management and operations for logistics companies with strategic planning and continuous improvement",
     logisticsManagementCTATitle: "Start Your Partnership With Us Today",
     logisticsManagementCTADesc:
       "Contact us now to learn how we can help you manage and operate your logistics company",

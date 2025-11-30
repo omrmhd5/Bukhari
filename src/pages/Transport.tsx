@@ -422,7 +422,7 @@ const Transport = () => {
 
       {/* Contact Section */}
       <div id="contact">
-        <ContactForm />
+      <ContactForm />
       </div>
     </div>
   );

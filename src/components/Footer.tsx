@@ -127,7 +127,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm text-center md:text-left">
               {language === "ar"
-                ? `© ${new Date().getFullYear()} شركة عبدالله بخاري و شركائه. جميع الحقوق محفوظة.`
+                ? `© ${new Date().getFullYear()} شركة عبدالله بخاري . جميع الحقوق محفوظة.`
                 : `© ${new Date().getFullYear()} Abdullah Bukhari Company. All rights reserved.`}
             </p>
             <p className="text-muted-foreground text-sm text-center md:text-right">

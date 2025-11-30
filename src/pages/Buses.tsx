@@ -447,7 +447,7 @@ const Buses = () => {
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-2 text-navy-800 dark:text-white">
                       {feature.title}
-                    </h3>
+                  </h3>
                     <p className="text-navy-600 dark:text-navy-300 mb-4">
                       {feature.description}
                     </p>
@@ -501,7 +501,7 @@ const Buses = () => {
                 <p className="text-lg md:text-xl text-white/90 mb-6">
                   {t("busesCTA2Desc")}
                 </p>
-              </div>
+                </div>
               <div className="flex justify-center md:justify-end">
                 <a
                   href="#contact"
@@ -517,7 +517,7 @@ const Buses = () => {
 
       {/* Contact Section */}
       <div id="contact">
-        <ContactForm />
+      <ContactForm />
       </div>
     </div>
   );
