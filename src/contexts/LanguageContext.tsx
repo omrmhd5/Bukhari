@@ -57,6 +57,13 @@ const translations = {
     ourMissionDesc:
       "تطوير وتنفيذ حلول نقل ولوجستيات مبتكرة ومستدامة تعزز كفاءة الأعمال ورفاهية العملاء من خلال شراكة فعالة مع كبرى الشركات المحلية والعالمية، وتميزنا في تقديم خدمات عالية الجودة تلبي جميع احتياجات السوق.",
     ourStrategicObjectives: "أهدافنا الاستراتيجية",
+    boardOfDirectors: "مجلس الإدارة",
+    chairman: "رئيس مجلس الإدارة",
+    chairmanName: "أ.عبدالله بن احمد",
+    viceChairman: "نائب رئيس مجلس الادارة ومدير العمليات والتشغيل",
+    viceChairmanName: "أ.شاكر بن أدم",
+    hrManager: "الموارد البشرية",
+    hrManagerName: "أ.خالد",
     whyChooseUs: "لماذا نحن الأفضل",
     whyChooseUsDesc:
       "نتميز بأسطول حديث ومتطور، وشراكات استراتيجية مع كبرى الشركات، وخبرة واسعة في مختلف المجالات. نحن نضع رضا العملاء في مقدمة أولوياتنا ونعمل بلا كلل لتحقيق التميز في كل ما نقدمه.",
@@ -478,6 +485,13 @@ const translations = {
     ourMissionDesc:
       "To develop and implement innovative and sustainable transport and logistics solutions that enhance business efficiency and customer well-being through effective partnerships with major local and international companies, and excellence in providing high-quality services that meet all market needs.",
     ourStrategicObjectives: "Our Strategic Objectives",
+    boardOfDirectors: "Board of Directors",
+    chairman: "Chairman of the Board",
+    chairmanName: "Mr. Abdullah bin Ahmed",
+    viceChairman: "Vice Chairman & COO",
+    viceChairmanName: "Mr. Shaker bin Adam",
+    hrManager: "Human Resources",
+    hrManagerName: "Mr. Khaled",
     whyChooseUs: "Why We Are The Best",
     whyChooseUsDesc:
       "We are distinguished by a modern and advanced fleet, strategic partnerships with major companies, and extensive experience in various fields. We put customer satisfaction at the forefront of our priorities and work tirelessly to achieve excellence in everything we offer.",

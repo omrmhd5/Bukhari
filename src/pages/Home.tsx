@@ -21,6 +21,8 @@ import {
   ArrowRight,
   Sparkles,
   TrendingUp,
+  Crown,
+  UserCircle,
 } from "lucide-react";
 // Images are in public/assets/ folder
 const heroImage = "/assets/home/hero-logistics.jpg";
@@ -361,6 +363,76 @@ const Home = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Board of Directors Section */}
+          <div className="mt-12 md:mt-16">
+            <div className="text-center mb-8 md:mb-12">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-foreground">
+                {t("boardOfDirectors")}
+              </h3>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+              {/* Chairman */}
+              <div className="relative bg-gradient-to-br from-amber-500/80 via-amber-600/80 to-amber-700/80 dark:from-amber-600/70 dark:via-amber-700/70 dark:to-amber-800/70 backdrop-blur-sm p-6 md:p-8 rounded-2xl md:rounded-3xl border-2 border-amber-400/30 dark:border-amber-500/30 shadow-2xl hover:border-amber-400/50 dark:hover:border-amber-500/50 hover:scale-[1.02] transition-all duration-300 group overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 dark:bg-white/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+                <div className="relative z-10 text-center">
+                  <div className="flex justify-center mb-6">
+                    <div className="bg-white/25 dark:bg-white/15 backdrop-blur-sm p-5 rounded-2xl border border-white/40 dark:border-white/30 group-hover:bg-white/35 dark:group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                      <Crown className="h-10 w-10 text-white" />
+                    </div>
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-white mb-3 drop-shadow-lg">
+                    {t("chairman")}
+                  </h4>
+                  <div className="h-px w-16 bg-white/50 mx-auto mb-4"></div>
+                  <p className="text-white/95 text-lg md:text-xl font-semibold">
+                    {t("chairmanName")}
+                  </p>
+                </div>
+              </div>
+
+              {/* Vice Chairman */}
+              <div className="relative bg-gradient-to-br from-light-blue-500/80 via-light-blue-600/80 to-light-blue-700/80 dark:from-light-blue-600/70 dark:via-light-blue-700/70 dark:to-light-blue-800/70 backdrop-blur-sm p-6 md:p-8 rounded-2xl md:rounded-3xl border-2 border-light-blue-400/30 dark:border-light-blue-500/30 shadow-2xl hover:border-light-blue-400/50 dark:hover:border-light-blue-500/50 hover:scale-[1.02] transition-all duration-300 group overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 dark:bg-white/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+                <div className="relative z-10 text-center">
+                  <div className="flex justify-center mb-6">
+                    <div className="bg-white/25 dark:bg-white/15 backdrop-blur-sm p-5 rounded-2xl border border-white/40 dark:border-white/30 group-hover:bg-white/35 dark:group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                      <Briefcase className="h-10 w-10 text-white" />
+                    </div>
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-white mb-3 drop-shadow-lg">
+                    {t("viceChairman")}
+                  </h4>
+                  <div className="h-px w-16 bg-white/50 mx-auto mb-4"></div>
+                  <p className="text-white/95 text-lg md:text-xl font-semibold">
+                    {t("viceChairmanName")}
+                  </p>
+                </div>
+              </div>
+
+              {/* HR Manager */}
+              <div className="relative bg-gradient-to-br from-navy-600/80 via-navy-700/80 to-navy-800/80 dark:from-navy-700/70 dark:via-navy-800/70 dark:to-navy-900/70 backdrop-blur-sm p-6 md:p-8 rounded-2xl md:rounded-3xl border-2 border-navy-400/30 dark:border-navy-500/30 shadow-2xl hover:border-navy-400/50 dark:hover:border-navy-500/50 hover:scale-[1.02] transition-all duration-300 group overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 dark:bg-white/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+                <div className="relative z-10 text-center">
+                  <div className="flex justify-center mb-6">
+                    <div className="bg-white/25 dark:bg-white/15 backdrop-blur-sm p-5 rounded-2xl border border-white/40 dark:border-white/30 group-hover:bg-white/35 dark:group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                      <UserCircle className="h-10 w-10 text-white" />
+                    </div>
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-white mb-3 drop-shadow-lg">
+                    {t("hrManager")}
+                  </h4>
+                  <div className="h-px w-16 bg-white/50 mx-auto mb-4"></div>
+                  <p className="text-white/95 text-lg md:text-xl font-semibold">
+                    {t("hrManagerName")}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
