@@ -352,7 +352,7 @@ const CarRental = () => {
 
       {/* Contact Section */}
       <div id="contact">
-      <ContactForm />
+        <ContactForm />
       </div>
     </div>
   );
