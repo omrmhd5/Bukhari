@@ -12,6 +12,7 @@ import {
 import { useLanguage } from "@/contexts/LanguageContext";
 import { toast } from "sonner";
 import { Phone, Mail, MessageCircle, Send, Sparkles, User, MessageSquare, Briefcase, Building2, FileText } from "lucide-react";
+import { FacebookIcon, InstagramIcon, SnapchatIcon, TelegramIcon } from "@/components/SocialIcons";
 
 type ContactType = "employee" | "company" | "quote";
 
@@ -140,6 +141,47 @@ const ContactForm = () => {
                     +966 56 443 1326
                   </a>
                 </div>
+              </div>
+            </div>
+
+            {/* Social Media */}
+            <div className="bg-white dark:bg-navy-800 p-5 md:p-6 rounded-2xl shadow-xl border-2 border-navy-100 dark:border-navy-700">
+              <h3 className="font-semibold text-lg mb-4 text-navy-800 dark:text-white">
+                {t("followUs")}
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-br from-light-blue-100 to-light-blue-200 dark:from-light-blue-800/50 dark:to-light-blue-700/50 p-3 rounded-xl border border-light-blue-200/50 dark:border-light-blue-700/30 hover:scale-110 transition-all duration-300 group">
+                  <FacebookIcon className="h-5 w-5 text-navy-700 dark:text-light-blue-400" />
+                  <span className="sr-only">{t("facebook")}</span>
+                </a>
+                <a
+                  href="https://www.snapchat.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-br from-light-blue-100 to-light-blue-200 dark:from-light-blue-800/50 dark:to-light-blue-700/50 p-3 rounded-xl border border-light-blue-200/50 dark:border-light-blue-700/30 hover:scale-110 transition-all duration-300 group">
+                  <SnapchatIcon className="h-5 w-5 text-navy-700 dark:text-light-blue-400" />
+                  <span className="sr-only">{t("snapchat")}</span>
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-br from-light-blue-100 to-light-blue-200 dark:from-light-blue-800/50 dark:to-light-blue-700/50 p-3 rounded-xl border border-light-blue-200/50 dark:border-light-blue-700/30 hover:scale-110 transition-all duration-300 group">
+                  <InstagramIcon className="h-5 w-5 text-navy-700 dark:text-light-blue-400" />
+                  <span className="sr-only">{t("instagram")}</span>
+                </a>
+                <a
+                  href="https://t.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-br from-light-blue-100 to-light-blue-200 dark:from-light-blue-800/50 dark:to-light-blue-700/50 p-3 rounded-xl border border-light-blue-200/50 dark:border-light-blue-700/30 hover:scale-110 transition-all duration-300 group">
+                  <TelegramIcon className="h-5 w-5 text-navy-700 dark:text-light-blue-400" />
+                  <span className="sr-only">{t("telegram")}</span>
+                </a>
               </div>
             </div>
           </div>
@@ -315,12 +357,12 @@ const ContactForm = () => {
                         setFormData({ ...formData, selectedService: value })
                       }
                       required>
-                      <SelectTrigger className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white pr-10 text-right">
+                      <SelectTrigger className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white pr-10 text-right [&>span]:text-right [&>svg]:left-3 [&>svg]:right-auto">
                         <SelectValue placeholder={t("selectService")} />
                       </SelectTrigger>
                       <SelectContent className="bg-white dark:bg-navy-800 border-2 border-navy-100 dark:border-navy-700">
                         {services.map((service, index) => (
-                          <SelectItem key={index} value={service} className="text-navy-800 dark:text-white focus:bg-light-blue-100 dark:focus:bg-light-blue-900/30">
+                          <SelectItem key={index} value={service} className="text-navy-800 dark:text-white focus:bg-light-blue-100 dark:focus:bg-light-blue-900/30 text-right [&>span:first-child]:left-auto [&>span:first-child]:right-2">
                             {service}
                           </SelectItem>
                         ))}

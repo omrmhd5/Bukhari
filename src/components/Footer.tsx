@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
+import { FacebookIcon, InstagramIcon, SnapchatIcon, TelegramIcon } from "@/components/SocialIcons";
 
 const Footer = () => {
   const { t, language } = useLanguage();
@@ -119,6 +120,47 @@ const Footer = () => {
                 </span>
               </li>
             </ul>
+          </div>
+
+          {/* Social Media */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-foreground">
+              {t("followUs")}
+            </h4>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary/10 hover:bg-primary/20 p-3 rounded-lg transition-all duration-300 group">
+                <FacebookIcon className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+                <span className="sr-only">{t("facebook")}</span>
+              </a>
+              <a
+                href="https://www.snapchat.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary/10 hover:bg-primary/20 p-3 rounded-lg transition-all duration-300 group">
+                <SnapchatIcon className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+                <span className="sr-only">{t("snapchat")}</span>
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary/10 hover:bg-primary/20 p-3 rounded-lg transition-all duration-300 group">
+                <InstagramIcon className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+                <span className="sr-only">{t("instagram")}</span>
+              </a>
+              <a
+                href="https://t.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary/10 hover:bg-primary/20 p-3 rounded-lg transition-all duration-300 group">
+                <TelegramIcon className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+                <span className="sr-only">{t("telegram")}</span>
+              </a>
+            </div>
           </div>
         </div>
 
