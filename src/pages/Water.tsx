@@ -439,24 +439,13 @@ const Water = () => {
       </section>
 
       {/* CTA Section 2 - Split Layout */}
-      <section className="py-16 md:py-24 relative overflow-hidden bg-white dark:bg-navy-900">
-        {/* Background Logos - Side by Side */}
-        <div className="absolute inset-0 flex">
-          <div className="w-1/2 h-full">
-            <img
-              src={language === "ar" ? sidqWaterImageAr : sidqWaterImageEn}
-              alt="Sidq Water"
-              className="w-full h-full object-cover opacity-30 dark:opacity-20"
-            />
-          </div>
-          <div className="w-1/2 h-full">
-            <img
-              src={bakkahWaterImage}
-              alt="Bakkah Water"
-              className="w-full h-full object-cover opacity-30 dark:opacity-20"
-            />
-          </div>
-        </div>
+      <section className="py-16 md:py-24 relative overflow-hidden bg-white dark:bg-navy-900 min-h-[450px]">
+        {/* Background Hero Image */}
+        <img
+          src={waterHero}
+          alt="Water Production"
+          className="absolute inset-0 w-full h-full object-cover opacity-30 dark:opacity-20"
+        />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
