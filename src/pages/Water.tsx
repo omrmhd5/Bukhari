@@ -444,12 +444,14 @@ const Water = () => {
         <img
           src={waterHero}
           alt="Water Production"
-          className="absolute inset-0 w-full h-full object-cover opacity-50 dark:opacity-40"
+          className="absolute inset-0 w-full h-full object-cover scale-105"
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/10 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-800/25 via-transparent to-light-blue-500/25" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="bg-white/5 dark:bg-navy-900/5 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-white/20 dark:border-navy-700/30 shadow-xl">
+              <div className="bg-white/15 dark:bg-white/10 backdrop-blur-lg p-6 md:p-8 rounded-2xl border border-white/30 dark:border-white/20 shadow-xl">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-navy-800 dark:text-white">
                   {t("waterCTA2Title")}
                 </h2>
