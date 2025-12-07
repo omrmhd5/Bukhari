@@ -61,7 +61,7 @@ const Water = () => {
           alt="Water Production"
           className="absolute inset-0 w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/10 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-800/25 via-transparent to-light-blue-500/25" />
         {/* Decorative Blur Elements */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-navy-800/20 rounded-full blur-3xl" />
@@ -444,13 +444,13 @@ const Water = () => {
         <img
           src={waterHero}
           alt="Water Production"
-          className="absolute inset-0 w-full h-full object-cover opacity-30 dark:opacity-20"
+          className="absolute inset-0 w-full h-full object-cover opacity-50 dark:opacity-40"
         />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="text-navy-800 dark:text-white">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              <div className="bg-white/80 dark:bg-navy-900/5 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-white/20 dark:border-navy-700/30 shadow-xl">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-navy-800 dark:text-white">
                   {t("waterCTA2Title")}
                 </h2>
                 <p className="text-lg md:text-xl text-navy-700 dark:text-navy-200 mb-6">
