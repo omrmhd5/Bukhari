@@ -449,7 +449,7 @@ const Water = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="bg-white/80 dark:bg-navy-900/5 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-white/20 dark:border-navy-700/30 shadow-xl">
+              <div className="bg-white/5 dark:bg-navy-900/5 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-white/20 dark:border-navy-700/30 shadow-xl">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-navy-800 dark:text-white">
                   {t("waterCTA2Title")}
                 </h2>
