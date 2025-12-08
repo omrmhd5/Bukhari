@@ -64,7 +64,7 @@ const Navigation = () => {
             <img
               src="/assets/LogoNavBar.png"
               alt="Logo"
-              className="w-24 sm:w-26 md:w-20 lg:w-16 h-auto"
+              className="w-16 md:w-20 lg:w-16 h-auto"
             />
           </Link>
 

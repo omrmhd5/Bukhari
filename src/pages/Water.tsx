@@ -67,7 +67,7 @@ const Water = () => {
         <div className="absolute top-20 right-20 w-96 h-96 bg-navy-800/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-light-blue-500/20 rounded-full blur-3xl" />
 
-        <div className="absolute inset-0 flex items-center justify-center py-16 md:py-0">
+        <div className="absolute inset-0 flex items-end md:items-center justify-center py-16 md:py-0 pb-16 md:pb-0">
           <div className="container mx-auto px-4 text-center text-white relative z-10">
             <div className="mb-4 md:mb-8 inline-block animate-fade-in">
               <div className="bg-white/15 backdrop-blur-lg px-4 md:px-6 py-2 md:py-3 rounded-full border border-white/30 shadow-lg inline-flex items-center gap-2 hover:bg-white/20 transition-all duration-300">
@@ -439,7 +439,7 @@ const Water = () => {
       </section>
 
       {/* CTA Section 2 - Split Layout */}
-      <section className="py-16 md:py-24 relative overflow-hidden bg-white dark:bg-navy-900 min-h-[450px]">
+      <section className="py-16 md:py-24 relative overflow-hidden bg-white dark:bg-navy-900 min-h-[450px] flex flex-col">
         {/* Background Hero Image */}
         <img
           src={waterHero}
@@ -448,24 +448,35 @@ const Water = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/10 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-800/25 via-transparent to-light-blue-500/25" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="bg-white/15 dark:bg-white/10 backdrop-blur-lg p-6 md:p-8 rounded-2xl border border-white/30 dark:border-white/20 shadow-xl">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-navy-800 dark:text-white">
+        <div className="container mx-auto px-4 relative z-10 flex-1 flex flex-col">
+          <div className="max-w-6xl mx-auto flex-1 flex items-start md:items-center pt-8 md:pt-0">
+            <div className="grid md:grid-cols-2 gap-8 items-center w-full">
+              {/* Desktop: Text on left, Mobile: Hidden */}
+              <div className="hidden md:block">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white drop-shadow-2xl">
                   {t("waterCTA2Title")}
                 </h2>
-                <p className="text-lg md:text-xl text-navy-700 dark:text-navy-200 mb-6">
+                <p className="text-lg md:text-xl text-white drop-shadow-lg mb-6 font-medium">
                   {t("waterCTA2Desc")}
                 </p>
               </div>
-              <div className="flex justify-center md:justify-end">
+              {/* Button and Mobile Text */}
+              <div className="flex flex-col items-center md:items-end">
                 <a
                   href="#contact"
-                  className="bg-light-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-light-blue-700 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 shadow-xl text-lg">
+                  className="bg-light-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-light-blue-700 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 shadow-xl text-lg mb-10 md:mb-0">
                   {t("contactTitle")}
                   <ArrowRight className="h-5 w-5" />
                 </a>
+                {/* Mobile: Text under button */}
+                <div className="md:hidden text-center">
+                  <h2 className="text-3xl font-bold mb-4 text-white drop-shadow-2xl">
+                    {t("waterCTA2Title")}
+                  </h2>
+                  <p className="text-lg text-white drop-shadow-lg font-medium">
+                    {t("waterCTA2Desc")}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
