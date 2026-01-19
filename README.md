@@ -56,10 +56,7 @@ The website improved content clarity and service discoverability across **7 core
 |------------|--------------------------|
 | Frontend   | React.js, TypeScript     |
 | Styling    | TailwindCSS              |
-| Routing    | React Router             |
-| UI System  | shadcn/ui, Radix UI      |
-| Build Tool | Vite                     |
-| Deployment | Vercel                   |
+
 
 ---
 
