@@ -116,8 +116,12 @@ The website improved content clarity and service discoverability across **7 core
 [**View Live Demo**](https://www.logistics-as.com/)
 
 ---
+
 ## Author
 
-👤 **Omar Mahmoud**  
-📧 [omrmhd54@gmail.com](mailto:omrmhd54@gmail.com)  
+👤 **Omar Mahmoud**
+📧 [omrmhd54@gmail.com](mailto:omrmhd54@gmail.com)
+💼 [LinkedIn](https://www.linkedin.com/in/omrmhd5/)
+🌐 [Portfolio](https://omarmahmoud.dev/)
 🔗 [GitHub](https://github.com/omrmhd5)
+
