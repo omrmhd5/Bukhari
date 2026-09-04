@@ -1,4 +1,4 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import ContactForm from "@/components/ContactForm";
 import {
   Monitor,
@@ -24,7 +24,7 @@ const digitalSocial = "/assets/digital/digital-social.jpg";
 const digitalSEO = "/assets/digital/digital-seo.jpg";
 
 const DigitalMarketing = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   const services = [
     {

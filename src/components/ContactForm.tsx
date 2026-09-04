@@ -9,7 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import {
   Phone,
@@ -33,7 +33,7 @@ import {
 type ContactType = "employee" | "company" | "quote";
 
 const ContactForm = () => {
-  const { t, language } = useLanguage();
+  const { t } = useTranslation();
   const [contactType, setContactType] = useState<ContactType>("company");
   const [formData, setFormData] = useState({
     name: "",

@@ -1,4 +1,4 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import ContactForm from "@/components/ContactForm";
 import {
   Truck,
@@ -18,7 +18,7 @@ const trailersHero = "/assets/trailers/trailers-hero.jpg";
 const trailersImage = "/assets/trailers/trailers-image.jpg";
 
 const Trailers = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   const features = [
     {

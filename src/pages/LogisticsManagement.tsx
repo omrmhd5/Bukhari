@@ -1,4 +1,4 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import ContactForm from "@/components/ContactForm";
 import {
   Building2,
@@ -20,7 +20,7 @@ const logisticsHero = "/assets/company/company-hero.jpg";
 const logisticsImage = "/assets/company/company-image.jpg";
 
 const LogisticsManagement = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   const services = [
     {

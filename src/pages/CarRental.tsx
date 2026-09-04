@@ -1,4 +1,4 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import ContactForm from "@/components/ContactForm";
 import {
   Car,
@@ -18,7 +18,7 @@ const carHero = "/assets/car/car-hero.jpg";
 const carImage = "/assets/car/car-image.jpg";
 
 const CarRental = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   const features = [
     {
@@ -352,7 +352,7 @@ const CarRental = () => {
 
       {/* Contact Section */}
       <div id="contact">
-      <ContactForm />
+        <ContactForm />
       </div>
     </div>
   );

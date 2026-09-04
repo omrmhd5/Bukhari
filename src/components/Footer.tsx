@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
-import { FacebookIcon, InstagramIcon, SnapchatIcon, TelegramIcon } from "@/components/SocialIcons";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  SnapchatIcon,
+  TelegramIcon,
+} from "@/components/SocialIcons";
 
 const Footer = () => {
-  const { t, language } = useLanguage();
+  const { t } = useTranslation();
 
   // Format phone number for RTL
   const formatPhoneNumber = (phone: string) => {
@@ -45,16 +50,14 @@ const Footer = () => {
               />
             </Link>
             <p className="text-muted-foreground leading-relaxed">
-              {language === "ar"
-                ? "رائدون في تقديم حلول النقل والخدمات اللوجستية المتكاملة في المملكة"
-                : "Leading provider of comprehensive transport and logistics solutions in Saudi Arabia"}
+              {t("footerTagline")}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-foreground">
-              {language === "ar" ? "روابط سريعة" : "Quick Links"}
+              {t("quickLinks")}
             </h4>
             <ul className="space-y-2">
               {navLinks.map((link) => (
@@ -114,9 +117,7 @@ const Footer = () => {
                   <MapPin className="h-4 w-4 text-primary" />
                 </div>
                 <span className="text-muted-foreground">
-                  {language === "ar"
-                    ? "المملكة العربية السعودية"
-                    : "Saudi Arabia"}
+                  {t("saudiArabia")}
                 </span>
               </li>
             </ul>
@@ -168,14 +169,10 @@ const Footer = () => {
         <div className="border-t border-border/50 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              {language === "ar"
-                ? `© ${new Date().getFullYear()} شركة عبدالله بخاري . جميع الحقوق محفوظة.`
-                : `© ${new Date().getFullYear()} Abdullah Bukhari Company. All rights reserved.`}
+              {t("copyright", { year: new Date().getFullYear() })}
             </p>
             <p className="text-muted-foreground text-sm text-center md:text-right">
-              {language === "ar"
-                ? "مصمم ومطور بكل فخر"
-                : "Designed & Developed with Pride"}
+              {t("designedWithPride")}
             </p>
           </div>
         </div>

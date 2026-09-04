@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Sun, Moon, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
+
+const SECTION_IDS = ["about", "services", "contact"] as const;
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
   const location = useLocation();
-  const { language, setLanguage, t } = useLanguage();
+  const { t, i18n } = useTranslation();
   const { theme, setTheme } = useTheme();
 
   const navLinks: Array<{
@@ -23,30 +26,144 @@ const Navigation = () => {
     { section: "contact", label: t("contactTitle"), type: "section" },
   ];
 
+  const isNavItemActive = (link: (typeof navLinks)[number]) => {
+    if (location.pathname !== "/") {
+      return link.type === "link" && location.pathname === link.path;
+    }
+
+    if (link.type === "section") {
+      return activeSection === link.section;
+    }
+
+    return !activeSection;
+  };
+
+  const navItemClassName = (
+    link: (typeof navLinks)[number],
+    mobile = false,
+  ) => {
+    const active = isNavItemActive(link);
+    const base =
+      "relative px-4 py-2 rounded-xl transition-all duration-300 font-medium";
+    const mobileBase = mobile
+      ? "px-4 py-3 rounded-xl transition-all duration-300 font-medium hover:translate-x-2 rtl:hover:-translate-x-2 text-left rtl:text-right"
+      : base;
+
+    return `${mobile ? mobileBase : base} ${
+      active
+        ? "bg-primary text-primary-foreground"
+        : "hover:bg-accent/10 text-foreground hover:text-primary"
+    }`;
+  };
+
+  useEffect(() => {
+    const syncHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (SECTION_IDS.includes(hash as (typeof SECTION_IDS)[number])) {
+        setActiveSection(hash);
+        return;
+      }
+
+      if (location.pathname === "/") {
+        setActiveSection(null);
+      }
+    };
+
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+    return () => window.removeEventListener("hashchange", syncHash);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      return;
+    }
+
+    const elements = SECTION_IDS.map((id) =>
+      document.getElementById(id),
+    ).filter((element): element is HTMLElement => element !== null);
+
+    if (!elements.length) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible[0]) {
+          const sectionId = visible[0].target.id;
+          setActiveSection(sectionId);
+          if (window.location.hash !== `#${sectionId}`) {
+            window.history.replaceState(null, "", `/#${sectionId}`);
+          }
+        }
+      },
+      {
+        rootMargin: "-96px 0px -55% 0px",
+        threshold: [0.1, 0.35, 0.6],
+      },
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    const handleScroll = () => {
+      if (window.scrollY < 120) {
+        setActiveSection(null);
+        if (window.location.hash) {
+          window.history.replaceState(null, "", "/");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [location.pathname, i18n.language]);
+
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== "/") {
-      // If not on home page, navigate first then scroll
       window.location.href = `/#${sectionId}`;
-    } else {
-      // If on home page, just scroll
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const offset = 80; // Account for fixed navbar
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - offset;
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth",
-          });
-        }
-      }, 100);
+      return;
     }
-    setIsOpen(false); // Close mobile menu
+
+    setActiveSection(sectionId);
+    window.history.replaceState(null, "", `/#${sectionId}`);
+
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }, 100);
+
+    setIsOpen(false);
+  };
+
+  const handleHomeClick = () => {
+    setActiveSection(null);
+    window.history.replaceState(null, "", "/");
+    setIsOpen(false);
+
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   const toggleLanguage = () => {
-    setLanguage(language === "ar" ? "en" : "ar");
+    const next = i18n.language === "ar" ? "en" : "ar";
+    i18n.changeLanguage(next);
   };
 
   const toggleTheme = () => {
@@ -60,6 +177,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link
             to="/"
+            onClick={handleHomeClick}
             className="flex items-center space-x-2 rtl:space-x-reverse group">
             <img
               src="/assets/LogoNavBar.png"
@@ -76,24 +194,21 @@ const Navigation = () => {
                   <button
                     key={`${link.section}-${index}`}
                     onClick={() => scrollToSection(link.section!)}
-                    className="relative px-4 py-2 rounded-xl transition-all duration-300 font-medium hover:bg-accent/10 text-foreground hover:text-primary">
+                    className={navItemClassName(link)}>
                     <span className="relative z-10">{link.label}</span>
                   </button>
                 );
-              } else {
-                return (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    className={`relative px-4 py-2 rounded-xl transition-all duration-300 font-medium group ${
-                      location.pathname === link.path
-                        ? "bg-primary text-primary-foreground"
-                        : "hover:bg-accent/10 text-foreground hover:text-primary"
-                    }`}>
-                    <span className="relative z-10">{link.label}</span>
-                  </Link>
-                );
               }
+
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path!}
+                  onClick={handleHomeClick}
+                  className={navItemClassName(link)}>
+                  <span className="relative z-10">{link.label}</span>
+                </Link>
+              );
             })}
           </div>
 
@@ -144,25 +259,21 @@ const Navigation = () => {
                     <button
                       key={`${link.section}-${index}`}
                       onClick={() => scrollToSection(link.section!)}
-                      className="px-4 py-3 rounded-xl transition-all duration-300 font-medium hover:translate-x-2 rtl:hover:-translate-x-2 hover:bg-accent/10 text-foreground hover:text-primary text-left rtl:text-right">
+                      className={navItemClassName(link, true)}>
                       {link.label}
                     </button>
                   );
-                } else {
-                  return (
-                    <Link
-                      key={link.path}
-                      to={link.path}
-                      onClick={() => setIsOpen(false)}
-                      className={`px-4 py-3 rounded-xl transition-all duration-300 font-medium hover:translate-x-2 rtl:hover:-translate-x-2 ${
-                        location.pathname === link.path
-                          ? "bg-primary text-primary-foreground"
-                          : "hover:bg-accent/10 text-foreground hover:text-primary"
-                      }`}>
-                      {link.label}
-                    </Link>
-                  );
                 }
+
+                return (
+                  <Link
+                    key={link.path}
+                    to={link.path!}
+                    onClick={handleHomeClick}
+                    className={navItemClassName(link, true)}>
+                    {link.label}
+                  </Link>
+                );
               })}
             </div>
           </div>

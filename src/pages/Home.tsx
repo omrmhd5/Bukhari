@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ContactForm from "@/components/ContactForm";
@@ -39,7 +39,7 @@ const digitalLink = "/assets/home/digital-link.jpg";
 const carLink = "/assets/home/car-link.jpg";
 
 const Home = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -227,7 +227,7 @@ const Home = () => {
         <button
           onClick={() =>
             setCurrentSlide(
-              (prev) => (prev - 1 + slides.length) % slides.length
+              (prev) => (prev - 1 + slides.length) % slides.length,
             )
           }
           className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm p-2 md:p-3 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg z-20">

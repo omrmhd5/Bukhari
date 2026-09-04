@@ -1,4 +1,4 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import ContactForm from "@/components/ContactForm";
 import {
   Truck,
@@ -27,7 +27,7 @@ const hungerStationLogo = "/assets/transport/hungerstation.png";
 const mrsoolLogo = "/assets/transport/mrsool.png";
 
 const Transport = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   const partners = [
     { name: t("partnerAramex"), logo: aramexLogo },
@@ -422,7 +422,7 @@ const Transport = () => {
 
       {/* Contact Section */}
       <div id="contact">
-      <ContactForm />
+        <ContactForm />
       </div>
     </div>
   );

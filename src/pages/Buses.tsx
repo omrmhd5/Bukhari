@@ -1,4 +1,4 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import ContactForm from "@/components/ContactForm";
 import {
   Bus,
@@ -24,7 +24,7 @@ const umrah = "/assets/buses/umrah.jpg";
 const tourism = "/assets/buses/tourism.jpg";
 
 const Buses = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   const services = [
     {
@@ -224,7 +224,9 @@ const Buses = () => {
                     {t("coverage")}
                   </span>
                 </div>
-                <p className="text-xs text-white/80 mb-2">{t("coverageDesc")}</p>
+                <p className="text-xs text-white/80 mb-2">
+                  {t("coverageDesc")}
+                </p>
                 <p className="text-xs text-white/70 leading-relaxed">
                   {t("busesCoverageDetail1")}
                 </p>
@@ -413,7 +415,6 @@ const Buses = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -447,7 +448,7 @@ const Buses = () => {
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-2 text-navy-800 dark:text-white">
                       {feature.title}
-                  </h3>
+                    </h3>
                     <p className="text-navy-600 dark:text-navy-300 mb-4">
                       {feature.description}
                     </p>
@@ -501,7 +502,7 @@ const Buses = () => {
                 <p className="text-lg md:text-xl text-white/90 mb-6">
                   {t("busesCTA2Desc")}
                 </p>
-                </div>
+              </div>
               <div className="flex justify-center md:justify-end">
                 <a
                   href="#contact"
@@ -517,7 +518,7 @@ const Buses = () => {
 
       {/* Contact Section */}
       <div id="contact">
-      <ContactForm />
+        <ContactForm />
       </div>
     </div>
   );

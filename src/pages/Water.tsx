@@ -1,4 +1,4 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import ContactForm from "@/components/ContactForm";
 import {
   Droplets,
@@ -19,7 +19,7 @@ const sidqWaterImageEn = "/assets/water/SidqEn.png";
 const bakkahWaterImage = "/assets/water/Bakkah.png";
 
 const Water = () => {
-  const { t, language } = useLanguage();
+  const { t, i18n } = useTranslation();
 
   const features = [
     {
@@ -43,7 +43,7 @@ const Water = () => {
     {
       name: t("sidqWater"),
       nameAr: t("sidqWater"),
-      image: language === "ar" ? sidqWaterImageAr : sidqWaterImageEn,
+      image: i18n.language === "ar" ? sidqWaterImageAr : sidqWaterImageEn,
     },
     {
       name: t("bakkahWater"),
