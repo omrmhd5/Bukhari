@@ -906,7 +906,7 @@ const translations = {
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
@@ -949,12 +949,12 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
         translations[language][key as keyof (typeof translations)["ar"]] || key
       );
     },
-    [language]
+    [language],
   );
 
   const value = useMemo(
     () => ({ language, setLanguage, t }),
-    [language, setLanguage, t]
+    [language, setLanguage, t],
   );
 
   return (

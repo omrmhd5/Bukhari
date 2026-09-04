@@ -82,16 +82,16 @@ const Navigation = () => {
                 );
               } else {
                 return (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`relative px-4 py-2 rounded-xl transition-all duration-300 font-medium group ${
-                  location.pathname === link.path
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-accent/10 text-foreground hover:text-primary"
-                }`}>
-                <span className="relative z-10">{link.label}</span>
-              </Link>
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`relative px-4 py-2 rounded-xl transition-all duration-300 font-medium group ${
+                      location.pathname === link.path
+                        ? "bg-primary text-primary-foreground"
+                        : "hover:bg-accent/10 text-foreground hover:text-primary"
+                    }`}>
+                    <span className="relative z-10">{link.label}</span>
+                  </Link>
                 );
               }
             })}
@@ -150,17 +150,17 @@ const Navigation = () => {
                   );
                 } else {
                   return (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`px-4 py-3 rounded-xl transition-all duration-300 font-medium hover:translate-x-2 rtl:hover:-translate-x-2 ${
-                    location.pathname === link.path
-                      ? "bg-primary text-primary-foreground"
-                      : "hover:bg-accent/10 text-foreground hover:text-primary"
-                  }`}>
-                  {link.label}
-                </Link>
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      onClick={() => setIsOpen(false)}
+                      className={`px-4 py-3 rounded-xl transition-all duration-300 font-medium hover:translate-x-2 rtl:hover:-translate-x-2 ${
+                        location.pathname === link.path
+                          ? "bg-primary text-primary-foreground"
+                          : "hover:bg-accent/10 text-foreground hover:text-primary"
+                      }`}>
+                      {link.label}
+                    </Link>
                   );
                 }
               })}

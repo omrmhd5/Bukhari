@@ -11,8 +11,24 @@ import {
 } from "@/components/ui/select";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { toast } from "sonner";
-import { Phone, Mail, MessageCircle, Send, Sparkles, User, MessageSquare, Briefcase, Building2, FileText } from "lucide-react";
-import { FacebookIcon, InstagramIcon, SnapchatIcon, TelegramIcon } from "@/components/SocialIcons";
+import {
+  Phone,
+  Mail,
+  MessageCircle,
+  Send,
+  Sparkles,
+  User,
+  MessageSquare,
+  Briefcase,
+  Building2,
+  FileText,
+} from "lucide-react";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  SnapchatIcon,
+  TelegramIcon,
+} from "@/components/SocialIcons";
 
 type ContactType = "employee" | "company" | "quote";
 
@@ -43,16 +59,16 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to a backend
-    const successMessage = 
-      contactType === "employee" 
+    const successMessage =
+      contactType === "employee"
         ? t("contactEmployeeSuccess")
         : contactType === "quote"
-        ? t("contactQuoteSuccess")
-        : t("contactCompanySuccess");
+          ? t("contactQuoteSuccess")
+          : t("contactCompanySuccess");
     toast.success(successMessage + " ✓");
-    setFormData({ 
-      name: "", 
-      email: "", 
+    setFormData({
+      name: "",
+      email: "",
       phone: "",
       company: "",
       position: "",
@@ -202,7 +218,9 @@ const ContactForm = () => {
                       : "text-navy-600 dark:text-navy-300 hover:bg-navy-200/50 dark:hover:bg-navy-600/50"
                   }`}>
                   <Building2 className="h-4 w-4" />
-                  <span className="hidden sm:inline">{t("contactCompany")}</span>
+                  <span className="hidden sm:inline">
+                    {t("contactCompany")}
+                  </span>
                 </button>
                 <button
                   type="button"
@@ -213,7 +231,9 @@ const ContactForm = () => {
                       : "text-navy-600 dark:text-navy-300 hover:bg-navy-200/50 dark:hover:bg-navy-600/50"
                   }`}>
                   <Briefcase className="h-4 w-4" />
-                  <span className="hidden sm:inline">{t("contactEmployee")}</span>
+                  <span className="hidden sm:inline">
+                    {t("contactEmployee")}
+                  </span>
                 </button>
                 <button
                   type="button"
@@ -228,11 +248,11 @@ const ContactForm = () => {
                 </button>
               </div>
               <p className="text-sm text-navy-500 dark:text-navy-400 mt-3 text-center">
-                {contactType === "company" 
-                  ? t("contactCompanyDesc") 
+                {contactType === "company"
+                  ? t("contactCompanyDesc")
                   : contactType === "quote"
-                  ? t("contactQuoteDesc")
-                  : t("contactEmployeeDesc")}
+                    ? t("contactQuoteDesc")
+                    : t("contactEmployeeDesc")}
               </p>
             </div>
 
@@ -251,7 +271,7 @@ const ContactForm = () => {
                   className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10 text-right"
                 />
               </div>
-              
+
               <div className="relative">
                 <div className="absolute right-3 top-1/2 -translate-y-1/2 z-10">
                   <Mail className="h-5 w-5 text-navy-400 dark:text-navy-500" />
@@ -327,7 +347,10 @@ const ContactForm = () => {
                       placeholder={t("registrationNumber")}
                       value={formData.registrationNumber}
                       onChange={(e) =>
-                        setFormData({ ...formData, registrationNumber: e.target.value })
+                        setFormData({
+                          ...formData,
+                          registrationNumber: e.target.value,
+                        })
                       }
                       required
                       className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 pr-10 text-right"
@@ -362,7 +385,10 @@ const ContactForm = () => {
                       </SelectTrigger>
                       <SelectContent className="bg-white dark:bg-navy-800 border-2 border-navy-100 dark:border-navy-700">
                         {services.map((service, index) => (
-                          <SelectItem key={index} value={service} className="text-navy-800 dark:text-white focus:bg-light-blue-100 dark:focus:bg-light-blue-900/30 text-right [&>span:first-child]:left-auto [&>span:first-child]:right-2">
+                          <SelectItem
+                            key={index}
+                            value={service}
+                            className="text-navy-800 dark:text-white focus:bg-light-blue-100 dark:focus:bg-light-blue-900/30 text-right [&>span:first-child]:left-auto [&>span:first-child]:right-2">
                             {service}
                           </SelectItem>
                         ))}
@@ -395,11 +421,11 @@ const ContactForm = () => {
                 </div>
                 <Textarea
                   placeholder={
-                    contactType === "company" 
-                      ? t("companyMessage") 
-                      : contactType === "quote"
+                    contactType === "company"
                       ? t("companyMessage")
-                      : t("employeeMessage")
+                      : contactType === "quote"
+                        ? t("companyMessage")
+                        : t("employeeMessage")
                   }
                   value={formData.message}
                   onChange={(e) =>
@@ -410,7 +436,7 @@ const ContactForm = () => {
                   className="rounded-xl border-2 border-navy-100 dark:border-navy-700 focus:border-light-blue-400 dark:focus:border-light-blue-500 transition-all duration-300 bg-white dark:bg-navy-900 text-navy-800 dark:text-white placeholder:text-navy-400 dark:placeholder:text-navy-500 resize-none pr-10 text-right"
                 />
               </div>
-              
+
               <Button
                 type="submit"
                 className="w-full rounded-xl bg-gradient-to-r from-light-blue-500 to-light-blue-600 hover:from-light-blue-600 hover:to-light-blue-700 dark:from-light-blue-600 dark:to-light-blue-700 dark:hover:from-light-blue-500 dark:hover:to-light-blue-600 text-white font-semibold py-6 transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
