@@ -9,21 +9,25 @@ The website improved content clarity and service discoverability across **7 core
 ## 🔧 Features
 
 ### 🏢 Corporate Services Showcase
+
 - Clear presentation of all company services in a structured layout
 - Dedicated pages for each service offering
 - Enterprise-level design aligned with corporate branding
 
 ### 🌍 Multilingual Experience
+
 - Full Arabic and English support
 - RTL / LTR layout compatibility
 - Language persistence for consistent user experience
 
 ### 🎨 UI / UX Design
+
 - Modern, clean interface with smooth animations
 - Dark / Light mode with saved user preference
 - Fully responsive design (desktop, tablet, mobile)
 
 ### 📄 Pages & Content
+
 - Dedicated service pages for:
   - Water Production & Supply
   - Transport & Logistics
@@ -36,6 +40,7 @@ The website improved content clarity and service discoverability across **7 core
 - Partner and client showcase to enhance credibility
 
 ### 📞 Communication & Contact
+
 - Multiple contact forms (Clients, Jobs, Request a Quote)
 - WhatsApp integration for direct communication
 - Clear company contact and social media links
@@ -43,6 +48,7 @@ The website improved content clarity and service discoverability across **7 core
 ---
 
 ## 💡 Impact
+
 - Improved content clarity and service discoverability across **7 services**
 - Enhanced user engagement through modern UI and smooth animations
 - Built with SEO-friendly structure and semantic HTML
@@ -52,64 +58,104 @@ The website improved content clarity and service discoverability across **7 core
 
 ## 📦 Tech Stack
 
-| Layer      | Tech                     |
-|------------|--------------------------|
-| Frontend   | React.js, TypeScript     |
-| Styling    | TailwindCSS              |
-
+| Layer    | Tech                             |
+| -------- | -------------------------------- |
+| Frontend | React.js, TypeScript, Vite       |
+| i18n     | react-i18next (English / Arabic) |
+| Styling  | TailwindCSS, next-themes         |
 
 ---
 
 ## 🌐 Deployment Notes
+
 - Fully responsive and cross-browser compatible
 - Optimized for performance and SEO
 - Designed for scalability and future service expansion
 
 ---
 
+## 🎬 Site Demo
+
+**[▶ Watch site walkthrough](./src/docs/bukhari-video-demo.mp4)**
+
+Home hero → about → services grid → water → transport → Hajj & Umrah buses → heavy transport → car rental → logistics → digital marketing → mobile preview.
+
+---
+
 ## 📸 Screenshots
-* Hero Section
-<img width="1918" height="947" alt="Hero Section" src="https://github.com/user-attachments/assets/21291a27-8295-4fca-a25f-ccbdc7bd8147" />
 
-* Mobile Preview
-* <img width="384" height="779" alt="Mobile Preview" src="https://github.com/user-attachments/assets/6202dc26-cef2-474f-bd05-5d3d2bee2549" />
-
-* About Us
-<img width="1916" height="945" alt="About Us" src="https://github.com/user-attachments/assets/915ba08b-ba91-422a-9915-3be457dbd1a8" />
-
-* Our Services
-<img width="1917" height="948" alt="Our Services" src="https://github.com/user-attachments/assets/7c7e656e-2a60-4682-843b-2f1faa84c083" />
-
-* Water Section
-<img width="1917" height="945" alt="Water Hero" src="https://github.com/user-attachments/assets/c4d5852e-6733-4ae1-a50d-513782ccf3ab" />
-
-* Water Content
-<img width="1917" height="948" alt="Water Content" src="https://github.com/user-attachments/assets/65afb4fa-9992-4ce0-bd51-b2b180427cec" />
-
-* Transport Section
-<img width="1916" height="948" alt="Transport Hero" src="https://github.com/user-attachments/assets/ecb7c216-ace2-40ba-a4d1-d049d3acd788" />
-
-* Transport Content
-<img width="1919" height="947" alt="Transport Content" src="https://github.com/user-attachments/assets/5616b525-1019-4df4-9848-b72fdd6a28cd" />
-
-* Buses Section
-<img width="1919" height="944" alt="Buses Hero" src="https://github.com/user-attachments/assets/1d9f3b83-e525-45c5-ad0c-1524be0a625b" />
-
-* Buses Content
-<img width="1919" height="946" alt="Buses Content" src="https://github.com/user-attachments/assets/19bd138f-5c97-4aeb-917c-08926e7beb0a" />
-
-* Trailer Section
-<img width="1919" height="946" alt="Trailer Hero" src="https://github.com/user-attachments/assets/5dbe32fb-0667-42c9-8bf1-26e9cd0281b6" />
-
-* Car Rental Section
-<img width="1919" height="947" alt="Car Rental Hero" src="https://github.com/user-attachments/assets/57950c78-f665-412a-86d1-64de126f0a2b" />
-
-* Logistics Section
-<img width="1918" height="945" alt="Logistics Hero" src="https://github.com/user-attachments/assets/6ac7b974-1119-4cd2-9daf-41cbf087c5db" />
-
-* Digital Marketing Section
-<img width="1918" height="946" alt="Marketing Content" src="https://github.com/user-attachments/assets/2612601a-0c6f-4397-b457-d16dbf715e48" />
-
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Home Hero</strong><br />
+      <img width="100%" alt="Home Hero" src="./src/docs/screenshots/01-home-hero.png" />
+    </td>
+    <td width="50%" valign="top">
+      <strong>About Us</strong><br />
+      <img width="100%" alt="About Us" src="./src/docs/screenshots/02-about.png" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Our Services</strong><br />
+      <img width="100%" alt="Our Services" src="./src/docs/screenshots/03-services.png" />
+    </td>
+    <td width="50%" valign="top">
+      <strong>Water — Hero</strong><br />
+      <img width="100%" alt="Water Hero" src="./src/docs/screenshots/04-water-hero.png" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Water — Content</strong><br />
+      <img width="100%" alt="Water Content" src="./src/docs/screenshots/05-water-content.png" />
+    </td>
+    <td width="50%" valign="top">
+      <strong>Transport — Hero</strong><br />
+      <img width="100%" alt="Transport Hero" src="./src/docs/screenshots/06-transport-hero.png" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Transport — Content</strong><br />
+      <img width="100%" alt="Transport Content" src="./src/docs/screenshots/07-transport-content.png" />
+    </td>
+    <td width="50%" valign="top">
+      <strong>Hajj & Umrah Buses — Hero</strong><br />
+      <img width="100%" alt="Buses Hero" src="./src/docs/screenshots/08-buses-hero.png" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Hajj & Umrah Buses — Content</strong><br />
+      <img width="100%" alt="Buses Content" src="./src/docs/screenshots/09-buses-content.png" />
+    </td>
+    <td width="50%" valign="top">
+      <strong>Heavy Transport</strong><br />
+      <img width="100%" alt="Trailer Hero" src="./src/docs/screenshots/10-trailer-hero.png" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Car Rental</strong><br />
+      <img width="100%" alt="Car Rental Hero" src="./src/docs/screenshots/11-car-rental-hero.png" />
+    </td>
+    <td width="50%" valign="top">
+      <strong>Logistics Management</strong><br />
+      <img width="100%" alt="Logistics Hero" src="./src/docs/screenshots/12-logistics-hero.png" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Digital Marketing</strong><br />
+      <img width="100%" alt="Digital Marketing" src="./src/docs/screenshots/13-digital-marketing.png" />
+    </td>
+    <td width="50%" valign="top">
+      <strong>Mobile Home</strong><br />
+      <img width="100%" alt="Mobile Preview" src="./src/docs/screenshots/14-mobile-home.png" />
+    </td>
+  </tr>
+</table>
 
 ## Live Demo 🚀
 
@@ -124,4 +170,3 @@ The website improved content clarity and service discoverability across **7 core
 💼 [LinkedIn](https://www.linkedin.com/in/omrmhd5/)
 🌐 [Portfolio](https://omarmahmoud.dev/)
 🔗 [GitHub](https://github.com/omrmhd5)
-
