@@ -49,10 +49,10 @@ The website improved content clarity and service discoverability across **7 core
 
 ## 💡 Impact
 
+- Delivered a full corporate digital presence — services, partners, quote paths, and contact online
 - Improved content clarity and service discoverability across **7 services**
-- Enhanced user engagement through modern UI and smooth animations
-- Built with SEO-friendly structure and semantic HTML
-- Provided a scalable digital foundation for future corporate expansion
+- Built an SEO-structured foundation to support long-term search visibility and growth
+- Strengthened B2B credibility through partner and client showcase on the homepage
 
 ---
 
