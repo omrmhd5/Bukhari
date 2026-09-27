@@ -76,9 +76,9 @@ The website improved content clarity and service discoverability across **7 core
 
 ## 🎬 Site Demo
 
-**[▶ Watch site walkthrough](./src/docs/bukhari-video-demo.mp4)**
+**[▶ Watch site walkthrough](./docs/bukhari-demo.mp4)**
 
-Home hero → about → services grid → water → transport → Hajj & Umrah buses → heavy transport → car rental → logistics → digital marketing → mobile preview.
+Arabic intro → home about → services → contact → water → transport → Hajj & Umrah buses → heavy transport → car rental → logistics → digital marketing.
 
 ---
 
@@ -88,71 +88,71 @@ Home hero → about → services grid → water → transport → Hajj & Umrah b
   <tr>
     <td width="50%" valign="top">
       <strong>Home Hero</strong><br />
-      <img width="100%" alt="Home Hero" src="./src/docs/screenshots/01-home-hero.png" />
+      <img width="100%" alt="Home Hero" src="./docs/screenshots/01-home-hero.png" />
     </td>
     <td width="50%" valign="top">
       <strong>About Us</strong><br />
-      <img width="100%" alt="About Us" src="./src/docs/screenshots/02-about.png" />
+      <img width="100%" alt="About Us" src="./docs/screenshots/02-about.png" />
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <strong>Our Services</strong><br />
-      <img width="100%" alt="Our Services" src="./src/docs/screenshots/03-services.png" />
+      <img width="100%" alt="Our Services" src="./docs/screenshots/03-services.png" />
     </td>
     <td width="50%" valign="top">
       <strong>Water — Hero</strong><br />
-      <img width="100%" alt="Water Hero" src="./src/docs/screenshots/04-water-hero.png" />
+      <img width="100%" alt="Water Hero" src="./docs/screenshots/04-water-hero.png" />
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <strong>Water — Content</strong><br />
-      <img width="100%" alt="Water Content" src="./src/docs/screenshots/05-water-content.png" />
+      <img width="100%" alt="Water Content" src="./docs/screenshots/05-water-content.png" />
     </td>
     <td width="50%" valign="top">
       <strong>Transport — Hero</strong><br />
-      <img width="100%" alt="Transport Hero" src="./src/docs/screenshots/06-transport-hero.png" />
+      <img width="100%" alt="Transport Hero" src="./docs/screenshots/06-transport-hero.png" />
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <strong>Transport — Content</strong><br />
-      <img width="100%" alt="Transport Content" src="./src/docs/screenshots/07-transport-content.png" />
+      <img width="100%" alt="Transport Content" src="./docs/screenshots/07-transport-content.png" />
     </td>
     <td width="50%" valign="top">
       <strong>Hajj & Umrah Buses — Hero</strong><br />
-      <img width="100%" alt="Buses Hero" src="./src/docs/screenshots/08-buses-hero.png" />
+      <img width="100%" alt="Buses Hero" src="./docs/screenshots/08-buses-hero.png" />
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <strong>Hajj & Umrah Buses — Content</strong><br />
-      <img width="100%" alt="Buses Content" src="./src/docs/screenshots/09-buses-content.png" />
+      <img width="100%" alt="Buses Content" src="./docs/screenshots/09-buses-content.png" />
     </td>
     <td width="50%" valign="top">
       <strong>Heavy Transport</strong><br />
-      <img width="100%" alt="Trailer Hero" src="./src/docs/screenshots/10-trailer-hero.png" />
+      <img width="100%" alt="Trailer Hero" src="./docs/screenshots/10-trailer-hero.png" />
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <strong>Car Rental</strong><br />
-      <img width="100%" alt="Car Rental Hero" src="./src/docs/screenshots/11-car-rental-hero.png" />
+      <img width="100%" alt="Car Rental Hero" src="./docs/screenshots/11-car-rental-hero.png" />
     </td>
     <td width="50%" valign="top">
       <strong>Logistics Management</strong><br />
-      <img width="100%" alt="Logistics Hero" src="./src/docs/screenshots/12-logistics-hero.png" />
+      <img width="100%" alt="Logistics Hero" src="./docs/screenshots/12-logistics-hero.png" />
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <strong>Digital Marketing</strong><br />
-      <img width="100%" alt="Digital Marketing" src="./src/docs/screenshots/13-digital-marketing.png" />
+      <img width="100%" alt="Digital Marketing" src="./docs/screenshots/13-digital-marketing.png" />
     </td>
     <td width="50%" valign="top">
       <strong>Mobile Home</strong><br />
-      <img width="100%" alt="Mobile Preview" src="./src/docs/screenshots/14-mobile-home.png" />
+      <img width="100%" alt="Mobile Preview" src="./docs/screenshots/14-mobile-home.png" />
     </td>
   </tr>
 </table>
